@@ -3,289 +3,454 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kailer’s High End Detailing</title>
+  <title>Kailer’s High End Detailing | Edmonton Interior & Exterior Detailing</title>
   <style>
     :root {
-      --bg:#020617;
-      --panel:#071826;
-      --panel2:#0f172a;
-      --blue:#0ea5e9;
-      --blue2:#38bdf8;
-      --text:#ffffff;
-      --muted:#aebccd;
-      --line:rgba(255,255,255,.08);
+      --bg: #020617;
+      --panel: #071826;
+      --panel2: #0f172a;
+      --blue: #0ea5e9;
+      --blue2: #38bdf8;
+      --gold: #d4af37;
+      --text: #ffffff;
+      --muted: #aebccd;
+      --line: rgba(255,255,255,.10);
     }
-    * { box-sizing:border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      color:var(--text);
+      color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(14,165,233,.16), transparent 26%),
+        radial-gradient(circle at top right, rgba(14,165,233,.20), transparent 28%),
+        radial-gradient(circle at top left, rgba(212,175,55,.10), transparent 24%),
         linear-gradient(180deg, #020617 0%, #071826 55%, #020617 100%);
+      line-height: 1.6;
     }
-    img { max-width:100%; display:block; }
-    a { color:inherit; text-decoration:none; }
-    .container { width:min(1180px, calc(100% - 2rem)); margin:0 auto; }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
     .topbar {
-      position:sticky; top:0; z-index:10;
-      background:rgba(2,6,23,.82);
-      backdrop-filter: blur(12px);
-      border-bottom:1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2,6,23,.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
     }
+
     .nav {
-      display:flex; align-items:center; justify-content:space-between; gap:1rem;
-      padding:1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .85rem 0;
     }
-    .brand { font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
-    .links { display:flex; gap:1.2rem; color:var(--muted); }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 14px;
+      filter: drop-shadow(0 0 12px rgba(56,189,248,.35));
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: .95rem;
+    }
+
+    .links a:hover { color: var(--blue2); }
+
     .hero {
-      padding:4.5rem 0 3rem;
-      display:grid; align-items:center;
+      padding: 5rem 0 4rem;
     }
+
     .hero-grid {
-      display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; align-items:center;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 1.5rem;
+      align-items: center;
     }
+
     .eyebrow {
-      display:inline-block; padding:.45rem .8rem; border-radius:999px;
-      border:1px solid rgba(56,189,248,.24);
-      background:rgba(56,189,248,.08);
-      color:#bae6fd; font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+      display: inline-block;
+      padding: .45rem .8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,.28);
+      background: rgba(56,189,248,.08);
+      color: #bae6fd;
+      font-size: .8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 1rem;
     }
+
     h1 {
-      font-size:clamp(2.5rem, 5vw, 5rem); line-height:1; margin:1rem 0;
-      max-width:10ch;
+      font-size: clamp(2.6rem, 6vw, 5.8rem);
+      line-height: .95;
+      margin-bottom: 1.1rem;
+      letter-spacing: -.04em;
     }
-    h2 { font-size:clamp(1.8rem, 3vw, 3rem); margin:.5rem 0 1rem; }
+
+    h2 {
+      font-size: clamp(1.9rem, 3.3vw, 3.2rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    h3 { margin-bottom: .65rem; font-size: 1.35rem; }
+
+    .gold { color: var(--gold); }
+    .blue { color: var(--blue2); }
+
     .lead {
-      color:#d9e6f3; font-size:1.08rem; line-height:1.75; max-width:62ch;
+      color: #d9e6f3;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      max-width: 68ch;
     }
-    .cta-row { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
     .btn {
-      display:inline-block; padding:1rem 1.2rem; border-radius:14px; font-weight:700;
-      transition:.2s ease;
+      display: inline-block;
+      padding: 1rem 1.25rem;
+      border-radius: 15px;
+      font-weight: 900;
+      transition: .2s ease;
+      text-align: center;
     }
-    .btn:hover { transform: translateY(-1px); }
+
+    .btn:hover { transform: translateY(-2px); }
+
     .btn-primary {
-      background:linear-gradient(135deg, var(--blue2), var(--blue));
-      color:#001018;
+      background: linear-gradient(135deg, var(--gold), #fff1a8);
+      color: #08111f;
+      box-shadow: 0 0 24px rgba(212,175,55,.20);
     }
+
     .btn-secondary {
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+      border: 1px solid rgba(56,189,248,.35);
+      background: rgba(255,255,255,.04);
+      color: white;
     }
-    .panel {
-      background:linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
-      border:1px solid var(--line);
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:0 18px 40px rgba(0,0,0,.25);
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 22px 50px rgba(0,0,0,.32);
     }
-    .hero-photo {
-      min-height:460px;
+
+    .logo-feature {
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
       background:
-        linear-gradient(180deg, rgba(2,6,23,.05), rgba(2,6,23,.35)),
-        url('https://images.unsplash.com/photo-1708805283017-c662be2c7a44?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        radial-gradient(circle, rgba(56,189,248,.18), transparent 45%),
+        linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
     }
-    .panel-copy { padding:1.1rem 1.25rem 1.3rem; }
+
+    .logo-feature img {
+      max-width: 330px;
+      width: 82%;
+      filter: drop-shadow(0 0 26px rgba(56,189,248,.40));
+    }
+
     .stats {
-      display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .8rem;
+      padding: 1rem;
     }
+
     .stat {
-      padding:1rem; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid var(--line);
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid var(--line);
     }
-    .section { padding:4.8rem 0; }
-    .muted { color:var(--muted); }
-    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+
+    .stat strong { color: white; }
+    .muted { color: var(--muted); }
+
+    .section { padding: 4.8rem 0; }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
     .card {
-      background:linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
-      border:1px solid var(--line);
-      border-radius:24px;
-      overflow:hidden;
+      background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,.22);
     }
-    .card-copy { padding:1.15rem; }
-    .card h3 { margin:.2rem 0 .7rem; }
+
+    .card-copy { padding: 1.25rem; }
+
     .photo {
       aspect-ratio: 4 / 3;
-      background:#0f172a center/cover no-repeat;
+      background: #0f172a center/cover no-repeat;
     }
+
+    .price-card {
+      padding: 1.35rem;
+      border-radius: 22px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid var(--line);
+    }
+
     .price {
-      color:#7dd3fc; font-weight:700;
+      color: #7dd3fc;
+      font-weight: 900;
     }
-    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
-    .policy {
-      padding:1.1rem 1.2rem; border-radius:20px; border:1px solid var(--line); background:rgba(255,255,255,.03);
-      line-height:1.7; color:#d9e6f3;
+
+    .big-price {
+      font-size: clamp(3rem, 7vw, 5rem);
+      color: #fff1a8;
+      line-height: 1;
+      font-weight: 900;
+      text-shadow: 0 0 20px rgba(212,175,55,.45);
     }
+
+    .about-box {
+      padding: 1.5rem;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(212,175,55,.12), rgba(56,189,248,.09));
+      border: 1px solid rgba(212,175,55,.26);
+    }
+
+    .about-box p { margin-bottom: 1rem; }
+
+    ul {
+      padding-left: 1.2rem;
+      color: #d9e6f3;
+    }
+
+    li { margin: .4rem 0; }
+
     .contact-list {
-      display:grid; gap:.8rem;
+      display: grid;
+      gap: .8rem;
     }
+
     .contact-item {
-      padding:1rem; border-radius:18px; border:1px solid var(--line); background:rgba(255,255,255,.03);
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
     }
-    .contact-item a { color:#7dd3fc; }
+
+    .contact-item a { color: #7dd3fc; font-weight: 800; }
+
     footer {
-      padding:2rem 0 3rem; border-top:1px solid var(--line); color:var(--muted);
+      padding: 2rem 0 3rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
     }
+
     @media (max-width: 920px) {
-      .hero-grid, .grid-3, .two-col { grid-template-columns:1fr; }
-      .links { display:none; }
-      .stats { grid-template-columns:1fr; }
-      .hero-photo { min-height:320px; }
+      .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .links { display: none; }
+      .stats { grid-template-columns: 1fr; }
+      .logo-feature { min-height: 300px; }
+      .brand span { font-size: .82rem; }
     }
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container nav">
-      <div class="brand">Kailer’s High End Detailing</div>
+      <a class="brand" href="#top">
+        <img src="kailer logo.png" alt="Kailer’s High End Detailing Logo" />
+        <span>Kailer’s High End Detailing</span>
+      </a>
       <div class="links">
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </div>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Edmonton Vehicle Detailing</span>
-        <h1>Luxury Clean Ride</h1>
-        <p class="lead">
-          Kailer’s High End Detailing delivers premium vehicle detailing in Edmonton, Alberta for work vehicles, taxis, muddy construction units, family vehicles, personal vehicles, and high-end summer cars. From heavy-duty interior resets to polished premium finishes, every detail is completed with care, precision, and a focus on results.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#contact">Book Your Detail</a>
-          <a class="btn btn-secondary" href="#pricing">View Pricing</a>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Edmonton Interior & Exterior Detailing</span>
+          <h1>High-End Clean. <span class="gold">Real Results.</span></h1>
+          <p class="lead">
+            Kailer’s High End Detailing provides professional vehicle detailing in Edmonton, Alberta. From deep interior resets to clean exterior finishes, every vehicle is treated with care, patience, and attention to detail.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:5879909990">Call 587-990-9990</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/kailerhighenddetailing" target="_blank">Message on Instagram</a>
+          </div>
         </div>
-      </div>
 
-      <div class="panel">
-        <div class="hero-photo"></div>
-        <div class="panel-copy">
+        <div class="hero-card">
+          <div class="logo-feature">
+            <img src="kailer logo.png" alt="Kailer’s High End Detailing Logo" />
+          </div>
           <div class="stats">
-            <div class="stat"><strong>Commercial</strong><div class="muted">Taxi and work vehicles</div></div>
-            <div class="stat"><strong>Heavy-Duty</strong><div class="muted">Mud, dust, and deep interior reset</div></div>
-            <div class="stat"><strong>Premium Finish</strong><div class="muted">Personal and luxury vehicles</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="container">
-      <span class="eyebrow">Services</span>
-      <h2>Professional detailing built for hard use and premium presentation</h2>
-      <div class="grid-3">
-        <div class="card">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1694678505384-5c28eb08dc60?auto=format&fit=crop&w=1600&q=80')"></div>
-          <div class="card-copy">
-            <h3>Work Vehicle Refresh</h3>
-            <p class="lead" style="font-size:1rem;">Built for taxis, commercial vehicles, and daily-use units that need a strong clean, refreshed interior, and sharper presentation.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1639419375955-2741a335818b?auto=format&fit=crop&w=1600&q=80')"></div>
-          <div class="card-copy">
-            <h3>Heavy Duty Clean</h3>
-            <p class="lead" style="font-size:1rem;">Designed for muddy construction vehicles and dirt-heavy jobs that need more time on floors, trim, buildup, and deep interior recovery.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1625690180114-5530b1304127?auto=format&fit=crop&w=1600&q=80')"></div>
-          <div class="card-copy">
-            <h3>Luxury Detail</h3>
-            <p class="lead" style="font-size:1rem;">Premium detailing for personal vehicles, family vehicles, and high-end summer cars that deserve a clean, polished, high-end finish.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="pricing">
-    <div class="container two-col">
-      <div class="card">
-        <div class="card-copy">
-          <span class="eyebrow">Competitive Pricing</span>
-          <h2>Simple pricing with room for condition-based quotes</h2>
-          <p><span class="price">Express / Entry Detail:</span> $89 - $119</p>
-          <p><span class="price">Taxi / Work Vehicle Refresh:</span> $109 - $149</p>
-          <p><span class="price">Heavy Duty Muddy Vehicle Clean:</span> $149 - $229</p>
-          <p><span class="price">Full Detail:</span> $169 - $259</p>
-          <p><span class="price">Premium Summer / High-End Detail:</span> $229 - $349+</p>
-          <p><span class="price">Fleet / Multi-Vehicle Pricing:</span> quoted per volume and condition</p>
-        </div>
-      </div>
-      <div class="policy">
-        <strong>Quote Policy</strong><br><br>
-        Every vehicle is quoted based on its condition at the time of visual inspection. If excessive dirt, stains, pet hair, sand, salt, biohazards, heavy mud, or other unexpected conditions are discovered, any extra work and charges will be discussed and approved before proceeding.
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="gallery">
-    <div class="container">
-      <span class="eyebrow">Gallery</span>
-      <h2>Results that speak for themselves</h2>
-      <p class="muted">Deep cleaning, premium finishes, and detailing built to restore comfort, cleanliness, and presentation.</p>
-      <div class="grid-3">
-        <div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1708805283017-c662be2c7a44?auto=format&fit=crop&w=1600&q=80')"></div></div>
-        <div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1694678505384-5c28eb08dc60?auto=format&fit=crop&w=1600&q=80')"></div></div>
-        <div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1625690180114-5530b1304127?auto=format&fit=crop&w=1600&q=80')"></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="container two-col">
-      <div class="card">
-        <div class="card-copy">
-          <span class="eyebrow">Book Today</span>
-          <h2>Book your next detail today</h2>
-          <div class="contact-list">
-            <div class="contact-item"><strong>Phone:</strong> 780-909-3771</div>
-            <div class="contact-item"><strong>Backup:</strong> 587-990-9990</div>
-            <div class="contact-item"><strong>Instagram:</strong> <a href="https://instagram.com/kailerhighenddetailing" target="_blank">Kailer High End Detailing</a></div>
-            <div class="contact-item"><strong>Service Area:</strong> Edmonton, Alberta</div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1639419375955-2741a335818b?auto=format&fit=crop&w=1600&q=80'); aspect-ratio: 16 / 11;"></div>
-        <div class="card-copy">
-          <h3>From muddy work vehicles to polished summer cars</h3>
-          <p class="lead" style="font-size:1rem;">Heavy-duty cleaning for work vehicles and premium detailing for personal and luxury cars.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">© 2026 Kailer’s High End Detailing — Luxury Clean Ride — Edmonton, Alberta</div>
-
-    <section class="section" id="qr-code">
-      <div class="container two-col">
-        <div class="card">
-          <div class="card-copy">
-            <span class="eyebrow">Scan to Follow</span>
-            <h2 style="margin-top:.8rem;">Find us on Instagram</h2>
-            <p class="lead">Scan the QR code to view our latest work, message us directly, and book your next detail.</p>
-            <div class="contact-list">
-              <div class="contact-item"><strong>Instagram:</strong> <a href="https://instagram.com/kailerhighenddetailing" target="_blank">@kailerhighenddetailing</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="display:flex; align-items:center; justify-content:center; padding:2rem;">
-          <div style="background:#fff; padding:1rem; border-radius:20px; text-align:center;">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAAC+UlEQVR4nO2cTW6cQBBGX6WRZgmSDzBHYW4W+Ui5ARzFB4jULC2Bviy6m4FJNo4tGEOxsBncT9NIpaqvftomPnz1Pz7OgEMOOeSQQw45dEzI8lVhNyYza/IzYDIYyoLbLttzaHuolSRFoLcKdYAUg+iTlQRJktbQdttzaDuoyr+HBtpfoP4WRmsjGPW7AWGEASzdbbw9h3aH7AaoGypo4/LZl3+TQ88JVQ+fxfCCQUAQZG03mRj22p5Du0G1pC7djairR+jNjL4JshsgaXyEttueQ5tBLBUjQbTxXz/KglaSuid/J4c+A6WosSplTyYYUd+E8qhe17qf/J0c+gyUfUQbWeacbQzJBtTVkhSDUiRxH3F4KFmEpDEpBXX1uLCSvCSCOoLcIo4PpahhANb+ajC4CIaXUf1VAFNZUv+2zbfn0OZQ9hFdPbJMOIAsKiXRJudR3In7iCNDxSLIOgLqYgIpVtQSJHsZcYs4PrTIPrN6kJTNIgZloTkbiFvE4aHZIoKSdqSeyxMpiMxmEYNHjRNAi1yDVjk43NVDLmEWe3GLOD40JxJR9BZkEGQpwxgaYLgoZSK7bM+hnSB1TAb1u+U7QK9XCcpHqN99YuYE0EJPplwj60lYyUtSc9yjxmmgvoG7qLRbMobJ6K8j9E2WnHbbZ3sO7aAs81RdTjiYPcNc4+7A+xqngcwaoL+O2M84ywqC9NpMBsMlWclO23NoJx+R6xG5np3qEXNa6r3Pk0BzXyMXq3Pvs8zJLKoVXsU+B7TMNVKdOsKytRXLwlbuI84ArZSlVrFidgr3Xof7iLNA9zNdtG9VTjfTxMxgBqth/W/yTg59RdQIxRVESpsDcptjvnMfcQpoyIc61VGO8bw2ZLPozcx9xEmgxxM8BtVIPttXQd9EWdtNlfrrWBY/+Ts59KVQG0trK81nD2b50N/bpczcfbd3cugj14OOKGJiLH+NsJqZcB1xcOivM13ALCpDGcCs5TNUZ4HM/zOZQw455JBDDjn0n9AfsEaqsoieIgMAAAAASUVORK5CYII=" alt="Instagram QR Code" style="width:220px; height:220px; display:block; margin:0 auto;" />
-            <p style="color:#001018; font-weight:700; margin:.8rem 0 0;">Scan to Book on Instagram</p>
+            <div class="stat"><strong>Interior</strong><div class="muted">Seats, carpets, panels, vents</div></div>
+            <div class="stat"><strong>Exterior</strong><div class="muted">Wash, wheels, clean finish</div></div>
+            <div class="stat"><strong>Premium Care</strong><div class="muted">Honest work and fair pricing</div></div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>Interior and exterior detailing for vehicles that need real care</h2>
+          <p class="lead">Whether your vehicle needs a quick refresh, a deeper clean, or a full detail, the goal is to make it look better, feel cleaner, and leave you proud of the result.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1600&q=80')"></div>
+            <div class="card-copy">
+              <h3>Interior Detailing</h3>
+              <p class="lead" style="font-size:1rem;">Deep cleaning for seats, carpets, mats, plastics, cup holders, panels, vents, and hard-to-reach areas.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1600&q=80')"></div>
+            <div class="card-copy">
+              <h3>Exterior Detailing</h3>
+              <p class="lead" style="font-size:1rem;">Careful exterior cleaning, wheels, trim, and a clean finish that helps your vehicle stand out.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80')"></div>
+            <div class="card-copy">
+              <h3>Full Detail</h3>
+              <p class="lead" style="font-size:1rem;">A full interior and exterior service for customers who want the best overall reset and presentation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container grid-2">
+        <div class="card">
+          <div class="card-copy">
+            <span class="eyebrow">Starting Price</span>
+            <h2>Starting at</h2>
+            <div class="big-price">$99</div>
+            <p class="lead">Final price depends on vehicle size, condition, stains, pet hair, salt, mud, and the level of detail requested.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-copy">
+            <span class="eyebrow">Customer Offers</span>
+            <h2>Extra value for customers</h2>
+            <ul>
+              <li>10% off for first-time customers</li>
+              <li>Price match and beat reasonable competitor quotes when possible</li>
+              <li>One-time emergency spill or accident clean-up within 3 months after your detail</li>
+              <li>Licensed and insured for customer peace of mind</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-box">
+          <span class="eyebrow">About Me</span>
+          <h2>My Story</h2>
+          <p>My name is Kailer, I am 23 years old, and I started Kailer’s High End Detailing because I genuinely love working on vehicles and seeing the transformation that comes from professional detailing.</p>
+          <p>I have autism and verbal apraxia, which means communication and speech can sometimes be difficult for me. I believe in being honest and transparent with my customers. When people meet me, they may notice that I communicate differently, and I never want that to come across the wrong way. I simply process and communicate in my own way.</p>
+          <p>Detailing became something I could fully focus on and take pride in because I genuinely enjoy transforming vehicles and helping customers feel proud of their car again. I also value building strong relationships, creating a trusted network, and being able to grow a business while staying true to who I am.</p>
+          <p>I worked with my uncle at Leung’s Auto, continued building my detailing skills in West Edmonton, and trained with Owner’s Pride Detailing School in St. Albert. Because the detailing industry is largely unregulated, I also joined the IDA so customers know I am serious about professionalism, continued learning, and industry standards.</p>
+          <p><strong class="gold">I built this business to prove that dedication, attention to detail, professionalism, and honesty matter more than fitting into a stereotype.</strong></p>
+          <p><strong>“I may communicate differently due to verbal apraxia, but I take my time to make sure every customer is understood and every vehicle receives the attention and care it deserves.”</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">Book Today</span>
+          <h2>Ready to book your detail?</h2>
+          <p class="lead">Call or message today to ask about availability, pricing, and the right detail for your vehicle.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:5879909990">Call Now</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/kailerhighenddetailing" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-item"><strong>Phone:</strong> <a href="tel:5879909990">587-990-9990</a></div>
+          <div class="contact-item"><strong>Instagram:</strong> <a href="https://www.instagram.com/kailerhighenddetailing" target="_blank">@kailerhighenddetailing</a></div>
+          <div class="contact-item"><strong>Service Area:</strong> Edmonton, Alberta</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Kailer’s High End Detailing — Edmonton Interior & Exterior Vehicle Detailing
+    </div>
   </footer>
 </body>
 </html>
