@@ -350,7 +350,33 @@
       font-weight: 900;
       box-shadow: 0 0 25px rgba(212,175,55,.45);
     }
+.mobile-bar {
+  display: none;
+}
 
+@media (max-width: 768px) {
+
+  .mobile-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    display: flex;
+    justify-content: space-around;
+    padding: 14px;
+    z-index: 9999;
+  }
+
+  .mobile-bar a {
+    color: white;
+    font-weight: bold;
+  }
+
+  .floating-call {
+    display: none;
+  }
+}
     @media (max-width: 920px) {
       .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
       .links { display: none; }
@@ -467,7 +493,73 @@
         </div>
       </div>
     </section>
+<section class="section">
+  <div class="container">
 
+    <div class="section-head">
+      <span class="eyebrow">Our Process</span>
+      <h2>What to expect</h2>
+      <p class="lead">
+        Every vehicle is approached carefully with attention to detail,
+        professionalism, and customer satisfaction in mind.
+      </p>
+    </div>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>1. Contact & Quote</h3>
+          <p>
+            Reach out by phone or Instagram to discuss your vehicle,
+            condition, and the type of detail you are looking for.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>2. Vehicle Assessment</h3>
+          <p>
+            Every vehicle is assessed based on size, condition,
+            stains, pet hair, salt, and overall detailing needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>3. Deep Cleaning Process</h3>
+          <p>
+            Interior and exterior detailing is completed carefully
+            using professional products, tools, and techniques.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>4. Final Quality Check</h3>
+          <p>
+            Final inspections help ensure the vehicle meets quality
+            expectations before completion.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>5. Customer Walkthrough</h3>
+          <p>
+            Customers can review the final result and ask any
+            questions before leaving.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     <section class="section" id="pricing">
       <div class="container grid-2">
         <div class="card">
@@ -496,7 +588,74 @@
         </div>
       </div>
     </section>
+<section class="section">
+  <div class="container">
 
+    <div class="section-head">
+      <span class="eyebrow">Why Detailing Matters</span>
+      <h2>More than just a clean vehicle</h2>
+
+      <p class="lead">
+        Professional detailing helps improve comfort, maintain your vehicle,
+        and create a cleaner driving experience.
+      </p>
+    </div>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Protects Your Interior</h3>
+          <p>
+            Dirt, salt, spills, and debris can slowly wear down
+            carpets, plastics, seats, and interior surfaces over time.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Improves Comfort</h3>
+          <p>
+            A clean vehicle creates a more enjoyable and comfortable
+            driving experience for both daily use and passengers.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Maintains Vehicle Value</h3>
+          <p>
+            Keeping a vehicle clean and maintained can help preserve
+            appearance and resale value over time.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Removes Salt & Debris</h3>
+          <p>
+            Edmonton roads, winter salt, mud, and buildup can collect
+            quickly and become difficult to manage without proper cleaning.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Healthier Environment</h3>
+          <p>
+            Deep interior cleaning can help reduce dust, allergens,
+            odors, and bacteria trapped inside the vehicle.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     <section class="section" id="about">
       <div class="container">
         <div class="about-box">
@@ -705,12 +864,20 @@
 
   </main>
 
-  <footer>
-    <div class="container">
-      © 2026 Kailer’s High End Detailing — Edmonton Interior & Exterior Vehicle Detailing
-    </div>
-  </footer>
+  
+ <footer>
+  <div class="container">
+    © 2026 Kailer’s High End Detailing — Edmonton Interior & Exterior Vehicle Detailing
+  </div>
+</footer>
 
-  <a href="tel:5879909990" class="floating-call">📞 Call Now</a>
+<a href="tel:5879909990" class="floating-call">📞 Call Now</a>
+
+<div class="mobile-bar">
+  <a href="tel:5879909990">📞 Call</a>
+  <a href="https://www.instagram.com/kailerhighenddetailing" target="_blank">📸 Instagram</a>
+  <a href="#contact">📅 Book</a>
+</div>
+
 </body>
 </html>
