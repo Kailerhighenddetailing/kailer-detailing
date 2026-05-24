@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Kailer’s High End Detailing | Edmonton Interior & Exterior Detailing</title>
+
+  <link rel="icon" type="image/png" href="K LOGO.png">
+  <meta charset="UTF-8" />
+
 
   <style>
     :root {
@@ -164,13 +169,22 @@
       color: white;
     }
 
-    .hero-card, .card {
-      background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 18px 40px rgba(0,0,0,.22);
-    }
+.hero-card, .card {
+  background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+}
+
+.card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0,0,0,.35);
+}
 
     .hero-card { border-radius: 30px; box-shadow: 0 22px 50px rgba(0,0,0,.32); }
 
@@ -184,12 +198,25 @@
         linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
     }
 
-    .logo-feature img {
-      max-width: 420px;
-      width: 100%;
-      border-radius: 22px;
-      filter: drop-shadow(0 0 26px rgba(56,189,248,.40));
-    }
+  .logo-feature {
+  position: relative;
+}
+
+.logo-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.18);
+}
+
+.logo-feature img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 22px;
+  filter: drop-shadow(0 0 26px rgba(56,189,248,.40));
+  position: relative;
+  z-index: 1;
+}
 
     .stats {
       display: grid;
@@ -249,7 +276,6 @@
   object-fit: cover;
   object-position: center top;
   display: block;
-}
   background: #0f172a;
   padding: 10px;
 }
@@ -381,9 +407,9 @@
       <p><strong>Fast responses through phone or Instagram messaging.</strong></p>    
 
 <div class="cta-row" style="margin-top:1rem;">
-  <span class="eyebrow">✔ Licensed & Insured</span>
-  <span class="eyebrow">✔ IDA Member</span>
-  <span class="eyebrow">✔ Owner’s Pride Trained</span>
+  <span class="muted">✔ Licensed & Insured</span>
+  <span class="muted">✔ IDA Member</span>
+  <span class="muted">✔ Owner’s Pride Trained</span>
 </div>
 <p class="muted">
   <strong>Limited weekly bookings available to ensure quality and attention to detail.</strong>
@@ -664,6 +690,9 @@
         </div>
 
         <div class="contact-list">
+          <p class="muted">
+  Customer satisfaction and attention to detail always come first.
+</p>
           <div class="contact-item"><strong>Phone:</strong> <a href="tel:5879909990">587-990-9990</a></div>
           <div class="contact-item"><strong>Instagram:</strong> <a href="https://www.instagram.com/kailerhighenddetailing" target="_blank">@kailerhighenddetailing</a></div>
           <div class="contact-item"><strong>Service Area:</strong> Edmonton, Alberta</div>
