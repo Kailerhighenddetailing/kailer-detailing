@@ -247,15 +247,18 @@
       background: rgba(255,255,255,.035);
       border: 1px solid var(--line);
     }
+.muted {
+  color: var(--muted);
+}
 
-    .muted { color: var(--muted); }
+.section {
+  padding: 3rem 0;
+}
 
-    .section { padding: 4.8rem 0; }
-
-    .section-head {
-      max-width: 780px;
-      margin-bottom: 2rem;
-    }
+.section-head {
+  max-width: 780px;
+  margin-bottom: 1.25rem;
+}
 
     .grid-3 {
       display: grid;
@@ -514,20 +517,17 @@
 </div>
 
 <div class="hero-card">
-        <div class="logo-feature">
-  <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80"
-       alt="Professional car detailing in Edmonton by Kailer's High End Detailing" />
+  <div class="logo-feature">
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80"
+         alt="Professional car detailing in Edmonton by Kailer's High End Detailing" />
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>Interior</strong><div class="muted">Seats, carpets, panels, vents</div></div>
+    <div class="stat"><strong>Exterior</strong><div class="muted">Wash, wheels, clean finish</div></div>
+    <div class="stat"><strong>Premium Care</strong><div class="muted">Honest work and fair pricing</div></div>
+  </div>
 </div>
-
-          </div>
-
-          <div class="stats">
-            <div class="stat"><strong>Interior</strong><div class="muted">Seats, carpets, panels, vents</div></div>
-            <div class="stat"><strong>Exterior</strong><div class="muted">Wash, wheels, clean finish</div></div>
-            <div class="stat"><strong>Premium Care</strong><div class="muted">Honest work and fair pricing</div></div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="section" id="services">
