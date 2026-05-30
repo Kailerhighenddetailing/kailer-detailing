@@ -377,6 +377,15 @@
     display: none;
   }
 }
+    .hide-mobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
     @media (max-width: 920px) {
       .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
       .links { display: none; }
@@ -493,7 +502,7 @@
         </div>
       </div>
     </section>
-<section class="section">
+<section class="section hide-mobile">
   <div class="container">
 
     <div class="section-head">
@@ -588,7 +597,7 @@
         </div>
       </div>
     </section>
-<section class="section">
+<section class="section hide-mobile">
   <div class="container">
 
     <div class="section-head">
@@ -691,7 +700,7 @@
       </div>
     </section>
 
-    <section class="section" id="gallery">
+    <section class="section hide-mobile" id="gallery">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Transformations</span>
