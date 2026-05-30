@@ -1,0 +1,21 @@
+{
+  "name": "Kailer's High End Detailing",
+  "short_name": "Kailer's Detail",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "description": "Edmonton interior and exterior vehicle detailing.",
+  "icons": [
+    {
+      "src": "K LOGO.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "K LOGO.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
