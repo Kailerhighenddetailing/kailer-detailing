@@ -323,7 +323,8 @@ h2 {
 
 .section {
   padding: clamp(6rem, 10vw, 12rem) 0;
-}
+
+}  
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -368,11 +369,17 @@ h2 {
 .photo {
   aspect-ratio: 4 / 3;
   background: #0f172a center/cover no-repeat;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform .35s ease;
 }
-
+.photo:hover {
+  transform: scale(1.04);
+}
 .review-img {
   width: 100%;
-  height: 340px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: contain;
   display: block;
   background: #0f172a;
@@ -527,10 +534,6 @@ h2 {
   .video-box iframe {
     height: 180px;
   }
-
-.review-img {
-  height: 220px;
-}
 
 .cert-img {
   max-height: 280px;
@@ -1566,18 +1569,19 @@ kailershighenddetailing.pro
   }
 
   vehicleSize.addEventListener("change", updateEstimate);
-  detailPackage.addEventListener("change", updateEstimate);
+detailPackage.addEventListener("change", updateEstimate);
 
-  addons.forEach(addon => {
-    addon.addEventListener("change", updateEstimate);
-  });
+addons.forEach(addon => {
+  addon.addEventListener("change", updateEstimate);
+});
 
-  updateEstimate();
+updateEstimate();
 </script>
+
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){
+    if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
   });
@@ -1588,5 +1592,6 @@ document.querySelectorAll(".card, .feature-card, .section-head").forEach(el => {
   observer.observe(el);
 });
 </script>
+
 </body>
 </html>
