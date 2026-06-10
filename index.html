@@ -74,27 +74,29 @@ a {
   color: inherit;
   text-decoration: none;
 }
-    .container {
-      width: min(1180px, calc(100% - 2rem));
-      margin: 0 auto;
-    }
+   .container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
 
-   .topbar {
+.topbar {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(2,6,23,.88);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-bottom: 1px solid rgba(231,199,104,.16);
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
 }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: .85rem 0;
-    }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem 0;
+}
 
     .brand {
       display: flex;
@@ -212,28 +214,38 @@ h2 {
       color: white;
     }
 
-.hero-card, .card {
-  background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
-}
-
 .card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
+    linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
+
+  border: 1px solid rgba(255,255,255,.13);
+  border-top: 1px solid rgba(231,199,104,.18);
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
   transition: transform .25s ease, box-shadow .25s ease;
-  backdrop-filter: blur(14px);
 }
 .feature-card {
-  background: linear-gradient(
-    180deg,
-    rgba(15,23,42,.78),
-    rgba(7,24,38,.96)
-  );
-  border: 1px solid var(--line);
-  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),
+    linear-gradient(180deg, rgba(15,23,42,.75), rgba(7,24,38,.92));
+  border: 1px solid rgba(255,255,255,.13);
+  border-top: 1px solid rgba(231,199,104,.22);
+  border-radius: 32px;
   padding: 2rem;
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+  box-shadow:
+    0 24px 65px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
     .feature-card p {
   margin-bottom: 1rem;
@@ -244,9 +256,21 @@ h2 {
 }
 
    .hero-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
+    linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
+
+  border: 1px solid rgba(255,255,255,.13);
+  border-top: 1px solid rgba(231,199,104,.18);
+
   border-radius: 30px;
-  box-shadow: 0 30px 80px rgba(0,0,0,.40);
-  border: 1px solid rgba(231,199,104,.12);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.40),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
     .logo-feature {
@@ -286,20 +310,30 @@ h2 {
       padding: 1rem;
     }
 
-    .stat {
-      padding: 1rem;
-      border-radius: 18px;
-      background: rgba(255,255,255,.035);
-      border: 1px solid var(--line);
-    }
+.stat {
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.13);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
 .muted {
   color: var(--muted);
 }
 
 .section {
-  padding: 5rem 0;
+  padding: clamp(6rem, 10vw, 12rem) 0;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s ease;
 }
 
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 .section-head {
   max-width: 780px;
   margin-bottom: 1.75rem;
@@ -577,7 +611,6 @@ h2 {
         <a href="#giveaway">Giveaway</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
-<a href="#quote">Free Quote</a>
 <a href="#contact">Contact</a>
       </div>
     </div>
@@ -904,7 +937,14 @@ stains, salt, mud, and overall detailing requirements.
   <div class="estimate-result">
     Estimated Quote: <span id="estimateTotal">$150</span>
   </div>
-
+<div class="cta-row">
+  <a class="btn btn-primary"
+     href="https://forms.gle/m55AUGRyMztN163B9"
+     target="_blank"
+     rel="noopener noreferrer">
+     📋 Request This Estimate
+  </a>
+</div>
 <p class="muted">
 Estimates are based on vehicle size and selected services.
 Final pricing may vary depending on vehicle condition, excessive pet hair,
@@ -1153,7 +1193,20 @@ Owner • Detailer • Professional Training & Continued Education
     <div class="section-head">
       <span class="eyebrow">Transformations</span>
       <h2>Before & After Results</h2>
-      <p class="lead">Real detailing photos will be added here as the business grows.</p>
+
+    <p class="lead">
+  Follow our journey on Instagram and watch our portfolio grow with real customer results and transformations.
+</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary"
+           href="https://www.instagram.com/kailerhighenddetailing"
+           target="_blank"
+           rel="noopener noreferrer">
+           📸 View More Results on Instagram
+        </a>
+      </div>
+
     </div>
 
     <div class="grid-3">
@@ -1372,25 +1425,7 @@ Owner • Detailer • Professional Training & Continued Education
 
   </div>
 </section>
-<section class="section" id="quote">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Free Quote</span>
-      <h2>Get a Free Quote in Minutes</h2>
 
-    <p class="lead">
-Tell us about your vehicle, the service you need, and we'll provide a personalized quote as soon as possible.
-</p>
-
-<a class="btn btn-primary"
-   href="https://forms.gle/m55AUGRyMztN163B9"
-   target="_blank"
-   rel="noopener noreferrer">
-   📋 Request Quote
-</a>
-    </div>
-  </div>
-</section>
 <section class="section" id="contact">
       <div class="container grid-2">
         <div>
@@ -1539,6 +1574,19 @@ kailershighenddetailing.pro
 
   updateEstimate();
 </script>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
 
+document.querySelectorAll(".card, .feature-card, .section-head").forEach(el => {
+  el.classList.add("hidden");
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
