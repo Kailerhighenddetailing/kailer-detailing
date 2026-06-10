@@ -365,7 +365,24 @@ h2 {
 .card-copy {
   padding: 1.25rem;
 }
+.before-after {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
 
+.before-after img {
+  width: 100%;
+  display: block;
+}
+
+.before-after input[type="range"] {
+  width: 100%;
+  margin-top: 15px;
+}
 .photo {
   aspect-ratio: 4 / 3;
   background: #0f172a center/cover no-repeat;
@@ -1145,15 +1162,17 @@ Maintenance memberships launching soon. Ask about joining the waitlist after you
     </div>
   </div>
 </section>
-    <section class="section" id="about">
+<section class="section" id="about">
   <div class="container">
     <div class="feature-card">
- <span class="eyebrow">My Story</span>
 
-<h2>Meet Kailer</h2>
-<p style="font-size:1.1rem;font-weight:700;color:#e7c768;">
-Owner • Detailer • Professional Training & Continued Education
-</p>
+      <span class="eyebrow">My Story</span>
+
+      <h2>Meet Kailer</h2>
+
+      <p style="font-size:1.1rem;font-weight:700;color:#e7c768;">
+        Owner • Detailer • Professional Training & Continued Education
+      </p>
 <h1>
   Trust Is Earned.<br>
   <span class="gold">We Earn It With Every Detail.</span>
@@ -1181,16 +1200,74 @@ Owner • Detailer • Professional Training & Continued Education
 <p style="color:#e7c768; font-weight:800;">
   Come join the journey. Be part of the story.
 </p>
-     <div class="cta-row">
 
+<div class="cta-row">
+  <a class="btn btn-secondary" href="extracted_story.html">
+    Read My Story →
+  </a>
+</div>
 
- <a class="btn btn-secondary" href="extracted_story.html">
-  Read My Story →
-</a>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Transformation Preview</span>
+      <h2>See The Difference</h2>
+      <p class="lead">
+        Move the slider to see how professional detailing can transform a vehicle.
+      </p>
+    </div>
+
+    <div class="before-after">
+<div style="
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-weight:800;
+color:#e7c768;
+">
+  <span>Before</span>
+  <span>After</span>
+</div>
+      <div style="position:relative; overflow:hidden; border-radius:24px;">
+
+        <!-- Before Image -->
+        <img
+          src="https://via.placeholder.com/1200x675?text=Before+Photo"
+          alt="Before Detail"
+          style="width:100%; display:block;">
+
+        <!-- After Image -->
+        <img
+          id="afterImage"
+          src="https://via.placeholder.com/1200x675?text=After+Photo"
+          alt="After Detail"
+          style="
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+          ">
+
+      </div>
+
+      <input
+        type="range"
+        id="compareSlider"
+        min="0"
+        max="100"
+        value="50">
+
+    </div>
+
+  </div>
+</section>
     <section class="section hide-mobile" id="gallery">
   <div class="container">
     <div class="section-head">
@@ -1592,6 +1669,18 @@ document.querySelectorAll(".card, .feature-card, .section-head").forEach(el => {
   observer.observe(el);
 });
 </script>
+<script>
+const compareSlider = document.getElementById("compareSlider");
 
+if (compareSlider) {
+  compareSlider.addEventListener("input", function() {
+    const value = this.value;
+    document.getElementById("afterImage").style.clipPath =
+      `inset(0 ${100 - value}% 0 0)`;
+  });
+
+  compareSlider.dispatchEvent(new Event("input"));
+}
+</script>
 </body>
 </html>
