@@ -502,6 +502,61 @@ h2 {
   max-height: 280px;
 }
 }
+  .calculator-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(231,199,104,.25);
+  background: rgba(255,255,255,.04);
+}
+
+.calculator-box label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: .35rem;
+  font-weight: 800;
+  color: #e7c768;
+}
+
+.calculator-box select {
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: #020617;
+  color: white;
+  font-weight: 700;
+}
+
+.estimate-result {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff1a8;
+}
+
+.addon-list {
+  display: grid;
+  gap: .65rem;
+  margin-top: .75rem;
+}
+
+.addon-list label {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .75rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.10);
+  color: #d9e6f3;
+}
+
+.addon-list input {
+  width: 18px;
+  height: 18px;
+}
+
 </style>
 </head>
 
@@ -572,8 +627,8 @@ h2 {
 🛡️ Licensed & Insured • 🎓 Owner's Pride Trained • 🏆 Proud IDA Member
 </div>
 <p style="margin-top:20px;">
-  <a class="btn btn-secondary" href="extracted_story.html">
-   Meet Kailer →
+<a class="btn btn-secondary" href="extracted_story.html">
+   My Story →
 </a>
 </p>
 <p><strong>Fast responses by phone, text, and Facebook Messenger.</strong></p>
@@ -779,23 +834,87 @@ No purchase necessary. Winner will be announced July 1, 2026 and posted through 
         <div class="card">
           <div class="card-copy">
             <span class="eyebrow">Packages</span>
-<h2>Professional Results Without $400+ Shop Pricing</h2>
-<p class="big-price">$150</p>
-<p style="margin-bottom:25px;"><strong>Executive Detail</strong></p>
+<h2>Premium Results Without Premium Shop Pricing</h2>
+<p class="big-price">Starting at $150</p>
+<p><strong>Executive Detail</strong></p>
+<p class="muted" style="margin-bottom:25px;">
+  A complete interior and exterior refresh designed to maintain a clean, well-cared-for vehicle.
+</p>
 
-<p class="big-price">$200</p>
-<p style="margin-bottom:25px;"><strong>Signature Detail</strong></p>
+<p class="big-price">Starting at $200</p>
+<p><strong>Signature Detail</strong></p>
+<p class="muted" style="margin-bottom:25px;">
+  Enhanced cleaning and restoration for vehicles requiring additional attention to interior and exterior surfaces.
+</p>
 
-<p class="big-price">$250</p>
-<p style="margin-bottom:25px;"><strong>Ultimate Detail</strong></p>
+<p class="big-price">Starting at $250</p>
+<p><strong>Ultimate Detail</strong></p>
+<p class="muted" style="margin-bottom:25px;">
+  Our most comprehensive detailing package, delivering the highest level of cleaning, restoration, and protection.
+</p>
 <p class="lead">
 Prices may vary based on vehicle size, condition, pet hair,
 stains, salt, mud, and overall detailing requirements.
 </p>
-          </div>
-        </div>
+<div class="calculator-box">
+  <h3>Vehicle-Specific Estimate Calculator</h3>
 
-        <div class="card" style="margin-top:20px; grid-column:1 / -1;">
+<label>Vehicle Type</label>
+<select id="vehicleSize">
+<option value="0">Sedan / Coupe</option>
+<option value="50">SUV / Crossover</option>
+<option value="50">Truck</option>
+<option value="75">Large SUV / 3-Row SUV</option>
+<option value="100">Van</option>
+</select>
+
+  <label>Service Package</label>
+  <select id="detailPackage">
+    <option value="150">Executive Detail - $150</option>
+    <option value="200">Signature Detail - $200</option>
+    <option value="250">Ultimate Detail - $250</option>
+  </select>
+
+  <label>Add-ons</label>
+
+  <div class="addon-list">
+
+    <label>
+      <input type="checkbox" class="addon" value="50">
+      Pet Hair Removal (+$50)
+    </label>
+
+    <label>
+      <input type="checkbox" class="addon" value="40">
+      Stain Treatment (+$40)
+    </label>
+
+    <label>
+      <input type="checkbox" class="addon" value="35">
+      Salt Removal (+$35)
+    </label>
+
+    <label>
+      <input type="checkbox" class="addon" value="50">
+      Odor Treatment (+$50)
+    </label>
+
+  </div>
+
+  <div class="estimate-result">
+    Estimated Quote: <span id="estimateTotal">$150</span>
+  </div>
+
+<p class="muted">
+Estimates are based on vehicle size and selected services.
+Final pricing may vary depending on vehicle condition, excessive pet hair,
+stains, salt buildup, or other detailing requirements.
+</p>
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:20px; grid-column:1 / -1;">
   <div class="card-copy" style="text-align:center;">
     <span class="eyebrow">Client Appreciation Program</span>
   <h2>Refer Friends & Save</h2>
@@ -825,17 +944,30 @@ stains, salt, mud, and overall detailing requirements.
     <p style="color:#e7c768; font-weight:bold;">
 🚗 Maintenance Memberships Coming Soon
 </p>
-    <h2>Kailer's Maintenance Program</h2>
+ <h2>Kailer's Maintenance Program</h2>
 
-    <p><strong>🥉 Bronze – $49/month</strong></p>
-    <p>Monthly vacuum, windows, dash wipe-down, and exterior wash.</p>
+<p style="color:#e7c768; font-weight:800;">
+🥉 Bronze – $49/month
+</p>
+<p>
+Monthly vacuum, windows, dash wipe-down, and exterior wash.
+</p>
 
-    <p><strong>🥈 Silver – $79/month</strong></p>
-    <p>Everything in Bronze plus tire dressing, door jamb cleaning, and added protection.</p>
+<p style="color:#e7c768; font-weight:800;">
+🥈 Silver – $79/month
+</p>
+<p>
+Everything in Bronze plus tire dressing, door jamb cleaning,
+and spray wax protection.
+</p>
 
-    <p><strong>🥇 Gold – $129/month</strong></p>
-<p>Our most complete maintenance package for customers who want their vehicle looking its best year-round.</p>
-
+<p style="color:#e7c768; font-weight:800;">
+🥇 Gold – $129/month
+</p>
+<p>
+Everything in Silver plus priority booking,
+enhanced interior touch-up, and premium exterior protection.
+</p>
 <p style="font-size:1.15rem; font-weight:bold; color:#e7c768;">
 📋 Ask About Our Maintenance Membership Waitlist
 </p>
@@ -975,13 +1107,9 @@ Maintenance memberships launching soon. Ask about joining the waitlist after you
     <div class="feature-card">
  <span class="eyebrow">My Story</span>
 
-<p style="font-weight:700;color:#e7c768;">
-From Uncle's Shop → Professional Training →
-IDA Membership → Business Owner
-</p>
 <h2>Meet Kailer</h2>
 <p style="font-size:1.1rem;font-weight:700;color:#e7c768;">
-  Owner • Detailer • Continuing Education Advocate
+Owner • Detailer • Professional Training & Continued Education
 </p>
 <h1>
   Trust Is Earned.<br>
@@ -992,13 +1120,6 @@ IDA Membership → Business Owner
   Kailer's High End Detailing was built on honesty, hard work,
   continued education, and a genuine passion for helping customers
   protect and maintain one of their largest investments.
-</p>
-
-
-<p>
-  Kailer continues to invest in training, education, and professional
-  development to improve his skills and provide better service for
-  every customer.
 </p>
 
 <p>
@@ -1020,9 +1141,9 @@ IDA Membership → Business Owner
      <div class="cta-row">
 
 
-  <a class="btn btn-secondary" href="consumer-guide.html.html">
-    Consumer Guide
-  </a>
+ <a class="btn btn-secondary" href="extracted_story.html">
+  Read My Story →
+</a>
     </div>
   </div>
 </section>
@@ -1235,19 +1356,17 @@ IDA Membership → Business Owner
       <span class="eyebrow">Service Area</span>
       <h2>Serving Edmonton & Area</h2>
 
-      <p class="lead">
-        Kailer’s High End Detailing provides professional interior and exterior
-        vehicle detailing services throughout Edmonton and the surrounding area.
-      </p>
+  <p class="lead">
+  Appointment-only detailing services for Edmonton and surrounding communities.
+</p>
     </div>
 
     <div class="card">
   <div class="card-copy">
-    <h3>Edmonton & Area</h3>
 
-    <p>
-      Proudly serving Edmonton and surrounding communities by appointment.
-    </p>
+   <p>
+  Appointment-only detailing focused on quality, convenience, and customer satisfaction.
+</p>
   </div>
 </div>
 
@@ -1390,6 +1509,36 @@ kailershighenddetailing.pro
 ⭐ Reviews
 </a>
 </div>
+<script>
+  const vehicleSize = document.getElementById("vehicleSize");
+  const detailPackage = document.getElementById("detailPackage");
+  const estimateTotal = document.getElementById("estimateTotal");
+  const addons = document.querySelectorAll(".addon");
+
+  function updateEstimate() {
+
+    let total =
+      Number(vehicleSize.value) +
+      Number(detailPackage.value);
+
+    addons.forEach(addon => {
+      if (addon.checked) {
+        total += Number(addon.value);
+      }
+    });
+
+    estimateTotal.textContent = "$" + total;
+  }
+
+  vehicleSize.addEventListener("change", updateEstimate);
+  detailPackage.addEventListener("change", updateEstimate);
+
+  addons.forEach(addon => {
+    addon.addEventListener("change", updateEstimate);
+  });
+
+  updateEstimate();
+</script>
 
 </body>
 </html>
