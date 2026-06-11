@@ -896,20 +896,20 @@ Everything in Signature plus priority booking, enhanced interior touch-ups, and 
       </p>
     </div>
 
-    <div class="grid-2">
-  <a href="consumer-guide.html">Consumer Guide</a>
+   <div class="grid-2">
+
+  <a href="consumer-guide.html" class="card">
     <div class="card-copy">
       <h3>Read The Full Consumer Guide</h3>
       <p>
         A dedicated education page that helps customers compare detailers,
         understand what affects price, and book with confidence.
       </p>
-      <p style="color:#e7c768; font-weight:900;">
+      <p style="color:#e7c768;font-weight:900;">
         Open Consumer Guide →
       </p>
     </div>
   </a>
-
       <div class="card">
         <div class="card-copy">
           <h3>What It Covers</h3>
@@ -1045,17 +1045,20 @@ Everything in Signature plus priority booking, enhanced interior touch-ups, and 
 <section class="section">
   <div class="container">
 
-    <div class="section-head">
     <div class="card">
-  <div class="card-copy" style="text-align:center;">
-    <h2>View Our Gallery</h2>
-    <p>See real detailing results and vehicle transformations.</p>
+      <div class="card-copy" style="text-align:center;">
+        <span class="eyebrow">Gallery</span>
+        <h2>View Our Gallery</h2>
+        <p>See real detailing results and vehicle transformations.</p>
 
-    <a class="btn btn-primary" href="gallery.html">
-      View Gallery →
-    </a>
+        <a class="btn btn-primary" href="gallery.html">
+          View Gallery →
+        </a>
+      </div>
+    </div>
+
   </div>
-</div>
+</section>
     
 
 
@@ -1295,51 +1298,7 @@ kailershighenddetailing.pro
 ⭐ Reviews
 </a>
 </div>
-<script>
-  const vehicleSize = document.getElementById("vehicleSize");
-  const detailPackage = document.getElementById("detailPackage");
-  const estimateTotal = document.getElementById("estimateTotal");
-  const addons = document.querySelectorAll(".addon");
 
-  const prices = {
-    car: {
-      executive: 150,
-      signature: 200,
-      ultimate: 250
-    },
-    suv: {
-      executive: 175,
-      signature: 225,
-      ultimate: 275
-    },
-    large: {
-      executive: 200,
-      signature: 250,
-      ultimate: 300
-    }
-  };
-
-  function updateEstimate() {
-    let total = prices[vehicleSize.value][detailPackage.value];
-
-    addons.forEach(addon => {
-      if (addon.checked) {
-        total += Number(addon.value);
-      }
-    });
-
-    estimateTotal.textContent = "$" + total;
-  }
-
-  vehicleSize.addEventListener("change", updateEstimate);
-  detailPackage.addEventListener("change", updateEstimate);
-
-  addons.forEach(addon => {
-    addon.addEventListener("change", updateEstimate);
-  });
-
-  updateEstimate();
-</script>
 
 <script>
 const observer = new IntersectionObserver((entries) => {
