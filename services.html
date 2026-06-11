@@ -4,10 +4,208 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | Kailer's High End Detailing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="K LOGO.png">
+
+<style>
+:root {
+  --bg:#020617;
+  --panel:#071826;
+  --blue2:#38bdf8;
+  --gold:#e7c768;
+  --text:#ffffff;
+  --muted:#aebccd;
+  --line:rgba(255,255,255,.10);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Manrope',sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(56,189,248,.12), transparent 30%),
+    radial-gradient(circle at top left, rgba(231,199,104,.08), transparent 28%),
+    linear-gradient(180deg,#010409,#030712,#07111f,#030712,#010409);
+}
+a { color:inherit; text-decoration:none; }
+.container { width:min(1180px, calc(100% - 2rem)); margin:0 auto; }
+.topbar {
+  position:sticky; top:0; z-index:20;
+  background:rgba(2,6,23,.78);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid rgba(231,199,104,.16);
+}
+.nav {
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding:.85rem 0;
+}
+.brand { display:flex; align-items:center; gap:.75rem; font-weight:900; text-transform:uppercase; }
+.brand img { width:52px; height:52px; object-fit:contain; border-radius:14px; }
+.links { display:flex; gap:1rem; flex-wrap:wrap; color:var(--muted); font-weight:800; }
+.links a:hover { color:var(--blue2); }
+
+.section { padding:clamp(4rem, 8vw, 8rem) 0; }
+.eyebrow {
+  display:inline-block; padding:.45rem .8rem; border-radius:999px;
+  border:1px solid rgba(56,189,248,.28);
+  background:rgba(56,189,248,.08);
+  color:#bae6fd; font-size:.8rem; font-weight:900;
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:1rem;
+}
+h1,h2 {
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:-.03em;
+}
+h1 { font-size:clamp(2.8rem, 6vw, 5.2rem); line-height:.95; margin-bottom:1rem; }
+h2 { font-size:clamp(2rem, 4vw, 3.2rem); margin-bottom:1rem; }
+h3 { font-size:1.35rem; margin-bottom:.65rem; }
+.gold { color:var(--gold); }
+.lead { color:#d9e6f3; font-size:1.08rem; line-height:1.75; max-width:75ch; }
+.muted { color:var(--muted); }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; }
+.card {
+  background:linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
+             linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
+  border:1px solid rgba(255,255,255,.13);
+  border-top:1px solid rgba(231,199,104,.18);
+  border-radius:26px;
+  box-shadow:0 20px 55px rgba(0,0,0,.32);
+  overflow:hidden;
+}
+.card-copy { padding:1.25rem; }
+.photo {
+  aspect-ratio:4/3;
+  background:#0f172a center/cover no-repeat;
+}
+.btn {
+  display:inline-block;
+  padding:1rem 1.25rem;
+  border-radius:999px;
+  font-weight:900;
+  text-align:center;
+  margin-top:1rem;
+}
+.btn-primary {
+  background:linear-gradient(135deg, var(--gold), #fff1a8);
+  color:#08111f;
+}
+.btn-secondary {
+  border:1px solid rgba(56,189,248,.35);
+  background:rgba(255,255,255,.04);
+  color:white;
+}
+.cta-row { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
+footer {
+  padding:2rem 0 3rem;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  text-align:center;
+}
+@media (max-width:920px) {
+  .grid-3 { grid-template-columns:1fr; }
+  .links { display:none; }
+}
+</style>
 </head>
+
 <body>
-<h1>Services</h1>
-<p>Paste the content from your current services section here.</p>
-<p><a href="index.html">← Back to Home</a></p>
+
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="K LOGO.png" alt="Kailer's High End Detailing Logo">
+      <span>Kailer's High End Detailing</span>
+    </a>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section class="section">
+  <div class="container">
+
+    <span class="eyebrow">Services</span>
+    <h1>Professional Car Detailing <span class="gold">Services in Edmonton</span></h1>
+
+    <p class="lead">
+      Kailer's High End Detailing provides professional interior detailing,
+      exterior detailing, deep cleaning, pet hair removal, stain removal,
+      and full vehicle detailing services throughout Edmonton and surrounding areas.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:5879909990">📞 Call Now</a>
+      <a class="btn btn-primary" href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book Online</a>
+      <a class="btn btn-secondary" href="index.html">← Back to Home</a>
+    </div>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1600&q=80')"></div>
+        <div class="card-copy">
+          <h3>Interior Detailing</h3>
+          <p class="lead" style="font-size:1rem;">
+            Deep cleaning for seats, carpets, mats, plastics, cup holders, panels, vents, and hard-to-reach areas.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1600&q=80')"></div>
+        <div class="card-copy">
+          <h3>Exterior Detailing</h3>
+          <p class="lead" style="font-size:1rem;">
+            Careful exterior cleaning, wheels, trim, and a clean finish that helps your vehicle stand out.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80')"></div>
+        <div class="card-copy">
+          <h3>Full Detail</h3>
+          <p class="lead" style="font-size:1rem;">
+            A full interior and exterior service for customers who want the best overall reset and presentation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top:2rem;">
+      <div class="card-copy" style="text-align:center;">
+        <span class="eyebrow">Our Promise</span>
+        <h2>24-Hour Recheck Guarantee</h2>
+        <p class="lead" style="margin:0 auto;">
+          If we missed something, contact us within 24 hours and we'll make it right.
+          Customer satisfaction and attention to detail are our priority.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Kailer's High End Detailing
+    <p style="font-size:1.2rem;font-weight:700;color:#e7c768;margin:15px 0;">
+      Professional Detailing • Honest Service • Edmonton, Alberta
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
