@@ -4,10 +4,339 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing | Kailer's High End Detailing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="K LOGO.png">
+
+<style>
+:root {
+  --bg:#020617;
+  --blue2:#38bdf8;
+  --gold:#e7c768;
+  --text:#ffffff;
+  --muted:#aebccd;
+  --line:rgba(255,255,255,.10);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Manrope',sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(56,189,248,.12), transparent 30%),
+    radial-gradient(circle at top left, rgba(231,199,104,.08), transparent 28%),
+    linear-gradient(180deg,#010409,#030712,#07111f,#030712,#010409);
+}
+a { color:inherit; text-decoration:none; }
+.container { width:min(1180px, calc(100% - 2rem)); margin:0 auto; }
+.topbar {
+  position:sticky; top:0; z-index:20;
+  background:rgba(2,6,23,.78);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid rgba(231,199,104,.16);
+}
+.nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 0; }
+.brand { display:flex; align-items:center; gap:.75rem; font-weight:900; text-transform:uppercase; }
+.brand img { width:52px; height:52px; object-fit:contain; border-radius:14px; }
+.links { display:flex; gap:1rem; flex-wrap:wrap; color:var(--muted); font-weight:800; }
+.links a:hover { color:var(--blue2); }
+.section { padding:clamp(4rem,8vw,8rem) 0; }
+.eyebrow {
+  display:inline-block; padding:.45rem .8rem; border-radius:999px;
+  border:1px solid rgba(56,189,248,.28);
+  background:rgba(56,189,248,.08);
+  color:#bae6fd; font-size:.8rem; font-weight:900;
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:1rem;
+}
+h1,h2 { font-family:'Cormorant Garamond',serif; letter-spacing:-.03em; }
+h1 { font-size:clamp(2.8rem,6vw,5.2rem); line-height:.95; margin-bottom:1rem; }
+h2 { font-size:clamp(2rem,4vw,3.2rem); margin-bottom:1rem; }
+h3 { margin-top:1.5rem; margin-bottom:.65rem; }
+.gold { color:var(--gold); }
+.lead { color:#d9e6f3; font-size:1.08rem; line-height:1.75; max-width:75ch; }
+.muted { color:var(--muted); }
+.grid-2 { display:grid; grid-template-columns:1.2fr .8fr; gap:1rem; }
+.card {
+  background:linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
+             linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
+  border:1px solid rgba(255,255,255,.13);
+  border-top:1px solid rgba(231,199,104,.18);
+  border-radius:26px;
+  box-shadow:0 20px 55px rgba(0,0,0,.32);
+}
+.card-copy { padding:1.25rem; }
+table { width:100%; border-collapse:collapse; color:white; margin:20px 0; }
+th,td { padding:14px; border:1px solid rgba(255,255,255,.12); }
+th { background:rgba(231,199,104,.14); }
+td { text-align:center; }
+td:first-child { text-align:left; }
+ul { padding-left:1.2rem; color:#d9e6f3; }
+li { margin:.4rem 0; }
+.btn {
+  display:inline-block; padding:1rem 1.25rem; border-radius:999px;
+  font-weight:900; text-align:center; margin-top:1rem;
+}
+.btn-primary { background:linear-gradient(135deg,var(--gold),#fff1a8); color:#08111f; }
+.btn-secondary { border:1px solid rgba(56,189,248,.35); background:rgba(255,255,255,.04); color:white; }
+.cta-row { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
+.calculator-box {
+  margin-top:2rem; padding:1.5rem; border-radius:24px;
+  border:1px solid rgba(231,199,104,.25);
+  background:rgba(255,255,255,.04);
+}
+.calculator-box label {
+  display:block; margin-top:1rem; margin-bottom:.35rem;
+  font-weight:800; color:var(--gold);
+}
+.calculator-box select {
+  width:100%; padding:.9rem 1rem; border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background:#020617; color:white; font-weight:700;
+}
+.addon-list { display:grid; gap:.65rem; margin-top:.75rem; }
+.addon-list label {
+  display:flex; align-items:center; gap:.6rem; padding:.75rem;
+  border-radius:14px; background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.10); color:#d9e6f3;
+}
+.estimate-result {
+  margin-top:1.5rem; font-size:1.4rem; font-weight:900; color:#fff1a8;
+}
+footer { padding:2rem 0 3rem; border-top:1px solid var(--line); color:var(--muted); text-align:center; }
+@media (max-width:920px) {
+  .grid-2 { grid-template-columns:1fr; }
+  .links { display:none; }
+}
+</style>
 </head>
+
 <body>
-<h1>Pricing</h1>
-<p>Paste the content from your current pricing section here.</p>
-<p><a href="index.html">← Back to Home</a></p>
+
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="K LOGO.png" alt="Kailer's High End Detailing Logo">
+      <span>Kailer's High End Detailing</span>
+    </a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<section class="section">
+  <div class="container">
+
+    <span class="eyebrow">Pricing</span>
+    <h1>Premium Results Without <span class="gold">Premium Shop Pricing</span></h1>
+
+    <p class="lead">
+      All package prices include both interior and exterior detailing. Interior-only and exterior-only services are also available below.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:5879909990">📞 Call Now</a>
+      <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">📋 Get Free Quote</a>
+      <a class="btn btn-secondary" href="index.html">← Back to Home</a>
+    </div>
+
+    <div class="grid-2" style="margin-top:2rem;">
+
+      <div class="card">
+        <div class="card-copy">
+
+          <h2>Detailing Packages</h2>
+
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Vehicle Type</th>
+                  <th>Executive</th>
+                  <th>Signature</th>
+                  <th>Ultimate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Car</td><td>$150</td><td>$200</td><td>$250</td></tr>
+                <tr><td>SUV / Truck</td><td>$175</td><td>$225</td><td>$275</td></tr>
+                <tr><td>Large SUV / Van</td><td>$200</td><td>$250</td><td>$300</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table>
+              <tr>
+                <th>Executive</th>
+                <th>Signature</th>
+                <th>Ultimate</th>
+              </tr>
+              <tr>
+                <td><strong>Maintenance Detail</strong><br>Approx. 3–4 Hours</td>
+                <td><strong>Deep Clean Detail</strong><br>Approx. 5–6 Hours</td>
+                <td><strong>Complete Restoration</strong><br>Approx. 6–8+ Hours</td>
+              </tr>
+            </table>
+          </div>
+
+          <h3>Why Detailing Times Vary</h3>
+          <p>
+            Many customers are surprised to learn that professional detailing often takes several hours to complete.
+            Unlike a quick wash and vacuum, detailing involves careful cleaning, inspection, and attention to hundreds
+            of interior and exterior surfaces.
+          </p>
+
+          <p>
+            The time required depends on vehicle size, condition, pet hair, stains, salt buildup,
+            and the level of cleaning or restoration needed.
+          </p>
+
+          <ul>
+            <li><strong>Executive Detail:</strong> Approx. 3–4 hours</li>
+            <li><strong>Signature Detail:</strong> Approx. 5–6 hours</li>
+            <li><strong>Ultimate Detail:</strong> Approx. 6–8+ hours</li>
+          </ul>
+
+          <h3>Interior Only</h3>
+          <p><strong>For customers who only need the inside cleaned.</strong></p>
+
+          <div style="overflow-x:auto;">
+            <table>
+              <tr><th>Vehicle Type</th><th>Price</th></tr>
+              <tr><td>Car</td><td>$125</td></tr>
+              <tr><td>SUV / Truck</td><td>$150</td></tr>
+              <tr><td>Large SUV / Van</td><td>$175</td></tr>
+            </table>
+          </div>
+
+          <ul>
+            <li>Interior vacuum</li>
+            <li>Interior surfaces wiped down</li>
+            <li>Interior windows cleaned</li>
+            <li>Floor mats cleaned</li>
+            <li>Light dust and debris removal</li>
+          </ul>
+
+          <h3>Exterior Only</h3>
+          <p><strong>For customers who only need the outside cleaned.</strong></p>
+
+          <div style="overflow-x:auto;">
+            <table>
+              <tr><th>Vehicle Type</th><th>Price</th></tr>
+              <tr><td>Car</td><td>$60</td></tr>
+              <tr><td>SUV / Truck</td><td>$75</td></tr>
+              <tr><td>Large SUV / Van</td><td>$90</td></tr>
+            </table>
+          </div>
+
+          <ul>
+            <li>Exterior hand wash</li>
+            <li>Wheels cleaned</li>
+            <li>Tire dressing</li>
+            <li>Exterior wipe down</li>
+          </ul>
+
+          <p class="lead">
+            Pet hair removal and excessive stains/heavy soil are available as add-ons.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <span class="eyebrow">Estimate Calculator</span>
+          <h2>Vehicle-Specific Estimate Calculator</h2>
+
+          <div class="calculator-box">
+
+            <label>Vehicle Type</label>
+            <select id="vehicleSize">
+              <option value="car">Car</option>
+              <option value="suv">SUV / Truck</option>
+              <option value="large">Large SUV / Van</option>
+            </select>
+
+            <label>Service Package</label>
+            <select id="detailPackage">
+              <option value="executive">Executive Detail</option>
+              <option value="signature">Signature Detail</option>
+              <option value="ultimate">Ultimate Detail</option>
+            </select>
+
+            <label>Add-ons</label>
+
+            <div class="addon-list">
+              <label><input type="checkbox" class="addon" value="50"> Pet Hair Removal (+$50)</label>
+              <label><input type="checkbox" class="addon" value="50"> Excessive Stains / Heavy Soil (+$50)</label>
+            </div>
+
+            <div class="estimate-result">
+              Estimated Quote: <span id="estimateTotal">$150</span>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">
+                📋 Request This Estimate
+              </a>
+            </div>
+
+            <p class="muted">
+              Estimates are based on vehicle size, selected package, and add-ons.
+              Final pricing may vary for extremely neglected vehicles, excessive pet hair,
+              severe staining, salt buildup, mud, or other detailing requirements.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Kailer's High End Detailing
+    <p style="font-size:1.2rem;font-weight:700;color:#e7c768;margin:15px 0;">
+      Professional Detailing • Honest Service • Edmonton, Alberta
+    </p>
+  </div>
+</footer>
+
+<script>
+const vehicleSize = document.getElementById("vehicleSize");
+const detailPackage = document.getElementById("detailPackage");
+const estimateTotal = document.getElementById("estimateTotal");
+const addons = document.querySelectorAll(".addon");
+
+const prices = {
+  car: { executive:150, signature:200, ultimate:250 },
+  suv: { executive:175, signature:225, ultimate:275 },
+  large: { executive:200, signature:250, ultimate:300 }
+};
+
+function updateEstimate() {
+  let total = prices[vehicleSize.value][detailPackage.value];
+  addons.forEach(addon => {
+    if (addon.checked) total += Number(addon.value);
+  });
+  estimateTotal.textContent = "$" + total;
+}
+
+vehicleSize.addEventListener("change", updateEstimate);
+detailPackage.addEventListener("change", updateEstimate);
+addons.forEach(addon => addon.addEventListener("change", updateEstimate));
+updateEstimate();
+</script>
+
 </body>
 </html>
