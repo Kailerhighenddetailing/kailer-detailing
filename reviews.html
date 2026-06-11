@@ -4,10 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reviews | Kailer's High End Detailing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:Manrope,sans-serif;
+background:#020617;
+color:white;
+margin:0;
+padding:0;
+}
+.container{
+width:min(1200px,calc(100% - 2rem));
+margin:auto;
+}
+.section{
+padding:80px 0;
+}
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3rem,6vw,5rem);
+margin-bottom:20px;
+}
+.card{
+background:#071826;
+border-radius:24px;
+overflow:hidden;
+margin-bottom:20px;
+}
+.review-img{
+width:100%;
+display:block;
+}
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+text-decoration:none;
+margin:10px;
+}
+.gold{
+color:#e7c768;
+}
+.primary{
+background:linear-gradient(135deg,#e7c768,#fff1a8);
+color:#08111f;
+}
+.secondary{
+border:1px solid #38bdf8;
+color:white;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+@media(max-width:900px){
+.grid{
+grid-template-columns:1fr;
+}
+}
+</style>
 </head>
+
 <body>
-<h1>Reviews</h1>
-<p>Paste the content from your current reviews section here.</p>
-<p><a href="index.html">← Back to Home</a></p>
+
+<section class="section">
+<div class="container">
+
+<h1>Customer <span class="gold">Reviews</span></h1>
+
+<p>
+See what customers are saying about Kailer's High End Detailing.
+Every review helps build trust and confidence for future customers.
+</p>
+
+<a class="btn primary"
+href="https://g.page/r/CcilDK6TDGr5EBM/review"
+target="_blank">
+⭐ Leave a Google Review
+</a>
+
+<a class="btn secondary"
+href="index.html">
+← Back to Home
+</a>
+
+<div class="grid" style="margin-top:40px;">
+
+<div class="card">
+<img class="review-img" src="r10.jpg">
+</div>
+
+<div class="card">
+<img class="review-img" src="r11.jpg">
+</div>
+
+<div class="card">
+<img class="review-img" src="r12.jpg">
+</div>
+
+<div class="card">
+<img class="review-img" src="reviews.jpg">
+</div>
+
+</div>
+
+</div>
+</section>
+
 </body>
 </html>
