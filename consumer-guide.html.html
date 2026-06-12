@@ -577,17 +577,31 @@ body {
   .checklist-grid { grid-template-columns: 1fr; }
   .guide-sidebar { position: static; }
 }
- @media (max-width: 768px) {
-  .nav-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+
+/* Compact navigation card */
+.compact-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.compact-nav .btn {
+  width: 100%;
+  padding: .85rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .compact-nav {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .nav-buttons .btn {
-    width: 100%;
+  .compact-nav .btn {
+    font-size: .9rem;
+    padding: .85rem .7rem;
   }
-}   
+}
+
 </style>
 </head>
 <body>
@@ -612,14 +626,13 @@ body {
         <span class="eyebrow">Navigation</span>
         <h2 style="color:#e7c768;">What Are You Looking For?</h2>
 
-     <div class="cta-row nav-buttons" style="justify-content:center;">
-  <a class="btn btn-secondary" href="index.html">🏠 Home</a>
-<a class="btn btn-secondary" href="services.html">🧼 Services</a>
-<a class="btn btn-secondary" href="pricing.html">💲 Pricing</a>
-<a class="btn btn-secondary" href="gallery.html">📸 Gallery</a>
-<a class="btn btn-secondary" href="reviews.html">⭐ Reviews</a>
-<a class="btn btn-secondary" href="faq.html">❓ FAQ</a>
-<a class="btn btn-secondary" href="contact.html">📞 Contact</a>
+        <div class="compact-nav">
+          <a class="btn btn-secondary" href="index.html">🏠 Home</a>
+          <a class="btn btn-secondary" href="services.html">🧼 Services</a>
+          <a class="btn btn-secondary" href="pricing.html">💲 Pricing</a>
+          <a class="btn btn-secondary" href="gallery.html">📸 Gallery</a>
+          <a class="btn btn-secondary" href="reviews.html">⭐ Reviews</a>
+          <a class="btn btn-secondary" href="faq.html">❓ FAQ</a>
         </div>
       </div>
     </div>
@@ -646,15 +659,13 @@ body {
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">📋 Request Quote</a>
-        <a class="btn btn-secondary" href="extracted_story.html">Read Kailer’s Story</a>
       </div>
     </div>
     <div class="guide-feature-panel">
       <span class="eyebrow">Book With Confidence</span>
-      <h2>Trust is earned before the detail even starts.</h2>
+      <h2>Compare more than price.</h2>
       <p>
-        The right detailer should explain the service, understand your vehicle’s condition,
-        communicate clearly, and take the time needed to do the job properly.
+        Use this guide to check service details, time expectations, insurance, training, reviews, and communication before booking.
       </p>
       <div class="guide-stat-grid">
         <div class="guide-stat"><strong>Licensed</strong><span class="muted">Business accountability</span></div>
@@ -849,15 +860,13 @@ body {
   <div class="container">
     <div class="final-guide-cta">
       <span class="eyebrow">Book With Confidence</span>
-      <h2>Trust is earned. Choose a detailer who values your vehicle.</h2>
+      <h2>Ready to request a quote?</h2>
       <p class="lead" style="margin:0 auto;">
         Whether you need a light refresh, a deep interior reset, or long-term maintenance care,
         Kailer’s High End Detailing is built on honesty, continued training, and attention to detail.
       </p>
       <div class="cta-row" style="justify-content:center;">
         <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">📋 Get Free Quote</a>
-        <a class="btn btn-primary" href="tel:5879909990">📞 Call Now</a>
-        <a class="btn btn-secondary" href="extracted_story.html">Read Kailer’s Story</a>
       </div>
     </div>
   </div>
