@@ -541,37 +541,38 @@ h2 {
   display: block;
 }
 
+media (max-width: 768px) {
+  .hide-mobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .hide-mobile {
     display: none;
   }
-}
 
-@media (max-width: 920px) {
-  .hero-grid,
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
+  .links {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: .5rem;
   }
 
-.links {
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  gap: .5rem;
-}
-
-.links div {
-  width: 100%;
-  text-align: center !important;
-}
-
-  .stats {
-    grid-template-columns: 1fr;
+  .links div {
+    width: 100%;
+    text-align: center !important;
   }
 
-  .logo-feature {
-    min-height: 300px;
+  .links a {
+    border: 1px solid rgba(56,189,248,.35);
+    background: rgba(255,255,255,.05);
+    padding: .45rem .7rem;
+    border-radius: 999px;
   }
 
   .brand span {
@@ -586,9 +587,9 @@ h2 {
     height: 180px;
   }
 
-.cert-img {
-  max-height: 280px;
-}
+  .cert-img {
+    max-height: 280px;
+  }
 }
   .calculator-box {
   margin-top: 2rem;
