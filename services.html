@@ -1,111 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Kailer's High End Detailing</title>
+  <title>Services | Kailer's High End Detailing</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="K LOGO.png">
+  <script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"AutoDetailing",
+ "name":"Kailer's High End Detailing",
+ "telephone":"+1-587-990-9990",
+ "url":"https://kailershighenddetailing.pro",
+ "address":{
+   "@type":"PostalAddress",
+   "addressLocality":"Edmonton",
+   "addressRegion":"AB",
+   "addressCountry":"CA"
+ }
+}
+</script>
 
-<style>
-:root {
-  --bg:#020617;
-  --panel:#071826;
-  --blue2:#38bdf8;
-  --gold:#e7c768;
-  --text:#ffffff;
-  --muted:#aebccd;
-  --line:rgba(255,255,255,.10);
-}
-* { box-sizing:border-box; margin:0; padding:0; }
-body {
-  font-family:'Manrope',sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(circle at top right, rgba(56,189,248,.12), transparent 30%),
-    radial-gradient(circle at top left, rgba(231,199,104,.08), transparent 28%),
-    linear-gradient(180deg,#010409,#030712,#07111f,#030712,#010409);
-}
-a { color:inherit; text-decoration:none; }
-.container { width:min(1180px, calc(100% - 2rem)); margin:0 auto; }
-.topbar {
-  position:sticky; top:0; z-index:20;
-  background:rgba(2,6,23,.78);
-  backdrop-filter:blur(22px);
-  border-bottom:1px solid rgba(231,199,104,.16);
-}
-.nav {
-  display:flex; align-items:center; justify-content:space-between;
-  gap:1rem; padding:.85rem 0;
-}
-.brand { display:flex; align-items:center; gap:.75rem; font-weight:900; text-transform:uppercase; }
-.brand img { width:52px; height:52px; object-fit:contain; border-radius:14px; }
-.links { display:flex; gap:1rem; flex-wrap:wrap; color:var(--muted); font-weight:800; }
-.links a:hover { color:var(--blue2); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Edmonton car detailing services including interior detailing, exterior detailing, full vehicle details, pet hair removal, stain treatment, and vehicle cleaning.">
 
-.section { padding:clamp(4rem, 8vw, 8rem) 0; }
-.eyebrow {
-  display:inline-block; padding:.45rem .8rem; border-radius:999px;
-  border:1px solid rgba(56,189,248,.28);
-  background:rgba(56,189,248,.08);
-  color:#bae6fd; font-size:.8rem; font-weight:900;
-  text-transform:uppercase; letter-spacing:.08em; margin-bottom:1rem;
-}
-h1,h2 {
-  font-family:'Cormorant Garamond',serif;
-  letter-spacing:-.03em;
-}
-h1 { font-size:clamp(2.8rem, 6vw, 5.2rem); line-height:.95; margin-bottom:1rem; }
-h2 { font-size:clamp(2rem, 4vw, 3.2rem); margin-bottom:1rem; }
-h3 { font-size:1.35rem; margin-bottom:.65rem; }
-.gold { color:var(--gold); }
-.lead { color:#d9e6f3; font-size:1.08rem; line-height:1.75; max-width:75ch; }
-.muted { color:var(--muted); }
-.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; }
-.card {
-  background:linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
-             linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
-  border:1px solid rgba(255,255,255,.13);
-  border-top:1px solid rgba(231,199,104,.18);
-  border-radius:26px;
-  box-shadow:0 20px 55px rgba(0,0,0,.32);
-  overflow:hidden;
-}
-.card-copy { padding:1.25rem; }
-.photo {
-  aspect-ratio:4/3;
-  background:#0f172a center/cover no-repeat;
-}
-.btn {
-  display:inline-block;
-  padding:1rem 1.25rem;
-  border-radius:999px;
-  font-weight:900;
-  text-align:center;
-  margin-top:1rem;
-}
-.btn-primary {
-  background:linear-gradient(135deg, var(--gold), #fff1a8);
-  color:#08111f;
-}
-.btn-secondary {
-  border:1px solid rgba(56,189,248,.35);
-  background:rgba(255,255,255,.04);
-  color:white;
-}
-.cta-row { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
-footer {
-  padding:2rem 0 3rem;
-  border-top:1px solid var(--line);
-  color:var(--muted);
-  text-align:center;
-}
-@media (max-width:920px) {
-  .grid-3 { grid-template-columns:1fr; }
-  .links { display:none; }
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="K LOGO.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#020617">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="K LOGO.png">
+
+  <style>
+    :root {
+      --bg:#020617;
+      --panel:#071826;
+      --panel2:#0f172a;
+      --blue:#0ea5e9;
+      --blue2:#38bdf8;
+      --gold:#e7c768;
+      --text:#ffffff;
+      --muted:#aebccd;
+      --line:rgba(255,255,255,.12);
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      font-family:'Manrope',sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(56,189,248,.14), transparent 30%),
+        radial-gradient(circle at top left, rgba(231,199,104,.10), transparent 28%),
+        linear-gradient(180deg,#020617 0%,#071826 52%,#020617 100%);
+      line-height:1.7;
+      padding-bottom:80px;
+    }
+
+    img { max-width:100%; display:block; }
+
+    a { color:inherit; text-decoration:none; }
+
+    .container {
+      width:min(1180px, calc(100% - 2rem));
+      margin:0 auto;
+    }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(2,6,23,.88);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:.85rem 0;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      font-weight:900;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+      line-height:1.1;
+    }
+
+    .brand img {
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:14px;
+      filter:drop-shadow(0 0 12px rgba(56,189,248,.35));
+    }
+
+    .links {
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      color:var(--muted);
+      font-weight:800;
+      font-size:.92rem;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .links a:hover { color:var(--blue2); }
+
+    .hero {
+      padding:5.5rem 0 3rem;
+      text-align:center;
+    }
+
+    .section { padding:4rem 0; }
+
+    .eyebrow {
+      display:inline-block;
+      padding:.45rem .8rem;
+      border-radius:999px;
+      border:1px solid rgba(56,189,248,.28);
+      background:rgba(56,189,248,.08);
+      color:#bae6fd;
+      font-size:.8rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:1rem;
+    }
+
+    h1 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(3rem,6vw,5.8rem);
+      line-height:.95;
+      margin-bottom:1.1rem;
+      letter-spacing:-.04em;
+    }
+
+    h2 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2rem,3.8vw,3.2rem);
+      line-height:1.05;
+      margin-bottom:1rem;
+      letter-spacing:-.03em;
+    }
+
+    h3 {
+      font-size:1.28rem;
+      margin-bottom:.65rem;
+      color:#fff1a8;
+    }
+
+    p { margin-bottom:1rem; }
+
+    ul {
+      padding-left:1.2rem;
+      color:#d9e6f3;
+    }
+
+    li { margin:.45rem 0; }
+
+    .gold {
+      color:var(--gold);
+      text-shadow:0 0 18px rgba(231,199,104,.28);
+    }
+
+    .lead {
+      color:#d9e6f3;
+      font-size:1.1rem;
+      line-height:1.78;
+      max-width:780px;
+      margin:0 auto;
+    }
+
+    .muted { color:var(--muted); }
+
+    .btn {
+      display:inline-block;
+      padding:.95rem 1.3rem;
+      border-radius:999px;
+      font-weight:900;
+      text-align:center;
+      transition:.2s ease;
+      margin:.4rem;
+    }
+
+    .btn:hover { transform:translateY(-2px); }
+
+    .btn-primary {
+      background:linear-gradient(135deg,var(--gold),#fff1a8);
+      color:#08111f;
+      box-shadow:0 0 24px rgba(212,175,55,.25);
+    }
+
+    .btn-secondary {
+      border:1px solid rgba(56,189,248,.38);
+      background:rgba(255,255,255,.04);
+      color:white;
+    }
+
+    .card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)),
+        linear-gradient(180deg, rgba(15,23,42,.80), rgba(7,24,38,.96));
+      border:1px solid var(--line);
+      border-top:1px solid rgba(231,199,104,.20);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 22px 60px rgba(0,0,0,.34);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .card-copy { padding:1.5rem; }
+
+    .service-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.2rem;
+    }
+
+    .service-card {
+      min-height:100%;
+    }
+
+    .photo {
+      aspect-ratio:4/3;
+      background:#0f172a center/cover no-repeat;
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .feature-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin-top:1.5rem;
+    }
+
+    .feature-item {
+      padding:1.2rem;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      font-weight:800;
+    }
+
+    .promise-panel {
+      text-align:center;
+      padding:2rem;
+      border-radius:30px;
+      border:1px solid rgba(231,199,104,.28);
+      background:
+        radial-gradient(circle at top, rgba(231,199,104,.14), transparent 35%),
+        linear-gradient(180deg, rgba(15,23,42,.86), rgba(2,6,23,.96));
+      box-shadow:0 24px 60px rgba(0,0,0,.30);
+    }
+
+    .process-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+      margin-top:1.5rem;
+    }
+
+    .process-step {
+      padding:1.25rem;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025)),
+        linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.94));
+    }
+
+    .step-number {
+      display:inline-grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--gold),#fff1a8);
+      color:#08111f;
+      font-weight:900;
+      margin-bottom:1rem;
+      box-shadow:0 0 22px rgba(231,199,104,.25);
+    }
+
+    footer {
+      padding:2rem 0 3rem;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .mobile-bar { display:none; }
+
+    @media (max-width:920px) {
+      .service-grid,
+      .feature-grid,
+      .process-grid {
+        grid-template-columns:1fr;
+      }
+
+      .links { display:none; }
+
+      .brand span { font-size:.85rem; }
+    }
+
+    @media (max-width:768px) {
+      .section { padding:3.2rem 0; }
+
+      .hero { padding:4rem 0 2rem; }
+
+      .mobile-bar {
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100%;
+        background:#020617;
+        display:flex;
+        justify-content:space-around;
+        padding:14px 8px;
+        z-index:9999;
+        border-top:1px solid var(--line);
+      }
+
+      .mobile-bar a {
+        color:white;
+        font-weight:900;
+        font-size:.9rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -118,76 +352,193 @@ footer {
     </a>
 
     <div class="links">
-     <a href="index.html">← Back Home</a>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </div>
 
-<main>
-
-<section class="section">
+<section class="hero">
   <div class="container">
-
     <span class="eyebrow">Services</span>
     <h1>Professional Car Detailing <span class="gold">Services in Edmonton</span></h1>
 
     <p class="lead">
-      Kailer's High End Detailing provides professional interior detailing,
-      exterior detailing, deep cleaning, pet hair removal, stain removal,
-      and full vehicle detailing services throughout Edmonton and surrounding areas.
+      Interior detailing, exterior detailing, full vehicle details, pet hair removal,
+      stain treatment, and careful vehicle cleaning for Edmonton and surrounding areas.
     </p>
 
-    <div class="cta-row">
-      <a class="btn btn-primary" href="tel:5879909990">📞 Call Now</a>
-      <a class="btn btn-primary" href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book Online</a>
-      <a class="btn btn-secondary" href="index.html">← Back to Home</a>
+    <div style="margin-top:1.5rem;">
+      <a class="btn btn-primary"
+         href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start"
+         target="_blank"
+         rel="noopener noreferrer">
+        📅 Book Online
+      </a>
+
+      <a class="btn btn-secondary"
+         href="https://forms.gle/m55AUGRyMztN163B9"
+         target="_blank"
+         rel="noopener noreferrer">
+        📋 Get Free Quote
+      </a>
     </div>
+  </div>
+</section>
 
-    <div class="grid-3">
+<main id="top">
 
-      <div class="card">
+<section class="section">
+  <div class="container">
+
+    <div class="service-grid">
+
+      <div class="card service-card">
         <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1600&q=80')"></div>
         <div class="card-copy">
+          <span class="eyebrow">Interior</span>
           <h3>Interior Detailing</h3>
-          <p class="lead" style="font-size:1rem;">
-            Deep cleaning for seats, carpets, mats, plastics, cup holders, panels, vents, and hard-to-reach areas.
+          <p>
+            Deep interior cleaning for seats, carpets, mats, plastics, cup holders,
+            panels, vents, door jambs, and hard-to-reach areas.
           </p>
+          <ul>
+            <li>Vacuuming and detailed interior cleaning</li>
+            <li>Seats, carpets, mats, panels, and vents</li>
+            <li>Pet hair, stains, salt, and spills when needed</li>
+          </ul>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card service-card">
         <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1600&q=80')"></div>
         <div class="card-copy">
+          <span class="eyebrow">Exterior</span>
           <h3>Exterior Detailing</h3>
-          <p class="lead" style="font-size:1rem;">
-            Careful exterior cleaning, wheels, trim, and a clean finish that helps your vehicle stand out.
+          <p>
+            Careful exterior cleaning focused on a cleaner finish, wheels, trim,
+            and improved vehicle presentation.
           </p>
+          <ul>
+            <li>Exterior wash and finish cleaning</li>
+            <li>Wheels, tires, trim, and exterior details</li>
+            <li>Protection options depending on the service</li>
+          </ul>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card service-card">
         <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80')"></div>
         <div class="card-copy">
-          <h3>Full Detail</h3>
-          <p class="lead" style="font-size:1rem;">
-            A full interior and exterior service for customers who want the best overall reset and presentation.
+          <span class="eyebrow">Complete</span>
+          <h3>Full Vehicle Detail</h3>
+          <p>
+            A complete interior and exterior service for customers who want the best
+            overall reset and presentation.
           </p>
+          <ul>
+            <li>Interior and exterior cleaning combined</li>
+            <li>Great for seasonal resets or neglected vehicles</li>
+            <li>Best option when the whole vehicle needs attention</li>
+          </ul>
         </div>
       </div>
 
     </div>
 
-    <div class="card" style="margin-top:2rem;">
-      <div class="card-copy" style="text-align:center;">
-        <span class="eyebrow">Our Promise</span>
-        <h2>24-Hour Recheck Guarantee</h2>
-        <p class="lead" style="margin:0 auto;">
-          If we missed something, contact us within 24 hours and we'll make it right.
-          Customer satisfaction and attention to detail are our priority.
-        </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="promise-panel">
+      <span class="eyebrow">Add-On Services</span>
+      <h2>Extra attention where your vehicle needs it most.</h2>
+
+      <p class="lead">
+        Some vehicles need more than a standard clean. Add-on work may be recommended
+        depending on condition, size, pet hair, stains, salt, spills, or odour.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-item">Pet hair removal</div>
+        <div class="feature-item">Stain treatment</div>
+        <div class="feature-item">Salt removal</div>
+        <div class="feature-item">Interior shampooing</div>
+        <div class="feature-item">Exterior protection</div>
+        <div class="feature-item">Heavy condition clean-up</div>
       </div>
     </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="eyebrow">Our Process</span>
+      <h2>Professional service, clear expectations.</h2>
+      <p class="lead">
+        Every vehicle is different. The goal is to understand the condition,
+        recommend the right service, and complete the detail with care.
+      </p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Quote</h3>
+        <p>Tell us about your vehicle, condition, and what you need done.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>Assessment</h3>
+        <p>Vehicle size, condition, stains, salt, pet hair, and service level are considered.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Detailing</h3>
+        <p>The vehicle receives careful cleaning using proper products, tools, and process.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h3>Recheck</h3>
+        <p>Final inspection helps make sure the vehicle meets quality expectations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="promise-panel">
+      <span class="eyebrow">Customer Promise</span>
+      <h2>24-Hour Recheck Guarantee</h2>
+
+      <p class="lead">
+        If something was missed, contact us within 24 hours and we will make it right.
+        Customer satisfaction and attention to detail are always the priority.
+      </p>
+
+      <div style="margin-top:1.5rem;">
+        <a class="btn btn-primary"
+           href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start"
+           target="_blank"
+           rel="noopener noreferrer">
+          📅 Book Online
+        </a>
+
+        <a class="btn btn-secondary" href="pricing.html">
+          💲 View Pricing
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -196,11 +547,19 @@ footer {
 <footer>
   <div class="container">
     © 2026 Kailer's High End Detailing
-    <p style="font-size:1.2rem;font-weight:700;color:#e7c768;margin:15px 0;">
-      Professional Detailing • Honest Service • Edmonton, Alberta
-    </p>
+    <br>
+    Edmonton Interior Detailing • Exterior Detailing • Full Vehicle Detailing
+    <br>
+    kailershighenddetailing.pro
   </div>
 </footer>
+
+<div class="mobile-bar">
+  <a href="index.html">🏠 Home</a>
+  <a href="pricing.html">💲 Pricing</a>
+  <a href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book</a>
+  <a href="contact.html">✉️ Contact</a>
+</div>
 
 </body>
 </html>
