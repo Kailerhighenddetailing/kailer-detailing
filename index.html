@@ -205,31 +205,41 @@ h2 {
       margin-top: 1.5rem;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 1rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 900;
-      transition: .2s ease;
-      text-align: center;
-    }
+  .btn {
+  display: inline-block;
+  padding: 1rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    filter .25s ease;
+}
+
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), #fff1a8);
-      color: #08111f;
-      box-shadow: 0 0 24px rgba(212,175,55,.25);
-    }
+   .btn-primary {
+  background: linear-gradient(135deg, var(--gold), #fff1a8);
+  color: #08111f;
+  box-shadow: 0 0 24px rgba(212,175,55,.25);
+}
 
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
     .btn-secondary {
       border: 1px solid rgba(56,189,248,.35);
       background: rgba(255,255,255,.04);
       color: white;
     }
-
+.btn-secondary:hover {
+  background: rgba(56,189,248,.12);
+}
 .card {
   background:
     linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
