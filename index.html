@@ -626,20 +626,23 @@ h2 {
   width: 18px;
   height: 18px;
 }
-
+@media (max-width:768px){
+  body{
+    padding-bottom:80px;
+  }
+}
 </style>
 </head>
 
 <body>
   <div class="topbar">
     <div class="container nav">
-      <a class="brand" href="#top">
+      <a class="brand" href="index.html">
         <img src="K LOGO.png" alt="Kailer’s High End Detailing Logo" />
         <span>Kailer’s High End Detailing</span>
       </a>
 
       <div class="links">
-        <a href="extracted_story.html">My Story</a>
        <a href="services.html">Services</a>
       <a href="pricing.html">Pricing</a>
        <a href="consumer-guide.html.html">Consumer Guide</a>
@@ -732,66 +735,6 @@ h2 {
 
 </section>
 
-<!-- EXPLORE CARDS START -->
-
-<section class="section">
-  <div class="container">
-
-    <div class="section-head">
-      <span class="eyebrow">Explore</span>
-      <h2>Find What You Need Fast</h2>
-    </div>
-
-    <div class="grid-3">
-
-      <a href="services.html" class="card">
-        <div class="card-copy">
-          <h3>Services</h3>
-          <p>View all detailing services.</p>
-        </div>
-      </a>
-
-      <a href="pricing.html" class="card">
-        <div class="card-copy">
-          <h3>Pricing</h3>
-          <p>See packages and pricing.</p>
-        </div>
-      </a>
-
-      <a href="gallery.html" class="card">
-        <div class="card-copy">
-          <h3>Gallery</h3>
-          <p>View our results.</p>
-        </div>
-      </a>
-
-      <a href="reviews.html" class="card">
-        <div class="card-copy">
-          <h3>Reviews</h3>
-          <p>See what customers say.</p>
-        </div>
-      </a>
-
-      <a href="faq.html" class="card">
-        <div class="card-copy">
-          <h3>FAQ</h3>
-          <p>Common questions answered.</p>
-        </div>
-      </a>
-
-      <a href="giveaway.html" class="card">
-        <div class="card-copy">
-          <h3>Giveaway</h3>
-          <p>Current promotions.</p>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- EXPLORE CARDS END -->
 
 <section class="section hide-mobile">
   <div class="container">
@@ -1053,9 +996,11 @@ Everything in Signature plus priority booking, enhanced interior touch-ups, and 
   <div class="container">
     <div class="feature-card">
 
-      <span class="eyebrow">My Story</span>
+     <a class="btn btn-primary" href="extracted_story.html">
+  Read Kailer's Story →
+</a>
 
-      <h2>Meet Kailer</h2>
+   <h2>The Story Behind The Detail</h2>
 
       <p style="font-size:1.1rem;font-weight:700;color:#e7c768;">
         Owner • Detailer • Professional Training & Continued Education
