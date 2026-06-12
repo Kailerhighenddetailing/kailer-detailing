@@ -577,6 +577,17 @@ body {
   .checklist-grid { grid-template-columns: 1fr; }
   .guide-sidebar { position: static; }
 }
+ @media (max-width: 768px) {
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-buttons .btn {
+    width: 100%;
+  }
+}   
 </style>
 </head>
 <body>
@@ -601,14 +612,14 @@ body {
         <span class="eyebrow">Navigation</span>
         <h2 style="color:#e7c768;">What Are You Looking For?</h2>
 
-        <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-secondary" href="index.html">Home</a>
-          <a class="btn btn-secondary" href="services.html">Services</a>
-          <a class="btn btn-secondary" href="pricing.html">Pricing</a>
-          <a class="btn btn-secondary" href="gallery.html">Gallery</a>
-          <a class="btn btn-secondary" href="reviews.html">Reviews</a>
-          <a class="btn btn-secondary" href="faq.html">FAQ</a>
-          <a class="btn btn-secondary" href="contact.html">Contact</a>
+     <div class="cta-row nav-buttons" style="justify-content:center;">
+  <a class="btn btn-secondary" href="index.html">🏠 Home</a>
+<a class="btn btn-secondary" href="services.html">🧼 Services</a>
+<a class="btn btn-secondary" href="pricing.html">💲 Pricing</a>
+<a class="btn btn-secondary" href="gallery.html">📸 Gallery</a>
+<a class="btn btn-secondary" href="reviews.html">⭐ Reviews</a>
+<a class="btn btn-secondary" href="faq.html">❓ FAQ</a>
+<a class="btn btn-secondary" href="contact.html">📞 Contact</a>
         </div>
       </div>
     </div>
