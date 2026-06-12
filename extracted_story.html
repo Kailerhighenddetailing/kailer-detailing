@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Kailer’s Story | Trust Is Earned With Every Detail</title>
+
   <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -17,16 +18,19 @@
  }
 }
 </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet Kailer and learn the story behind Kailer’s High End Detailing in Edmonton. Trust is earned with every detail through training, care, professionalism, and long-term vehicle care.">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Meet Kailer and learn the story behind Kailer’s High End Detailing in Edmonton. A business built on trust, patience, training, care, and pride in every detail.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="K LOGO.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#020617">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <link rel="apple-touch-icon" href="K LOGO.png">
+
   <style>
     :root {
       --bg: #020617;
@@ -37,26 +41,29 @@
       --gold: #e7c768;
       --text: #ffffff;
       --muted: #aebccd;
-      --line: rgba(255,255,255,.10);
+      --line: rgba(255,255,255,.12);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     html { scroll-behavior: smooth; }
-body {
-  font-family: 'Manrope', sans-serif;
+
+    body {
+      font-family: 'Manrope', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(14,165,233,.20), transparent 28%),
-        radial-gradient(circle at top left, rgba(212,175,55,.10), transparent 24%),
-        linear-gradient(180deg, #020617 0%, #071826 55%, #020617 100%);
-      line-height: 1.6;
+        radial-gradient(circle at top right, rgba(56,189,248,.14), transparent 30%),
+        radial-gradient(circle at top left, rgba(231,199,104,.10), transparent 28%),
+        linear-gradient(180deg, #020617 0%, #071826 52%, #020617 100%);
+      line-height: 1.7;
     }
 
     img { max-width: 100%; display: block; }
+
     a { color: inherit; text-decoration: none; }
 
     .container {
-      width: min(1180px, calc(100% - 2rem));
+      width: min(1120px, calc(100% - 2rem));
       margin: 0 auto;
     }
 
@@ -66,6 +73,7 @@ body {
       z-index: 20;
       background: rgba(2,6,23,.88);
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
     }
 
@@ -100,7 +108,7 @@ body {
       align-items: center;
       gap: 1rem;
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 800;
       font-size: .92rem;
       flex-wrap: wrap;
       justify-content: flex-end;
@@ -108,12 +116,16 @@ body {
 
     .links a:hover { color: var(--blue2); }
 
-    .hero { padding: 5rem 0 4rem; }
+    .section { padding: 4.5rem 0; }
+
+    .hero {
+      padding: 5.5rem 0 3rem;
+    }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
-      gap: 1.5rem;
+      gap: 2rem;
       align-items: center;
     }
 
@@ -132,228 +144,216 @@ body {
     }
 
     h1 {
-      font-size: clamp(2.6rem, 6vw, 5.8rem);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5.8rem);
       line-height: .95;
       margin-bottom: 1.1rem;
       letter-spacing: -.04em;
     }
 
     h2 {
-      font-size: clamp(1.9rem, 3.3vw, 3.2rem);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.8vw, 3.3rem);
       line-height: 1.05;
       margin-bottom: 1rem;
+      letter-spacing: -.03em;
     }
 
-    h3 { margin-bottom: .65rem; font-size: 1.35rem; }
+    h3 {
+      font-size: 1.28rem;
+      margin-bottom: .65rem;
+    }
 
-.gold {
-  color: var(--gold);
-  text-shadow: 0 0 18px rgba(231,199,104,.35);
-}
+    p { margin-bottom: 1rem; }
+
+    .gold {
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(231,199,104,.28);
+    }
 
     .lead {
       color: #d9e6f3;
-      font-size: 1.08rem;
-      line-height: 1.75;
-      max-width: 68ch;
+      font-size: 1.1rem;
+      line-height: 1.78;
+      max-width: 70ch;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
+    .muted { color: var(--muted); }
+
+    .card,
+    .feature-panel {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)),
+        linear-gradient(180deg, rgba(15,23,42,.80), rgba(7,24,38,.96));
+      border: 1px solid var(--line);
+      border-top: 1px solid rgba(231,199,104,.20);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(0,0,0,.34);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .card-copy { padding: 1.5rem; }
+
+    .story-photo-frame {
+      position: relative;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(231,199,104,.28);
+      box-shadow: 0 28px 70px rgba(0,0,0,.42);
+      background: linear-gradient(135deg, rgba(231,199,104,.12), rgba(56,189,248,.10));
+    }
+
+    .story-photo-frame img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+    }
+
+    .story-photo-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 1rem;
+      border-radius: 20px;
+      background: rgba(2,6,23,.78);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .compact-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 1rem 1.25rem;
+      padding: .9rem 1rem;
       border-radius: 999px;
       font-weight: 900;
-      transition: .2s ease;
       text-align: center;
+      transition: .2s ease;
     }
 
     .btn:hover { transform: translateY(-2px); }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), #fff1a8);
-      color: #08111f;
-      box-shadow: 0 0 24px rgba(212,175,55,.25);
-    }
-
     .btn-secondary {
-      border: 1px solid rgba(56,189,248,.35);
+      border: 1px solid rgba(56,189,248,.38);
       background: rgba(255,255,255,.04);
       color: white;
     }
 
-.hero-card, .card {
-  background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
-}
-
-.card {
-  transition: transform .25s ease, box-shadow .25s ease;
-  backdrop-filter: blur(14px);
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 55px rgba(0,0,0,.35);
-}
-
-    .hero-card { border-radius: 30px; box-shadow: 0 22px 50px rgba(0,0,0,.32); }
-
-    .logo-feature {
-      min-height: 420px;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-      background:
-        radial-gradient(circle, rgba(56,189,248,.18), transparent 45%),
-        linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 1.6rem;
     }
 
-  .logo-feature {
-  position: relative;
-}
+    .center { text-align: center; }
 
-.logo-feature::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.18);
-}
-
-.logo-feature img {
-  max-width: 420px;
-  width: 100%;
-  border-radius: 22px;
-  filter: drop-shadow(0 0 26px rgba(56,189,248,.40));
-  position: relative;
-  z-index: 1;
-}
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: .8rem;
-      padding: 1rem;
-    }
-
-    .stat {
-      padding: 1rem;
-      border-radius: 18px;
-      background: rgba(255,255,255,.035);
-      border: 1px solid var(--line);
-    }
-.muted {
-  color: var(--muted);
-}
-
-.section {
-  padding: 3rem 0;
-}
-
-.section-head {
-  max-width: 780px;
-  margin-bottom: 1.25rem;
-}
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
+    .center .lead { margin-left: auto; margin-right: auto; }
 
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .mission-panel {
+      padding: 2rem;
+      border-radius: 30px;
+      border: 1px solid rgba(231,199,104,.28);
+      background:
+        radial-gradient(circle at top left, rgba(231,199,104,.16), transparent 35%),
+        linear-gradient(180deg, rgba(15,23,42,.88), rgba(2,6,23,.96));
+      box-shadow: 0 24px 60px rgba(0,0,0,.30);
+    }
+
+    .big-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.65rem, 2.8vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      color: #fff1a8;
+    }
+
+    .story-timeline {
+      display: grid;
       gap: 1rem;
-    }
-.card-copy {
-  padding: 1.25rem;
-}
-
-.photo {
-  aspect-ratio: 4 / 3;
-  background: #0f172a center/cover no-repeat;
-}
-
-.review-img {
-  width: 100%;
-  height: 340px;
-  object-fit: contain;
-  display: block;
-  background: #0f172a;
-  padding: 10px;
-}
-
-.cert-img {
-  width: 100%;
-  height: auto;
-  max-height: 520px;
-  object-fit: contain;
-  display: block;
-  background: #0f172a;
-  padding: 10px;
-  margin: 0 auto;
-}
-
-.big-price {
-  font-size: clamp(3rem, 7vw, 5rem);
-  color: #fff1a8;
-  line-height: 1;
-  font-weight: 900;
-  text-shadow: 0 0 20px rgba(212,175,55,.45);
-}
-
-    .about-box {
-      padding: 1.5rem;
-      border-radius: 26px;
-      background: linear-gradient(135deg, rgba(212,175,55,.12), rgba(56,189,248,.09));
-      border: 1px solid rgba(212,175,55,.26);
+      margin-top: 1.5rem;
     }
 
-    .about-box p { margin-bottom: 1rem; }
-
-    ul {
-      padding-left: 1.2rem;
-      color: #d9e6f3;
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 1rem;
+      align-items: start;
     }
 
-    li { margin: .4rem 0; }
+    .timeline-year {
+      border-radius: 999px;
+      padding: .7rem .75rem;
+      text-align: center;
+      color: #08111f;
+      background: linear-gradient(135deg, var(--gold), #fff1a8);
+      font-weight: 900;
+      box-shadow: 0 0 24px rgba(212,175,55,.22);
+    }
+
+    .timeline-content {
+      padding: 1.25rem;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
+    }
+
+    .value-card {
+      min-height: 220px;
+    }
+
+    .cert-img {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: contain;
+      display: block;
+      background: #0f172a;
+      padding: 10px;
+      margin: 0 auto;
+    }
 
     .video-box {
-      margin-top: 30px;
+      margin-top: 24px;
       border-radius: 24px;
       overflow: hidden;
       box-shadow: 0 0 30px rgba(56,189,248,.20);
+      border: 1px solid rgba(255,255,255,.10);
     }
 
     .video-box iframe {
       width: 100%;
-      height: 450px;
+      height: 430px;
       display: block;
     }
 
-    .contact-list {
-      display: grid;
-      gap: .8rem;
+    .closing-panel {
+      text-align: center;
+      padding: 2.2rem;
+      border-radius: 30px;
+      border: 1px solid rgba(231,199,104,.28);
+      background:
+        radial-gradient(circle at top, rgba(231,199,104,.14), transparent 35%),
+        linear-gradient(180deg, rgba(15,23,42,.86), rgba(2,6,23,.96));
     }
-
-    .contact-item {
-      padding: 1rem;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.035);
-    }
-
-    .contact-item a { color: #7dd3fc; font-weight: 800; }
 
     footer {
       padding: 2rem 0 3rem;
@@ -362,342 +362,146 @@ body {
       text-align: center;
     }
 
-    .floating-call {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      z-index: 999;
-      background: linear-gradient(135deg, #d4af37, #fff1a8);
-      color: #08111f;
-      padding: 16px 22px;
-      border-radius: 999px;
-      font-weight: 900;
-      box-shadow: 0 0 25px rgba(212,175,55,.45);
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .links { display: none; }
+
+      .brand span { font-size: .85rem; }
+
+      .story-photo-frame img {
+        height: auto;
+        max-height: 520px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .video-box iframe {
+        height: 220px;
+      }
     }
-.mobile-bar {
-  display: none;
-}
 
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
+      .compact-nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-  .mobile-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #020617;
-    display: flex;
-    justify-content: space-around;
-    padding: 14px;
-    z-index: 9999;
-  }
+      .compact-nav .btn {
+        font-size: .9rem;
+        padding: .85rem .7rem;
+      }
 
-  .mobile-bar a {
-    color: white;
-    font-weight: bold;
-  }
+      .section {
+        padding: 3.2rem 0;
+      }
 
-  .floating-call {
-    display: none;
-  }
-}
-    .hide-mobile {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .hide-mobile {
-    display: none;
-  }
-}
-
-@media (max-width: 920px) {
-  .hero-grid,
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .links {
-    display: none;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .logo-feature {
-    min-height: 300px;
-  }
-
-  .brand span {
-    font-size: .85rem;
-  }
-
-  .video-box {
-    margin-top: 15px;
-  }
-
-  .video-box iframe {
-    height: 180px;
-  }
-
-.review-img {
-  height: 220px;
-}
-
-.cert-img {
-  max-height: 280px;
-}
-}
-
-/* Split landing page additions */
-.page-hero {
-  padding: 4.5rem 0 2.5rem;
-}
-.page-hero .lead {
-  max-width: 760px;
-}
-.breadcrumb {
-  color: var(--muted);
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-.breadcrumb a {
-  color: #7dd3fc;
-}
-.feature-card {
-  padding: 1.5rem;
-  border-radius: 26px;
-  background: linear-gradient(135deg, rgba(212,175,55,.12), rgba(56,189,248,.09));
-  border: 1px solid rgba(212,175,55,.26);
-}
-.link-card {
-  display: block;
-  height: 100%;
-}
-.link-card .card-copy {
-  min-height: 220px;
-}
-.top-page-cta {
-  margin-top: 1.5rem;
-}
-
-/* Premium Story Page Full Upgrade */
-.story-hero-premium {
-  padding: 5rem 0 3rem;
-}
-.story-hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 2rem;
-  align-items: center;
-}
-.story-photo-frame {
-  position: relative;
-  border-radius: 34px;
-  overflow: hidden;
-  border: 1px solid rgba(231,199,104,.28);
-  box-shadow: 0 28px 70px rgba(0,0,0,.42);
-  background: linear-gradient(135deg, rgba(231,199,104,.12), rgba(56,189,248,.10));
-}
-.story-photo-frame img {
-  width: 100%;
-  height: 560px;
-  object-fit: cover;
-}
-.story-photo-caption {
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  padding: 1rem;
-  border-radius: 20px;
-  background: rgba(2,6,23,.78);
-  border: 1px solid rgba(255,255,255,.12);
-  backdrop-filter: blur(12px);
-}
-.trust-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: .8rem;
-  margin-top: 1.5rem;
-}
-.trust-pill {
-  padding: .9rem;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
-  font-weight: 900;
-}
-.mission-panel {
-  padding: 2rem;
-  border-radius: 30px;
-  border: 1px solid rgba(231,199,104,.28);
-  background:
-    radial-gradient(circle at top left, rgba(231,199,104,.16), transparent 35%),
-    linear-gradient(180deg, rgba(15,23,42,.88), rgba(2,6,23,.96));
-  box-shadow: 0 24px 60px rgba(0,0,0,.30);
-}
-.mission-panel p {
-  margin-bottom: 1rem;
-}
-.big-quote {
-  font-size: clamp(1.45rem, 2.4vw, 2.35rem);
-  line-height: 1.18;
-  font-weight: 900;
-  letter-spacing: -.03em;
-}
-.story-timeline {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-.timeline-item {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 1rem;
-  align-items: start;
-}
-.timeline-year {
-  border-radius: 999px;
-  padding: .7rem .75rem;
-  text-align: center;
-  color: #08111f;
-  background: linear-gradient(135deg, var(--gold), #fff1a8);
-  font-weight: 900;
-  box-shadow: 0 0 24px rgba(212,175,55,.22);
-}
-.timeline-content {
-  padding: 1.2rem;
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.96));
-}
-.value-card {
-  min-height: 230px;
-}
-.story-review-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-.story-review-grid img {
-  height: 280px;
-  width: 100%;
-  object-fit: contain;
-  background: #0f172a;
-  padding: 10px;
-}
-.cta-panel {
-  text-align: center;
-  padding: 2rem;
-  border-radius: 30px;
-  border: 1px solid rgba(231,199,104,.28);
-  background:
-    radial-gradient(circle at top, rgba(231,199,104,.14), transparent 35%),
-    linear-gradient(180deg, rgba(15,23,42,.86), rgba(2,6,23,.96));
-}
-@media (max-width: 920px) {
-  .story-hero-grid,
-  .trust-strip,
-  .story-review-grid {
-    grid-template-columns: 1fr;
-  }
-  .story-photo-frame img {
-    height: auto;
-    max-height: 520px;
-  }
-  .timeline-item {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+      .hero {
+        padding: 4rem 0 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <div class="topbar">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="K LOGO.png" alt="Kailer’s High End Detailing Logo" />
+      <img src="K LOGO.png" alt="Kailer’s High End Detailing Logo">
       <span>Kailer’s High End Detailing</span>
     </a>
 
-   <div class="links">
-  <a href="index.html">← Back Home</a>
-</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+    </div>
   </div>
 </div>
-<main id="top">
 
-<section class="story-hero-premium">
-  <div class="container story-hero-grid">
+<section class="hero">
+  <div class="container hero-grid">
     <div>
-      <div class="breadcrumb"><a href="index.html">Home</a> / My Story</div>
-      <span class="eyebrow">The Story Behind The Business</span>
-      <h1>Trust Is Earned. <span class="gold">We Earn It With Every Detail.</span></h1>
+      <span class="eyebrow">Kailer’s Story</span>
+      <h1>Trust Is Earned. <span class="gold">Every Detail Matters.</span></h1>
 
       <p class="lead">
-        Kailer’s High End Detailing is not a side hustle. It is a long-term commitment to professional vehicle care,
-        continued training, honest service, and helping customers protect the value of the vehicles they rely on.
+        Kailer’s High End Detailing was built on patience, honesty, professional training,
+        and real pride in the work. This is the story behind the business.
       </p>
 
       <p>
-     Come join the journey, be part of Kailer’s story, and experience the difference that comes from working with someone who genuinely cares about your vehicle.
+        It is not just about cleaning vehicles. It is about building confidence, earning trust,
+        improving every year, and giving customers a detailing experience that feels personal,
+        respectful, and professional.
       </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book Online</a>
-        <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">📋 Get Free Quote</a>
-        <a class="btn btn-secondary" href="tel:5879909990">📞 Call Now</a>
-      </div>
-
-      <div class="trust-strip">
-        <div class="trust-pill">⭐ 23 Reviews</div>
-        <div class="trust-pill">🛡️ Licensed & Insured</div>
-        <div class="trust-pill">🎓 Owner’s Pride Trained</div>
-        <div class="trust-pill">🏆 IDA Member</div>
-      </div>
     </div>
 
     <div class="story-photo-frame">
       <img src="kailer-hero.jpg.jpeg" alt="Kailer, owner of Kailer's High End Detailing in Edmonton">
       <div class="story-photo-caption">
         <strong class="gold">Kailer’s High End Detailing</strong>
-        <p class="muted">Professional Edmonton detailing built on trust, pride, and real care.</p>
+        <p class="muted">Built on trust, pride, patience, and care.</p>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section" style="padding-top:1.5rem;">
+  <div class="container">
+    <div class="card center">
+      <div class="card-copy">
+        <span class="eyebrow">Navigation</span>
+        <h2 class="gold">What Are You Looking For?</h2>
+
+        <div class="compact-nav">
+          <a class="btn btn-secondary" href="index.html">🏠 Home</a>
+          <a class="btn btn-secondary" href="services.html">🧼 Services</a>
+          <a class="btn btn-secondary" href="pricing.html">💲 Pricing</a>
+          <a class="btn btn-secondary" href="gallery.html">📸 Gallery</a>
+          <a class="btn btn-secondary" href="reviews.html">⭐ Reviews</a>
+          <a class="btn btn-secondary" href="faq.html">❓ FAQ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="top">
+
 <section class="section">
   <div class="container">
     <div class="mission-panel">
-      <span class="eyebrow">Our Mission</span>
+      <span class="eyebrow">The Mission</span>
       <h2>Built for the long term — not just the next appointment.</h2>
 
       <p class="lead">
         Kailer’s High End Detailing was built on a simple belief:
-        <strong class="gold">trust is earned, and we earn it with every detail.</strong>
+        <strong class="gold">trust is earned, and it is earned through every detail.</strong>
       </p>
 
       <p>
-        My name is Kailer, and detailing is not something I do on the side. It is a profession I am committed to building
-        through continued training, hands-on experience, better tools, safer products, and a constant focus on improving my skillset.
+        My name is Kailer. I started this business because I genuinely enjoy working on vehicles
+        and seeing the transformation that comes from careful, professional detailing.
       </p>
 
       <p>
-        My goal is not only to clean vehicles. My goal is to help customers protect one of the largest investments many people make.
-        A well-maintained vehicle can look better, feel better, and hold its value longer.
+        Detailing gives me a way to use patience, routine, focus, and attention to detail in a meaningful way.
+        Every vehicle is a chance to improve, build confidence, and create a result the customer can feel proud of.
       </p>
 
       <p>
-        As the business grows, I plan to keep advancing my education, expanding what I offer, and building long-term relationships
-        with customers who want someone they can trust with their vehicle year after year.
-      </p>
-
-      <p>
-        When you choose Kailer’s High End Detailing, you are not just booking a detail.
-        You are becoming part of a story built on growth, pride, professionalism, and care.
+        As the business grows, my goal is to keep learning, keep improving, and keep building long-term trust
+        with customers who want their vehicle handled with care.
       </p>
     </div>
   </div>
@@ -708,92 +512,40 @@ body {
     <div class="card">
       <div class="card-copy">
         <span class="eyebrow">Who Is Kailer?</span>
-       <h2>A detailer building a future through hard work, training, and trust.</h2>
-        <p class="lead">
-  Kailer built this business on honesty, craftsmanship, continued education,
-  and a genuine passion for helping customers protect and maintain their vehicles.
-</p>
+        <h2>A detailer building a future through work, training, and trust.</h2>
 
-<p>
-  While he may communicate differently due to verbal apraxia, his focus never changes:
-  taking the time to ensure every customer is understood and every vehicle receives
-  the care, attention, and professionalism it deserves.
-</p>
+        <p>
+          Kailer is 23 years old and built this business around honesty, craftsmanship,
+          continued education, and a real passion for helping customers protect and maintain their vehicles.
+        </p>
 
-<p style="color:#e7c768;font-weight:800;font-size:1.15rem;">
-  At Kailer’s High End Detailing, trust isn't given — it's earned with every detail.
-</p>
         <p>
-          My name is Kailer, I am 23 years old, and I started Kailer’s High End Detailing because I genuinely love working on vehicles
-          and seeing the transformation that comes from professional detailing.
+          Kailer has autism and verbal apraxia, which means communication and speech can sometimes take more time.
+          He believes in being honest and transparent about that, because customers deserve to understand the person behind the business.
         </p>
+
         <p>
-          I have autism and verbal apraxia, which means communication and speech can sometimes be difficult for me.
-          I believe in being honest and transparent with my customers.
-        </p>
-        <p>
-          When people meet me, they may notice that I communicate differently, and I never want that to come across the wrong way.
-          I simply process and communicate in my own way.
+          While he may communicate differently, his goal never changes:
+          take the time to understand the customer, respect the vehicle, and complete the work with care.
         </p>
       </div>
     </div>
 
     <div class="mission-panel">
       <p class="big-quote">
-        “I may communicate differently due to verbal apraxia, but I take my time to make sure every customer is understood and every vehicle receives the attention and care it deserves.”
+        “I may communicate differently, but I take my time to make sure every customer is understood and every vehicle receives the care it deserves.”
       </p>
     </div>
   </div>
 </section>
-<section class="section">
-  <div class="container">
 
-    <div class="mission-panel">
-
-      <span class="eyebrow">The Journey</span>
-
-      <h2>More Than A Business</h2>
-
-      <p>
-        Long before Kailer's High End Detailing existed, Kailer spent years
-        learning around vehicles, helping at his uncle's shop, developing
-        work habits, and building confidence through hands-on experience.
-      </p>
-
-      <p>
-        Like many people with autism and verbal apraxia, some things have
-        come with additional challenges. Communication can take more time,
-        but patience, attention to detail, consistency, and dedication have
-        always been strengths.
-      </p>
-
-      <p>
-        Detailing became a way to combine those strengths into something
-        meaningful. Every vehicle is an opportunity to improve, learn,
-        build trust, and create something customers can be proud of.
-      </p>
-
-      <p>
-        What started as a passion has grown into a business built around
-        professionalism, education, customer care, and long-term growth.
-      </p>
-
-    </div>
-
-  </div>
-</section>
 <section class="section">
   <div class="container">
     <div class="section-head">
-  <span class="eyebrow">Kailer’s Journey</span>
-
-<h2>From learning the trade to building a professional business</h2>
-
-<img src="kailer-hero.jpg.jpeg"
-     alt="Kailer"
-     style="width:100%;max-width:700px;margin:20px auto;border-radius:24px;display:block;">
+      <span class="eyebrow">The Journey</span>
+      <h2>From hands-on experience to building a professional business.</h2>
       <p class="lead">
-        Every step helped build the skill, patience, confidence, and pride behind Kailer’s High End Detailing.
+        Every step helped build the skill, confidence, patience, and pride behind Kailer’s High End Detailing.
       </p>
     </div>
 
@@ -803,8 +555,8 @@ body {
         <div class="timeline-content">
           <h3>Leung’s Auto</h3>
           <p>
-            Kailer started building hands-on experience around vehicles while working with his uncle at Leung’s Auto.
-            This helped develop his comfort around vehicles, tools, work routines, and customer expectations.
+            Kailer started building hands-on experience around vehicles while helping at his uncle’s shop.
+            This helped him become more comfortable with vehicles, tools, work routines, and customer expectations.
           </p>
         </div>
       </div>
@@ -812,10 +564,10 @@ body {
       <div class="timeline-item">
         <div class="timeline-year">Step 2</div>
         <div class="timeline-content">
-          <h3>West Edmonton Detailing Experience</h3>
+          <h3>Detailing Experience</h3>
           <p>
-            He continued building his detailing skills through additional experience in West Edmonton,
-            learning the importance of consistency, patience, and careful cleaning.
+            He continued developing his detailing skills through additional hands-on experience,
+            learning the value of consistency, patience, careful cleaning, and quality control.
           </p>
         </div>
       </div>
@@ -825,7 +577,7 @@ body {
         <div class="timeline-content">
           <h3>Owner’s Pride Training</h3>
           <p>
-            Kailer trained with Owner’s Pride Detailing School in St. Albert, strengthening his professional detailing process,
+            Kailer trained with Owner’s Pride Detailing School in St. Albert, strengthening his professional process,
             product knowledge, and attention to quality.
           </p>
         </div>
@@ -834,21 +586,10 @@ body {
       <div class="timeline-item">
         <div class="timeline-year">Step 4</div>
         <div class="timeline-content">
-          <h3>International Detailing Association Member</h3>
+          <h3>Professional Standards</h3>
           <p>
-            Because the detailing industry is largely unregulated, Kailer joined the IDA to show customers that
-            professionalism, education, and standards matter.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">Step 5</div>
-        <div class="timeline-content">
-          <h3>Business Launch</h3>
-          <p>
-            Kailer’s High End Detailing was created to offer Edmonton customers honest service, careful work,
-            fair pricing, and a more personal detailing experience.
+            Because detailing is largely unregulated, Kailer chose to take training, education, licensing,
+            insurance, and professional presentation seriously.
           </p>
         </div>
       </div>
@@ -856,13 +597,11 @@ body {
       <div class="timeline-item">
         <div class="timeline-year">Future</div>
         <div class="timeline-content">
-          <h3>Continued Training & Expanded Services</h3>
-      <p>
-  This is only the beginning. Future goals include advanced detailing
-  education, additional certifications, improved equipment, expanded
-  service offerings, community involvement, and becoming one of
-  Edmonton's most trusted detailing businesses.
-</p>
+          <h3>Continued Growth</h3>
+          <p>
+            Future goals include more training, better equipment, expanded services, community involvement,
+            and becoming one of Edmonton’s most trusted detailing businesses.
+          </p>
         </div>
       </div>
     </div>
@@ -872,40 +611,52 @@ body {
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Why Customers Choose Kailer</span>
-      <h2>Trust, quality, education, and long-term care</h2>
+      <span class="eyebrow">Values</span>
+      <h2>What the business is built on.</h2>
     </div>
 
     <div class="grid-3">
-      <div class="card value-card"><div class="card-copy">
-        <h3>Honesty</h3>
-        <p>Clear communication, fair expectations, and honest service from the first message to the final walkthrough.</p>
-      </div></div>
+      <div class="card value-card">
+        <div class="card-copy">
+          <h3>Honesty</h3>
+          <p>Clear expectations, respectful communication, and honest service from start to finish.</p>
+        </div>
+      </div>
 
-      <div class="card value-card"><div class="card-copy">
-        <h3>Quality</h3>
-        <p>Every vehicle receives careful attention, proper time, and a quality-focused process instead of rushed work.</p>
-      </div></div>
+      <div class="card value-card">
+        <div class="card-copy">
+          <h3>Patience</h3>
+          <p>Good detailing takes time. Rushed work does not match the standard Kailer wants to build.</p>
+        </div>
+      </div>
 
-      <div class="card value-card"><div class="card-copy">
-        <h3>Continued Education</h3>
-        <p>Kailer is committed to ongoing training, better techniques, and improving his skillset as the business grows.</p>
-      </div></div>
+      <div class="card value-card">
+        <div class="card-copy">
+          <h3>Quality</h3>
+          <p>Every vehicle receives careful attention and a process focused on real results.</p>
+        </div>
+      </div>
 
-      <div class="card value-card"><div class="card-copy">
-        <h3>Long-Term Relationships</h3>
-        <p>The goal is to build trust with customers who want someone reliable to care for their vehicle over time.</p>
-      </div></div>
+      <div class="card value-card">
+        <div class="card-copy">
+          <h3>Education</h3>
+          <p>Training, better techniques, and continued learning are part of the long-term plan.</p>
+        </div>
+      </div>
 
-      <div class="card value-card"><div class="card-copy">
-        <h3>Vehicle Value</h3>
-        <p>Proper care can help your vehicle look better, feel cleaner, and maintain its condition for the long term.</p>
-      </div></div>
+      <div class="card value-card">
+        <div class="card-copy">
+          <h3>Respect</h3>
+          <p>Every customer and every vehicle is treated with care, patience, and professionalism.</p>
+        </div>
+      </div>
 
-      <div class="card value-card"><div class="card-copy">
-        <h3>Pride In Every Detail</h3>
-        <p>Kailer treats each vehicle with care because every detail is a chance to earn trust and show pride in the work.</p>
-      </div></div>
+      <div class="card value-card">
+        <div class="card-copy">
+          <h3>Pride</h3>
+          <p>Every detail is a chance to earn trust and show pride in the work.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -924,12 +675,12 @@ body {
     </div>
 
     <div class="card">
-      <div class="card-copy" style="text-align:center;">
-        <img src="ida-badge.png.png" alt="International Detailing Association Member" style="max-width:300px; width:100%; height:auto; margin:0 auto 1rem;">
-        <h3>Proud IDA Member</h3>
+      <div class="card-copy center">
+        <img src="ida-badge.png.png" alt="International Detailing Association Member" style="max-width:280px; width:100%; height:auto; margin:0 auto 1rem;">
+        <h3>Professional Detailing Community</h3>
         <p>
-          Kailer’s High End Detailing is proud to be part of a professional detailing community
-          that values education, standards, and continued improvement.
+          Kailer’s High End Detailing values education, standards, continued improvement,
+          and professional pride in the detailing industry.
         </p>
       </div>
     </div>
@@ -939,44 +690,35 @@ body {
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Customer Confidence</span>
-      <h2>Real reviews help new customers book with trust</h2>
-      <p class="lead">Customer feedback is one of the strongest signs of honest service and quality work.</p>
-    </div>
-
-    <div class="story-review-grid">
-      <div class="card"><img src="r10.jpg" alt="Customer review for Kailer's High End Detailing"></div>
-      <div class="card"><img src="r11.jpg" alt="Customer review for Kailer's High End Detailing"></div>
-      <div class="card"><img src="r12.jpg" alt="Customer review for Kailer's High End Detailing"></div>
-      <div class="card"><img src="reviews.jpg" alt="Customer review for Kailer's High End Detailing"></div>
-    </div>
-<p style="color:#e7c768;font-weight:800;font-size:1.15rem;">
-Thank you to every customer who chooses to support the journey.
-Your trust helps make the dream possible.
-</p>
-    <div class="cta-row">
-      <a class="btn btn-secondary" href="https://g.page/r/CcilDK6TDGr5EBM/review" target="_blank" rel="noopener noreferrer">
-        ⭐ View / Leave a Google Review
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
       <span class="eyebrow">Follow The Journey</span>
-      <h2>Watch the business grow</h2>
+      <h2>Watch the business grow.</h2>
       <p class="lead">
-        Follow Kailer’s journey as he continues training, improving the shop, expanding services,
-        and sharing real transformations with customers.
+        Follow Kailer’s journey as he continues learning, improving the workspace,
+        expanding skills, and sharing real vehicle transformations.
       </p>
     </div>
 
     <div class="grid-3">
-      <div class="card"><div class="card-copy"><h3>Meet Kailer</h3><p>Learn more about the person behind the business and why detailing matters to him.</p></div></div>
-      <div class="card"><div class="card-copy"><h3>Training & Growth</h3><p>Follow future training, certifications, tools, products, and service improvements.</p></div></div>
-      <div class="card"><div class="card-copy"><h3>Customer Transformations</h3><p>See real before-and-after results as the business continues to grow.</p></div></div>
+      <div class="card">
+        <div class="card-copy">
+          <h3>Meet Kailer</h3>
+          <p>Learn more about the person behind the business and why detailing matters to him.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Training & Growth</h3>
+          <p>Follow future training, tools, products, and improvements as the business grows.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-copy">
+          <h3>Real Transformations</h3>
+          <p>See the results, progress, and pride that go into the work over time.</p>
+        </div>
+      </div>
     </div>
 
     <div class="video-box">
@@ -991,27 +733,20 @@ Your trust helps make the dream possible.
 
 <section class="section">
   <div class="container">
-    <div class="cta-panel">
-      <span class="eyebrow">Ready To Book?</span>
-      <h2>
-Trust Is Earned.<br>
-We Earn It With Every Detail.
-</h2>
-      <p class="lead" style="margin:0 auto;">
-        Whether you are looking for a one-time detail or a long-term professional to care for your vehicle,
-        Kailer looks forward to earning your trust with every detail.
-      </p>
+    <div class="closing-panel">
+      <span class="eyebrow">Thank You</span>
+      <h2>Trust Is Earned.<br><span class="gold">We Earn It With Every Detail.</span></h2>
 
-      <div class="cta-row" style="justify-content:center;">
-        <a class="btn btn-primary" href="tel:5879909990">📞 Call Now</a>
-        <a class="btn btn-primary" href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book Online</a>
-        <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">📋 Get Free Quote</a>
-      </div>
+      <p class="lead" style="margin:0 auto;">
+        Thank you to every customer, supporter, and community member who chooses to be part of the journey.
+        Your trust helps make the dream possible.
+      </p>
     </div>
   </div>
 </section>
 
 </main>
+
 <footer>
   <div class="container">
     © 2026 Kailer’s High End Detailing
@@ -1022,14 +757,5 @@ We Earn It With Every Detail.
   </div>
 </footer>
 
-<a href="tel:5879909990" class="floating-call">📞 Call Now</a>
-
-<div class="mobile-bar">
-  <a href="tel:5879909990">📞 Call</a>
-  <a href="index.html#giveaway">🎁 Giveaway</a>
-  <a href="https://www.instagram.com/kailerhighenddetailing" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
-  <a href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book</a>
-  <a href="https://g.page/r/CcilDK6TDGr5EBM/review" target="_blank" rel="noopener noreferrer">⭐ Reviews</a>
-</div>
 </body>
 </html>
