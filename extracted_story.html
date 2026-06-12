@@ -103,17 +103,15 @@
       filter: drop-shadow(0 0 12px rgba(56,189,248,.35));
     }
 
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      color: var(--muted);
-      font-weight: 800;
-      font-size: .92rem;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
+   .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .75rem;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: .92rem;
+}
     .links a:hover { color: var(--blue2); }
 
     .section { padding: 4.5rem 0; }
@@ -221,9 +219,7 @@
       background: rgba(2,6,23,.78);
       border: 1px solid rgba(255,255,255,.12);
       backdrop-filter: blur(12px);
-    }
 
-    .compact-nav {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
@@ -361,50 +357,56 @@
       color: var(--muted);
       text-align: center;
     }
+@media (max-width: 920px) {
 
-    @media (max-width: 920px) {
-      .hero-grid,
-      .grid-2,
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
+  .hero-grid,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 
-      .links { display: none; }
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
 
-      .brand span { font-size: .85rem; }
+  .links {
+    justify-content: center;
+  }
 
-      .story-photo-frame img {
-        height: auto;
-        max-height: 520px;
-      }
+  .links div {
+    width: 100%;
+    text-align: center !important;
+  }
 
-      .timeline-item {
-        grid-template-columns: 1fr;
-      }
+  .brand span {
+    font-size: .85rem;
+  }
 
-      .video-box iframe {
-        height: 220px;
-      }
-    }
+  .story-photo-frame img {
+    height: auto;
+    max-height: 520px;
+  }
 
-    @media (max-width: 768px) {
-      .compact-nav {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
 
-      .compact-nav .btn {
-        font-size: .9rem;
-        padding: .85rem .7rem;
-      }
+  .video-box iframe {
+    height: 220px;
+  }
+}
 
-      .section {
-        padding: 3.2rem 0;
-      }
+@media (max-width: 768px) {
 
-      .hero {
-        padding: 4rem 0 2rem;
-      }
-    }
+  .section {
+    padding: 3.2rem 0;
+  }
+
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+}
   </style>
 </head>
 
@@ -416,11 +418,10 @@
       <img src="K LOGO.png" alt="Kailer’s High End Detailing Logo">
       <span>Kailer’s High End Detailing</span>
     </a>
-
-  <div class="links">
-  <span style="color:#e7c768;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;">
+<div class="links">
+  <div style="width:100%;color:#e7c768;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;text-align:right;">
     What Are You Looking For?
-  </span>
+  </div>
 
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
@@ -650,16 +651,25 @@
 
 <section class="section">
   <div class="container grid-2">
-    <div class="card">
-      <img class="cert-img" src="training.jpg" alt="Owner's Pride Detailing Training Certificate">
-      <div class="card-copy">
-        <h3>Owner’s Pride Trained</h3>
-        <p>
-          Professional training focused on quality, safe products, proper process,
-          attention to detail, and customer satisfaction.
-        </p>
-      </div>
-    </div>
+  <div class="card">
+  <img class="cert-img"
+       src="training.jpg"
+       alt="Owner's Pride Detailing Training Certificate">
+
+  <div class="card-copy">
+    <h3>Owner’s Pride Trained</h3>
+
+    <p>
+      Completed professional detailing training with Paulo Assunção
+      at Owner's Pride St. Albert.
+    </p>
+
+    <p>
+      Professional training focused on quality, safe products,
+      proper process, attention to detail, and customer satisfaction.
+    </p>
+  </div>
+</div> 
 
     <div class="card">
       <div class="card-copy center">
