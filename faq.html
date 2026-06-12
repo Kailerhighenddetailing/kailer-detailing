@@ -1,130 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ | Kailer's High End Detailing</title>
+  <title>FAQ | Kailer's High End Detailing</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"AutoDetailing",
+ "name":"Kailer's High End Detailing",
+ "telephone":"+1-587-990-9990",
+ "url":"https://kailershighenddetailing.pro",
+ "address":{
+   "@type":"PostalAddress",
+   "addressLocality":"Edmonton",
+   "addressRegion":"AB",
+   "addressCountry":"CA"
+ }
+}
+</script>
 
-<style>
-body{
-font-family:Manrope,sans-serif;
-background:#020617;
-color:white;
-margin:0;
-padding:0;
-}
-.container{
-width:min(1100px,calc(100% - 2rem));
-margin:auto;
-}
-.section{
-padding:80px 0;
-}
-h1{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(3rem,6vw,5rem);
-margin-bottom:20px;
-}
-.gold{color:#e7c768;}
-.card{
-background:#071826;
-border-radius:24px;
-padding:25px;
-margin-bottom:20px;
-border:1px solid rgba(255,255,255,.08);
-}
-.btn{
-display:inline-block;
-padding:14px 24px;
-border-radius:999px;
-font-weight:800;
-text-decoration:none;
-margin-top:20px;
-border:1px solid #38bdf8;
-color:white;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions for Kailer's High End Detailing in Edmonton. Learn about booking, detail time, pet hair, vehicle condition, interiors, exteriors, and appointment-only service.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="K LOGO.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#020617">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="K LOGO.png">
+
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: #071826;
+      --panel2: #0f172a;
+      --blue: #0ea5e9;
+      --blue2: #38bdf8;
+      --gold: #e7c768;
+      --text: #ffffff;
+      --muted: #aebccd;
+      --line: rgba(255,255,255,.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(56,189,248,.14), transparent 30%),
+        radial-gradient(circle at top left, rgba(231,199,104,.10), transparent 28%),
+        linear-gradient(180deg, #020617 0%, #071826 52%, #020617 100%);
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2,6,23,.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .85rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 14px;
+      filter: drop-shadow(0 0 12px rgba(56,189,248,.35));
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: .92rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .links a:hover { color: var(--blue2); }
+
+    .hero {
+      padding: 5.5rem 0 3rem;
+      text-align: center;
+    }
+
+    .section { padding: 4rem 0; }
+
+    .eyebrow {
+      display: inline-block;
+      padding: .45rem .8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,.28);
+      background: rgba(56,189,248,.08);
+      color: #bae6fd;
+      font-size: .8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5.8rem);
+      line-height: .95;
+      margin-bottom: 1.1rem;
+      letter-spacing: -.04em;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      letter-spacing: -.03em;
+    }
+
+    h3 {
+      font-size: 1.22rem;
+      margin-bottom: .6rem;
+      color: #fff1a8;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    .gold {
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(231,199,104,.28);
+    }
+
+    .lead {
+      color: #d9e6f3;
+      font-size: 1.1rem;
+      line-height: 1.78;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .muted { color: var(--muted); }
+
+    .card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)),
+        linear-gradient(180deg, rgba(15,23,42,.80), rgba(7,24,38,.96));
+      border: 1px solid var(--line);
+      border-top: 1px solid rgba(231,199,104,.20);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(0,0,0,.34);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .card-copy { padding: 1.5rem; }
+
+    .compact-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .9rem 1rem;
+      border-radius: 999px;
+      font-weight: 900;
+      text-align: center;
+      transition: .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #fff1a8);
+      color: #08111f;
+      box-shadow: 0 0 24px rgba(212,175,55,.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(56,189,248,.38);
+      background: rgba(255,255,255,.04);
+      color: white;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .faq-card {
+      padding: 1.5rem;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025)),
+        linear-gradient(180deg, rgba(15,23,42,.78), rgba(7,24,38,.94));
+      box-shadow: 0 16px 42px rgba(0,0,0,.26);
+    }
+
+    .faq-card p:last-child { margin-bottom: 0; }
+
+    .quick-note {
+      padding: 2rem;
+      border-radius: 30px;
+      border: 1px solid rgba(231,199,104,.28);
+      background:
+        radial-gradient(circle at top left, rgba(231,199,104,.16), transparent 35%),
+        linear-gradient(180deg, rgba(15,23,42,.88), rgba(2,6,23,.96));
+      box-shadow: 0 24px 60px rgba(0,0,0,.30);
+      text-align: center;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.4rem;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .mobile-bar {
+      display: none;
+    }
+
+    @media (max-width: 920px) {
+      .links { display: none; }
+
+      .brand span { font-size: .85rem; }
+    }
+
+    @media (max-width: 768px) {
+      .compact-nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .compact-nav .btn {
+        font-size: .9rem;
+        padding: .85rem .7rem;
+      }
+
+      .section { padding: 3.2rem 0; }
+
+      .hero { padding: 4rem 0 2rem; }
+
+      .mobile-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #020617;
+        display: flex;
+        justify-content: space-around;
+        padding: 14px 8px;
+        z-index: 9999;
+        border-top: 1px solid var(--line);
+      }
+
+      .mobile-bar a {
+        color: white;
+        font-weight: 900;
+        font-size: .9rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="section">
-<div class="container">
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="K LOGO.png" alt="Kailer's High End Detailing Logo">
+      <span>Kailer’s High End Detailing</span>
+    </a>
 
-<h1>Frequently Asked <span class="gold">Questions</span></h1>
-
-<p>
-Answers to some of the most common questions customers ask before booking.
-</p>
-
-<a class="btn" href="index.html">← Back to Home</a>
-
-<div style="margin-top:40px;">
-
-<div class="card">
-<h3>How long does a detail take?</h3>
-<p>
-Time depends on vehicle size and condition.
-Heavy dirt, salt, stains, or pet hair may take longer.
-</p>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>My vehicle is extremely dirty. Is that okay?</h3>
-<p>
-Absolutely. Every vehicle is different, and there is never any judgment.
-The focus is simply helping restore and improve the condition of your vehicle.
-</p>
-</div>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Customer Questions</span>
+    <h1>Frequently Asked <span class="gold">Questions</span></h1>
 
-<div class="card">
-<h3>Do you remove pet hair?</h3>
-<p>
-Yes. Pet hair removal is available as a $50 add-on.
-Excessive pet hair may require additional time.
-</p>
-</div>
-
-<div class="card">
-<h3>How do I book?</h3>
-<p>
-You can book online through our Square booking system, call, text,
-message us on Facebook, or submit a free quote request form.
-</p>
-</div>
-
-<div class="card">
-<h3>Do I need an appointment?</h3>
-<p>
-Yes. All services are by appointment to ensure every vehicle receives
-the time and attention it deserves.
-</p>
-</div>
-
-<div class="card">
-<h3>Do you clean interiors and exteriors?</h3>
-<p>
-Yes. Kailer's High End Detailing offers both interior and exterior
-detailing services.
-</p>
-
-<a class="btn" href="contact.html">
-  Still Have Questions? Contact Us
-</a>
-
-<a class="btn"
-   href="https://forms.gle/m55AUGRyMztN163B9"
-   target="_blank"
-   rel="noopener noreferrer">
-  📋 Get Free Quote
-</a>
-
-</div>
-
-</div>
+    <p class="lead">
+      Clear answers to common questions about booking, timing, vehicle condition,
+      pet hair, interiors, exteriors, and what to expect before your detail.
+    </p>
+  </div>
 </section>
+
+<section class="section" style="padding-top:1.5rem;">
+  <div class="container">
+    <div class="card" style="text-align:center;">
+      <div class="card-copy">
+        <span class="eyebrow">Navigation</span>
+        <h2 class="gold">What Are You Looking For?</h2>
+
+        <div class="compact-nav">
+          <a class="btn btn-secondary" href="index.html">🏠 Home</a>
+          <a class="btn btn-secondary" href="services.html">🧼 Services</a>
+          <a class="btn btn-secondary" href="pricing.html">💲 Pricing</a>
+          <a class="btn btn-secondary" href="gallery.html">📸 Gallery</a>
+          <a class="btn btn-secondary" href="reviews.html">⭐ Reviews</a>
+          <a class="btn btn-secondary" href="contact.html">📞 Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="top">
+
+<section class="section">
+  <div class="container">
+
+    <div class="faq-grid">
+
+      <div class="faq-card">
+        <h3>How long does a detail take?</h3>
+        <p>
+          Time depends on vehicle size, condition, and the level of service being completed.
+          Heavy dirt, salt, stains, spills, or pet hair can require additional time.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>My vehicle is extremely dirty. Is that okay?</h3>
+        <p>
+          Yes. Every vehicle is different, and there is no judgment.
+          The focus is simply helping restore, refresh, and improve the condition of your vehicle.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Do you remove pet hair?</h3>
+        <p>
+          Yes. Pet hair removal is available as an add-on service.
+          Excessive pet hair may require additional time depending on the amount and how embedded it is.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>How do I book?</h3>
+        <p>
+          You can book online, call or text, message through social media, or submit a quote request form.
+          If you are unsure which service is right, a quote request is usually the best place to start.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Do I need an appointment?</h3>
+        <p>
+          Yes. All services are by appointment only so every vehicle receives proper time,
+          attention, and care.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Do you clean interiors and exteriors?</h3>
+        <p>
+          Yes. Kailer's High End Detailing offers interior detailing, exterior detailing,
+          and full vehicle detailing depending on your vehicle’s needs.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Can you remove stains and odours?</h3>
+        <p>
+          Many stains and odours can be improved, but results depend on the source, age, material,
+          and severity. Some stains or odours may not fully disappear, but the goal is always to improve the vehicle safely and honestly.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Is shampooing included?</h3>
+        <p>
+          Shampooing depends on the service selected. If your seats, carpets, or mats need deeper cleaning,
+          mention that when requesting a quote so the right service can be recommended.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>What should I remove before my appointment?</h3>
+        <p>
+          Please remove personal belongings, valuables, car seats, important documents,
+          and anything you do not want handled before your appointment.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Do you service large SUVs, trucks, or family vehicles?</h3>
+        <p>
+          Yes. Larger vehicles are welcome, but they may require more time because there is more surface area,
+          more seats, more carpet, and often more storage areas to clean.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="quick-note">
+      <span class="eyebrow">Still Unsure?</span>
+      <h2>Have a question that is not listed?</h2>
+
+      <p class="lead">
+        Reach out anytime. The goal is to make the process clear before you book,
+        so you feel confident about the service your vehicle needs.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">Get Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Kailer’s High End Detailing
+    <br>
+    Edmonton Interior Detailing • Exterior Detailing • Full Vehicle Detailing
+    <br>
+    kailershighenddetailing.pro
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:5879909990">📞 Call</a>
+  <a href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">📋 Quote</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="contact.html">✉️ Contact</a>
+</div>
 
 </body>
 </html>
