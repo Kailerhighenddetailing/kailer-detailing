@@ -99,6 +99,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
+  position: relative;
   background: rgba(2, 6, 23, 0.72);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
@@ -145,10 +146,27 @@ a {
 
     .links a:hover { color: var(--blue2); }
 
-    .hero {
+.hero {
   padding: 8rem 0 7rem;
+  position: relative;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle,
+    rgba(231,199,104,.08),
+    transparent 70%
+  );
 
+  top: -200px;
+  right: -150px;
+
+  filter: blur(80px);
+  pointer-events: none;
+}
     .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
@@ -181,9 +199,22 @@ h1 {
 h2 {
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: -.03em;
-   font-size: clamp(2.3rem, 4vw, 3.8rem);
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
   line-height: 1.05;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(231,199,104,.08);
+  filter: blur(60px);
+  left: -20px;
+  top: -20px;
+  z-index: -1;
 }
 
     h3 { margin-bottom: .65rem; font-size: 1.35rem; }
@@ -256,6 +287,29 @@ h2 {
   height: 3px;
   background: linear-gradient(90deg,#e7c768,transparent);
 }
+.card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -150%;
+  width: 60%;
+  height: 300%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.04),
+    rgba(255,255,255,.12),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 1.2s;
+  pointer-events: none;
+}
+
+.card:hover::after {
+  left: 180%;
+}
+
 
 .feature-card {
   background:
@@ -278,20 +332,40 @@ h2 {
 
 .card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 40px 90px rgba(0,0,0,.45);
+
+  box-shadow:
+    0 40px 90px rgba(0,0,0,.45),
+    0 0 35px rgba(231,199,104,.12);
+
+  border-color: rgba(231,199,104,.28);
 }
     .logo-feature {
-      min-height: 420px;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-      background:
-        radial-gradient(circle, rgba(56,189,248,.18), transparent 45%),
-        linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
-    }
-
-  .logo-feature {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
   position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle, rgba(56,189,248,.18), transparent 45%),
+    linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
+}
+ .logo-feature {
+  position: relative;
+}
+
+.logo-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,.18),
+    transparent 35%
+  );
+  z-index: 2;
+  pointer-events: none;
 }
 
 .logo-feature::after {
@@ -307,16 +381,28 @@ h2 {
   object-fit: cover;
   border-radius: 22px;
   position: relative;
-overflow: hidden;
+  overflow: hidden;
   z-index: 1;
+
+  animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: .8rem;
-      padding: 1rem;
-    }
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  padding: 1rem;
+}
 
 .stat {
   padding: 1rem;
@@ -329,10 +415,26 @@ overflow: hidden;
   color: var(--muted);
 }
 
-.section {
+ .section {
   padding: clamp(6rem, 10vw, 12rem) 0;
+  position: relative;
+}
 
-}  
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(231,199,104,.5),
+    transparent
+  );
+} 
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -359,11 +461,6 @@ overflow: hidden;
   background: linear-gradient(90deg, #e7c768, transparent);
 }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
 
     .grid-2 {
       display: grid;
@@ -554,10 +651,6 @@ overflow: hidden;
     grid-template-columns: 1fr;
   }
 
-  .logo-feature {
-    min-height: 300px;
-  }
-
   .brand span {
     font-size: .85rem;
   }
@@ -628,11 +721,161 @@ overflow: hidden;
   width: 18px;
   height: 18px;
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(231,199,104,.18) 1px,
+      transparent 1px
+    );
+
+  background-size: 220px 220px;
+
+  opacity: .06;
+  z-index: -1;
+}
+
+   
+.luxury-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.luxury-bg::before {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  top: -250px;
+  right: -250px;
+  background: radial-gradient(circle, rgba(231,199,104,.12), transparent 60%);
+  filter: blur(20px);
+}
+
+.luxury-bg::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  bottom: -300px;
+  left: -250px;
+  background: radial-gradient(circle, rgba(56,189,248,.10), transparent 62%);
+  filter: blur(24px);
+}
+
+.luxury-bg span {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 220px;
+  background: linear-gradient(to bottom, transparent, rgba(231,199,104,.28), transparent);
+  opacity: .45;
+  transform: rotate(28deg);
+  animation: luxuryFloat 12s ease-in-out infinite;
+}
+
+.luxury-bg span:nth-child(1) {
+  top: 18%;
+  left: 12%;
+}
+
+.luxury-bg span:nth-child(2) {
+  top: 42%;
+  right: 18%;
+  height: 300px;
+  animation-delay: 3s;
+}
+
+.luxury-bg span:nth-child(3) {
+  bottom: 16%;
+  left: 55%;
+  height: 180px;
+  animation-delay: 6s;
+}
+
+@keyframes luxuryFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(28deg);
+    opacity: .25;
+  }
+
+  50% {
+    transform: translateY(-28px) rotate(28deg);
+    opacity: .55;
+  }
+}
+  .cursor-glow {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(231,199,104,.12),
+    transparent 70%
+  );
+
+  transform: translate(-50%,-50%);
+  transition:
+    left .12s linear,
+    top .12s linear;
+}
+ .topbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(231,199,104,.8),
+    transparent
+  );
+
+  animation: navGlow 6s linear infinite;
+}
+
+@keyframes navGlow {
+  0% {
+    opacity: .3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .3;
+  }
+}   
 </style>
 </head>
-
 <body>
+
+<div class="cursor-glow"></div>
+
+
+
+ <div class="luxury-bg">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
   <div class="topbar">
     <div class="container nav">
       <a class="brand" href="#top">
@@ -697,11 +940,7 @@ overflow: hidden;
 <div style="margin-top:20px; color:#e7c768; font-weight:800;">
 🛡️ Licensed & Insured • 🎓 Owner's Pride Trained • 🏆 Proud IDA Member
 </div>
-<p style="margin-top:20px;">
-<a class="btn btn-secondary" href="extracted_story.html">
-   My Story →
-</a>
-</p>
+
 <p><strong>Fast responses by phone, text, and Facebook Messenger.</strong></p>
 
 <p class="muted">
@@ -714,23 +953,6 @@ overflow: hidden;
     <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80"
          alt="Professional car detailing in Edmonton by Kailer's High End Detailing" />
   </div>
-
-<div class="stats">
-  <div class="stat">
-    <strong>Interior Detailing</strong>
-    <div class="muted">Seats, carpets, vents & surfaces</div>
-  </div>
-
-  <div class="stat">
-    <strong>Exterior Detailing</strong>
-    <div class="muted">Wash, wheels, trim & finish</div>
-  </div>
-
-  <div class="stat">
-    <strong>Full Vehicle Details</strong>
-    <div class="muted">Complete inside & out service</div>
-  </div>
-</div>
 
 </div>
 </section>
@@ -1152,55 +1374,23 @@ No purchase necessary. Winner will be announced July 1, 2026 and posted through 
     </div>
   </div>
 </section>
-<section class="section" id="about">
+<section class="section">
   <div class="container">
-    <div class="feature-card">
+    <div class="feature-card" style="text-align:center;">
+      <span class="eyebrow">Meet Kailer</span>
 
-      <span class="eyebrow">My Story</span>
+      <h2>The Story Behind The Business</h2>
 
-      <h2>Meet Kailer</h2>
-
-      <p style="font-size:1.1rem;font-weight:700;color:#e7c768;">
-        Owner • Detailer • Professional Training & Continued Education
+      <p class="lead">
+        Learn about Kailer, his training, his journey, and the values that built Kailer's High End Detailing.
       </p>
-<h1>
-  Trust Is Earned.<br>
-  <span class="gold">We Earn It With Every Detail.</span>
-</h1>
 
-<p class="lead">
-  Kailer's High End Detailing was built on honesty, hard work,
-  continued education, and a genuine passion for helping customers
-  protect and maintain one of their largest investments.
-</p>
-
-<p>
-  Whether you're a first-time customer or someone who has trusted us
-  for years, the goal is the same: provide honest service, quality work,
-  and build a long-term relationship with someone who cares about your
-  vehicle as much as you do.
-</p>
-
-<p>
-  Kailer may communicate differently due to verbal apraxia, but he
-  takes the time to ensure every customer is understood and every
-  vehicle receives the care and attention it deserves.
-</p>
-
-<p style="color:#e7c768; font-weight:800;">
-  Come join the journey. Be part of the story.
-</p>
-
-<div class="cta-row">
-  <a class="btn btn-secondary" href="extracted_story.html">
-    Read My Story →
-  </a>
-</div>
-
+      <a class="btn btn-primary" href="extracted_story.html">
+        Read My Story →
+      </a>
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="container">
 
@@ -1645,6 +1835,14 @@ if (compareSlider) {
 
   compareSlider.dispatchEvent(new Event("input"));
 }
+</script>
+    <script>
+const glow = document.querySelector('.cursor-glow');
+
+document.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
 </script>
 </body>
 </html>
