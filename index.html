@@ -63,8 +63,22 @@
       --line: rgba(255,255,255,.10);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   color: var(--text);
@@ -80,7 +94,6 @@ body {
       #000000 100%
     );
 }
-
 img {
   max-width: 100%;
   display: block;
@@ -153,20 +166,22 @@ a {
 .hero::before {
   content: "";
   position: absolute;
-  width: 700px;
-  height: 700px;
+  width: 500px;
+  height: 500px;
+
   background: radial-gradient(
     circle,
     rgba(231,199,104,.08),
     transparent 70%
   );
 
-  top: -200px;
-  right: -150px;
+  top: -120px;
+  right: -100px;
 
   filter: blur(80px);
   pointer-events: none;
 }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
@@ -351,10 +366,6 @@ h2::before {
     radial-gradient(circle, rgba(56,189,248,.18), transparent 45%),
     linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
 }
- .logo-feature {
-  position: relative;
-}
-
 .logo-feature::before {
   content: "";
   position: absolute;
@@ -812,13 +823,13 @@ body::before {
     opacity: .55;
   }
 }
-  .cursor-glow {
+.cursor-glow {
   position: fixed;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 
   background: radial-gradient(
     circle,
