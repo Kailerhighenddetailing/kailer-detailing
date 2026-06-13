@@ -145,7 +145,9 @@ a {
 
     .links a:hover { color: var(--blue2); }
 
-    .hero { padding: 5rem 0 4rem; }
+    .hero {
+  padding: 8rem 0 7rem;
+}
 
     .hero-grid {
       display: grid;
@@ -179,7 +181,7 @@ h1 {
 h2 {
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: -.03em;
-  font-size: clamp(1.9rem, 3.3vw, 3.2rem);
+   font-size: clamp(2.3rem, 4vw, 3.8rem);
   line-height: 1.05;
   margin-bottom: 1rem;
 }
@@ -234,21 +236,27 @@ h2 {
   background:
     linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
     linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
-
   border: 1px solid rgba(255,255,255,.13);
   border-top: 1px solid rgba(231,199,104,.18);
-
   border-radius: 26px;
-
+  position: relative;
+  overflow: hidden;
   box-shadow:
     0 20px 55px rgba(0,0,0,.32),
-    inset 0 1px 0 rgba(255,255,255,.08);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  transition: transform .25s ease, box-shadow .25s ease;
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 0 25px rgba(231,199,104,.05);
 }
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg,#e7c768,transparent);
+}
+
 .feature-card {
   background:
     linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),
@@ -263,32 +271,15 @@ h2 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
-    .feature-card p {
+
+.feature-card p {
   margin-bottom: 1rem;
 }
+
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 70px rgba(0,0,0,.40);
+  transform: translateY(-12px);
+  box-shadow: 0 40px 90px rgba(0,0,0,.45);
 }
-
-   .hero-card {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
-    linear-gradient(180deg, rgba(15,23,42,.72), rgba(7,24,38,.88));
-
-  border: 1px solid rgba(255,255,255,.13);
-  border-top: 1px solid rgba(231,199,104,.18);
-
-  border-radius: 30px;
-
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.40),
-    inset 0 1px 0 rgba(255,255,255,.08);
-
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
     .logo-feature {
       min-height: 420px;
       display: grid;
@@ -316,6 +307,7 @@ h2 {
   object-fit: cover;
   border-radius: 22px;
   position: relative;
+overflow: hidden;
   z-index: 1;
 }
 
@@ -400,7 +392,8 @@ h2 {
   margin-top: 15px;
 }
 .photo {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
+}
   background: #0f172a center/cover no-repeat;
   border-radius: 22px;
   overflow: hidden;
