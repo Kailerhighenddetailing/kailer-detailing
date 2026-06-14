@@ -32,6 +32,81 @@
   <link rel="apple-touch-icon" href="K LOGO.png">
 
     <style>
+      .mission-panel,
+.closing-panel {
+  padding: 2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(231,199,104,.25);
+  background:
+    radial-gradient(circle at top left, rgba(231,199,104,.12), transparent 35%),
+    linear-gradient(180deg, rgba(15,23,42,.82), rgba(2,6,23,.95));
+  box-shadow: 0 24px 65px rgba(0,0,0,.36);
+}
+
+.big-quote {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.45;
+  color: #fff1a8;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.story-photo-frame {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(231,199,104,.25);
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
+}
+
+.story-photo-frame img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.story-photo-caption {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(2,6,23,.78);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.story-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+}
+
+.timeline-year {
+  color: #fff1a8;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.timeline-content p {
+  color: #d9e6f3;
+  line-height: 1.7;
+}
+
+.center {
+  text-align: center;
+}
     :root {
       --bg: #020617;
       --panel: #071826;
@@ -93,7 +168,6 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  position: relative;
   background: rgba(2, 6, 23, 0.72);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
@@ -586,7 +660,17 @@ h2::before {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 75px;
+  }
 
+  .story-photo-frame img {
+    height: 360px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
   .mobile-bar {
     position: fixed;
     bottom: 0;
@@ -855,6 +939,13 @@ body::before {
     opacity: .3;
   }
 }   
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
 </style>
 
 
@@ -877,15 +968,11 @@ body::before {
       <span>Kailer’s High End Detailing</span>
     </a>
 <div class="links">
-  <a href="extracted_story.html">My Story</a>
+  <a href="index.html">Home</a>
   <a href="services.html">Services</a>
   <a href="pricing.html">Pricing</a>
-  <a href="consumer-guide.html.html">Consumer Guide</a>
   <a href="gallery.html">Gallery</a>
-  <a href="giveaway.html">Giveaway</a>
   <a href="reviews.html">Reviews</a>
-  <a href="faq.html">FAQ</a>
-  <a href="https://forms.gle/m55AUGRyMztN163B9" target="_blank">Free Quote</a>
   <a href="contact.html">Contact</a>
 </div>
 </div>
@@ -908,14 +995,15 @@ body::before {
       </p>
     </div>
 
-    <div class="story-photo-frame">
-      <img src="kailer-hero.jpg.jpeg" alt="Kailer, owner of Kailer's High End Detailing in Edmonton">
-      <div class="story-photo-caption">
-        <strong class="gold">Kailer’s High End Detailing</strong>
-        <p class="muted">Built on trust, pride, patience, and care.</p>
-      </div>
-    </div>
+<div class="story-photo-frame">
+  <img src="kailer-hero.jpg.jpeg"
+       alt="Kailer, owner of Kailer's High End Detailing in Edmonton">
+
+  <div class="story-photo-caption">
+    <strong class="gold">Kailer’s High End Detailing</strong>
+    <p class="muted">Built on trust, pride, patience, and care.</p>
   </div>
+</div>
 </section>
 
 <main id="top">
@@ -951,33 +1039,63 @@ body::before {
 
 <section class="section">
   <div class="container grid-2">
+
     <div class="card">
       <div class="card-copy">
-        <span class="eyebrow">Who Is Kailer?</span>
-        <h2>A detailer building a future through work, training, and trust.</h2>
 
+        <span class="eyebrow">Who Is Kailer?</span>
+
+        <h2>A detailer building a future through work, training, and trust.</h2>
+<img src="c.jpg"
+     alt="Kailer"
+     style="
+       width:100%;
+       border-radius:24px;
+       margin:1rem 0 1.5rem;
+       box-shadow:0 20px 50px rgba(0,0,0,.35);
+     ">
         <p>
-          Kailer is 23 years old and built this business around honesty, craftsmanship,
-          continued education, and a real passion for helping customers protect and maintain their vehicles.
+          Kailer is 23 years old and built this business around honesty,
+          craftsmanship, continued education, and a real passion for helping
+          customers protect and maintain their vehicles.
         </p>
 
         <p>
-          Kailer has autism and verbal apraxia, which means communication and speech can sometimes take more time.
-          He believes in being honest and transparent about that, because customers deserve to understand the person behind the business.
+          Kailer has autism and verbal apraxia, which means communication and
+          speech can sometimes take more time. He believes in being honest and
+          transparent about that, because customers deserve to understand the
+          person behind the business.
         </p>
 
         <p>
           While he may communicate differently, his goal never changes:
-          take the time to understand the customer, respect the vehicle, and complete the work with care.
+          take the time to understand the customer, respect the vehicle,
+          and complete the work with care.
         </p>
+
       </div>
     </div>
 
-    <div class="mission-panel">
-      <p class="big-quote">
-        “I may communicate differently, but I take my time to make sure every customer is understood and every vehicle receives the care it deserves.”
-      </p>
+    <div class="card">
+      <div class="card-copy">
+
+        <span class="eyebrow">Personal Message</span>
+
+        <p class="big-quote">
+          “I may communicate differently, but I take my time to make sure every
+          customer is understood and every vehicle receives the care it deserves.”
+        </p>
+
+        <p class="muted" style="text-align:center; margin-top:1.5rem;">
+          Licensed &amp; Insured<br>
+          Owner's Pride Trained<br>
+          IDA Member<br>
+          Edmonton, Alberta
+        </p>
+
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -1105,36 +1223,46 @@ body::before {
 
 <section class="section">
   <div class="container grid-2">
-  <div class="card">
+
+ <div class="card">
   <img class="cert-img"
        src="training.jpg"
        alt="Owner's Pride Detailing Training Certificate">
 
   <div class="card-copy">
-    <h3>Owner’s Pride Trained</h3>
+        <h3>Owner’s Pride Trained</h3>
 
-    <p>
-      Completed professional detailing training with Paulo Assunção
-      at Owner's Pride St. Albert.
-    </p>
+        <p>
+          Completed professional detailing training with Paulo Assunção
+          at Owner's Pride St. Albert.
+        </p>
 
-    <p>
-      Professional training focused on quality, safe products,
-      proper process, attention to detail, and customer satisfaction.
-    </p>
-  </div>
-</div> 
+        <p>
+          Professional training focused on quality, safe products,
+          proper process, attention to detail, and customer satisfaction.
+        </p>
+      </div>
+    </div>
 
     <div class="card">
-      <div class="card-copy center">
-        <img src="ida-badge.png.png" alt="International Detailing Association Member" style="max-width:280px; width:100%; height:auto; margin:0 auto 1rem;">
-        <h3>Professional Detailing Community</h3>
+  <div class="card-copy center">
+
+    <img src="ida-badge.png.png"
+         alt="International Detailing Association Member"
+         style="max-width:280px;
+                width:100%;
+                height:auto;
+                margin:0 auto 1rem;">
+
+    <h3>Professional Detailing Community</h3>
+
         <p>
           Kailer’s High End Detailing values education, standards, continued improvement,
           and professional pride in the detailing industry.
         </p>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1184,7 +1312,37 @@ body::before {
 
 <section class="section">
   <div class="container">
-    <div class="closing-panel">
+    <div class="closing-panel" style="text-align:center;">
+
+      <span class="eyebrow">Ready To Book?</span>
+
+      <h2>Experience The Difference.</h2>
+
+      <p class="lead" style="margin:0 auto;">
+        Professional detailing built on trust, patience, training, and attention to detail.
+      </p>
+
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary"
+           href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start"
+           target="_blank" rel="noopener noreferrer">
+          📅 Book Online
+        </a>
+
+        <a class="btn btn-secondary"
+           href="https://forms.gle/m55AUGRyMztN163B9"
+           target="_blank" rel="noopener noreferrer">
+          📋 Free Quote
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="closing-panel" style="text-align:center;">
       <span class="eyebrow">Thank You</span>
       <h2>Trust Is Earned.<br><span class="gold">We Earn It With Every Detail.</span></h2>
 
@@ -1207,6 +1365,17 @@ body::before {
     kailershighenddetailing.pro
   </div>
 </footer>
+
+<script>
+const glow = document.querySelector('.cursor-glow');
+
+if (glow) {
+  document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+}
+</script>
 
 </body>
 </html>
