@@ -91,7 +91,6 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  position: relative;
   background: rgba(2, 6, 23, 0.72);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
@@ -181,7 +180,14 @@ a {
       letter-spacing: .08em;
       margin-bottom: 1rem;
     }
-
+.breadcrumb{
+  color: var(--gold);
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.6rem, 6vw, 5.8rem);
@@ -582,7 +588,97 @@ h2::before {
 .mobile-bar {
   display: none;
 }
+.grid-3,
+.quick-guide-grid,
+.guide-stat-grid,
+.checklist-grid {
+  display: grid;
+  gap: 1rem;
+}
 
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.guide-hero-premium {
+  padding: 8rem 0 6rem;
+}
+
+.guide-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.guide-feature-panel,
+.final-guide-cta {
+  padding: 2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(231,199,104,.25);
+  background:
+    radial-gradient(circle at top left, rgba(231,199,104,.12), transparent 35%),
+    linear-gradient(180deg, rgba(15,23,42,.82), rgba(2,6,23,.95));
+}
+
+.guide-stat-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1.5rem;
+}
+
+.guide-stat,
+.check-item,
+.key-takeaway {
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.guide-stat strong {
+  display: block;
+  color: var(--gold);
+}
+
+.quick-guide-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.guide-sidebar {
+  position: sticky;
+  top: 110px;
+}
+
+.guide-sidebar a {
+  display: block;
+  padding: .65rem 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.guide-sidebar a:hover {
+  color: var(--blue2);
+}
+
+.article-card {
+  margin-bottom: 1rem;
+}
+
+.checklist-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+.final-guide-cta {
+  text-align: center;
+}
 @media (max-width: 768px) {
 
   .mobile-bar {
@@ -617,6 +713,18 @@ h2::before {
 }
 
 @media (max-width: 920px) {
+  .guide-hero-grid,
+.article-layout,
+.quick-guide-grid,
+.guide-stat-grid,
+.checklist-grid,
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+.guide-sidebar {
+  position: static;
+}
   .hero-grid,
   .grid-3,
   .grid-2 {
@@ -1137,5 +1245,13 @@ body::before {
   <a href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book</a>
   <a href="https://g.page/r/CcilDK6TDGr5EBM/review" target="_blank" rel="noopener noreferrer">⭐ Reviews</a>
 </div>
+  <script>
+const glow = document.querySelector('.cursor-glow');
+
+document.addEventListener('mousemove', (e) => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
+</script>
 </body>
 </html>
