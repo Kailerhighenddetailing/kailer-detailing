@@ -844,11 +844,7 @@ body::before {
 
    
 .luxury-bg {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+  display: none;
 }
 
 .luxury-bg::before {
@@ -915,23 +911,7 @@ body::before {
   }
 }
 .cursor-glow {
-  position: fixed;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-
-  background: radial-gradient(
-    circle,
-    rgba(231,199,104,.12),
-    transparent 70%
-  );
-
-  transform: translate(-50%,-50%);
-  transition:
-    left .12s linear,
-    top .12s linear;
+  display: none;
 }
 
 main,
