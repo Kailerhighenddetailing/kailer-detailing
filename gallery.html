@@ -3,271 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Gallery | Kailer's High End Detailing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="K LOGO.png">
 
 <style>
-:root{
---bg:#020617;
---panel:#071826;
---gold:#e7c768;
---blue:#38bdf8;
---text:#fff;
---muted:#aebccd;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:Manrope,sans-serif;
-color:var(--text);
-background:
-radial-gradient(circle at top right, rgba(56,189,248,.12), transparent 30%),
-radial-gradient(circle at top left, rgba(231,199,104,.08), transparent 28%),
-linear-gradient(180deg,#010409,#030712,#07111f,#030712,#010409);
-}
-
-a{text-decoration:none;color:inherit;}
-
-.container{
-width:min(1180px,calc(100% - 2rem));
-margin:auto;
-}
-
-.topbar{
-position:sticky;
-top:0;
-z-index:50;
-background:rgba(2,6,23,.82);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(231,199,104,.16);
-}
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:1rem 0;
-gap:1rem;
-}
-
-.links{
-display:flex;
-gap:.9rem;
-flex-wrap:wrap;
-font-weight:800;
-color:var(--muted);
-}
-
-.links a:hover{
-color:var(--blue);
-}
-
-.hero{
-padding:6rem 0;
-text-align:center;
-}
-
-.eyebrow{
-display:inline-block;
-padding:.45rem .8rem;
-border-radius:999px;
-border:1px solid rgba(56,189,248,.28);
-background:rgba(56,189,248,.08);
-color:#bae6fd;
-font-size:.8rem;
-font-weight:900;
-margin-bottom:1rem;
-}
-
-h1{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(3rem,6vw,5rem);
-margin-bottom:1rem;
-}
-
-.gold{
-color:var(--gold);
-}
-
-.lead{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-color:#d9e6f3;
-}
-
-.section{
-padding:5rem 0;
-}
-
-.grid-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:1rem;
-}
-
-.card{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.12);
-border-radius:24px;
-overflow:hidden;
-}
-
-.photo{
-aspect-ratio:4/3;
-background:#0f172a center/cover no-repeat;
-}
-
-.card-copy{
-padding:1.25rem;
-}
-
-.btn{
-display:inline-block;
-padding:1rem 1.3rem;
-border-radius:999px;
-font-weight:900;
-margin-top:1.5rem;
-}
-
-.btn-primary{
-background:linear-gradient(135deg,var(--gold),#fff1a8);
-color:#08111f;
-}
-
-footer{
-padding:3rem 0;
-text-align:center;
-color:var(--muted);
-}
-
-@media(max-width:900px){
-.grid-3{
-grid-template-columns:1fr;
-}
-
-.nav{
-flex-direction:column;
-text-align:center;
-}
-}
+:root{--bg:#020617;--gold:#e7c768;--blue:#38bdf8;--text:#fff;--muted:#aebccd;--line:rgba(255,255,255,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Manrope,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(56,189,248,.14),transparent 32%),radial-gradient(circle at top left,rgba(231,199,104,.10),transparent 30%),linear-gradient(180deg,#010409,#020617,#07111f,#020617,#010409)}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,calc(100% - 2rem));margin:auto}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(2,6,23,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(231,199,104,.16)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0}
+.brand{display:flex;align-items:center;gap:.75rem;font-weight:900;text-transform:uppercase}
+.brand img{width:52px;height:52px;object-fit:contain;border-radius:14px}
+.links{display:flex;gap:.8rem;flex-wrap:wrap;color:var(--muted);font-weight:800}
+.links a:hover{color:var(--blue)}
+.hero{padding:6rem 0 4rem;text-align:center}
+.eyebrow{display:inline-block;padding:.45rem .8rem;border-radius:999px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);color:#bae6fd;font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
+h1,h2{font-family:'Cormorant Garamond',serif;letter-spacing:-.03em}
+h1{font-size:clamp(3rem,6vw,5.6rem);line-height:.95;margin-bottom:1rem}
+h2{font-size:clamp(2.2rem,4vw,3.5rem);margin-bottom:1rem}
+.gold{color:var(--gold)}
+.lead{max-width:800px;margin:auto;line-height:1.8;color:#d9e6f3;font-size:1.08rem}
+.section{padding:5rem 0}
+.section-head{text-align:center;margin-bottom:2rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.13);border-top:1px solid rgba(231,199,104,.22);border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.photo{aspect-ratio:4/3;background:#0f172a center/cover no-repeat;display:grid;place-items:center;color:var(--muted);font-weight:900;text-align:center;padding:1rem}
+.card-copy{padding:1.25rem}
+.card-copy p{color:#d9e6f3;line-height:1.6}
+.btn{display:inline-block;padding:1rem 1.3rem;border-radius:999px;font-weight:900;margin-top:1.5rem}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#fff1a8);color:#08111f}
+.notice{padding:2rem;border-radius:30px;border:1px solid rgba(231,199,104,.25);background:radial-gradient(circle at top left,rgba(231,199,104,.14),transparent 35%),rgba(255,255,255,.04);text-align:center}
+footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr}.nav{flex-direction:column;text-align:center}.links{justify-content:center}}
 </style>
 </head>
 
 <body>
 
 <div class="topbar">
-<div class="container nav">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="K LOGO.png" alt="Kailer's High End Detailing Logo">
+      <span>Kailer's High End Detailing</span>
+    </a>
 
-<div style="font-weight:900;">
-Kailer's High End Detailing
-</div>
-
-<div class="links">
-<a href="index.html">Home</a>
-<a href="extracted_story.html">My Story</a>
-<a href="services.html">Services</a>
-<a href="pricing.html">Pricing</a>
-<a href="consumer-guide.html.html">Consumer Guide</a>
-<a href="reviews.html">Reviews</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="extracted_story.html">My Story</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consumer-guide.html.html">Consumer Guide</a>
+      <a href="giveaway.html">Giveaway</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </div>
 
 <section class="hero">
-<div class="container">
+  <div class="container">
+    <span class="eyebrow">Gallery</span>
+    <h1>Real Detailing <span class="gold">Transformations</span></h1>
 
-<span class="eyebrow">Gallery</span>
+    <p class="lead">
+      A dedicated space for before-and-after photos, completed vehicle details,
+      interior resets, exterior finishes, and customer-approved transformation shots.
+    </p>
 
-<h1>
-Before & After
-<span class="gold">Results</span>
-</h1>
-
-<p class="lead">
-Follow the journey as our portfolio grows with real customer vehicles,
-before-and-after transformations, interior restorations, exterior finishes,
-and detailing results completed with care.
-</p>
-
-<a class="btn btn-primary"
-href="https://www.instagram.com/kailerhighenddetailing"
-target="_blank">
-📸 View Instagram
-</a>
-
-</div>
+    <a class="btn btn-primary" href="https://www.instagram.com/kailerhighenddetailing" target="_blank" rel="noopener noreferrer">
+      📸 View Instagram
+    </a>
+  </div>
 </section>
 
 <section class="section">
-<div class="container">
+  <div class="container">
+    <div class="notice">
+      <span class="eyebrow">Portfolio Notice</span>
+      <h2>Real customer photos will be added here.</h2>
+      <p class="lead">
+        Replace these placeholder cards with real detailing photos as the portfolio grows.
+        Best results: same vehicle, same angle, good lighting.
+      </p>
+    </div>
+  </div>
+</section>
 
-<div class="grid-3">
+<section class="section">
+  <div class="container">
 
-<div class="card">
-<div class="photo" style="background-image:url('r2.jpg')"></div>
-<div class="card-copy">
-<h3>Future Portfolio Space</h3>
-<p>Replace with customer before-and-after photos.</p>
-</div>
-</div>
+    <div class="section-head">
+      <span class="eyebrow">Before & After</span>
+      <h2>Transformation Gallery</h2>
+    </div>
 
-<div class="card">
-<div class="photo" style="background-image:url('r3.jpg')"></div>
-<div class="card-copy">
-<h3>Interior Transformations</h3>
-<p>Showcase real cleaning and restoration results.</p>
-</div>
-</div>
+    <div class="grid-3">
 
-<div class="card">
-<div class="photo" style="background-image:url('r4.jpg')"></div>
-<div class="card-copy">
-<h3>Exterior Finishes</h3>
-<p>Highlight washes, protection, and final presentation.</p>
-</div>
-</div>
+      <div class="card">
+        <div class="photo">Before Photo<br>Upload: before1.jpg</div>
+        <div class="card-copy">
+          <h3>Interior Before</h3>
+          <p>Use this space for the original condition before detailing.</p>
+        </div>
+      </div>
 
-<div class="card">
-<div class="photo" style="background-image:url('r5.jpg')"></div>
-<div class="card-copy">
-<h3>Customer Vehicles</h3>
-<p>Real vehicles. Real results. No stock photography needed.</p>
-</div>
-</div>
+      <div class="card">
+        <div class="photo">After Photo<br>Upload: after1.jpg</div>
+        <div class="card-copy">
+          <h3>Interior After</h3>
+          <p>Show the cleaned result from the same angle when possible.</p>
+        </div>
+      </div>
 
-<div class="card">
-<div class="photo" style="background-image:url('r6.jpg')"></div>
-<div class="card-copy">
-<h3>Portfolio Growth</h3>
-<p>New detailing projects will continue to be added.</p>
-</div>
-</div>
+      <div class="card">
+        <div class="photo">Exterior Finish<br>Upload: exterior1.jpg</div>
+        <div class="card-copy">
+          <h3>Exterior Results</h3>
+          <p>Show clean paint, wheels, tires, trim, and final presentation.</p>
+        </div>
+      </div>
 
-<div class="card">
-<div class="photo" style="background-image:url('r8.jpg')"></div>
-<div class="card-copy">
-<h3>Professional Results</h3>
-<p>Built one vehicle at a time.</p>
-</div>
-</div>
+      <div class="card">
+        <div class="photo">Seat Cleaning<br>Upload: seats1.jpg</div>
+        <div class="card-copy">
+          <h3>Seats & Carpets</h3>
+          <p>Great for stain removal, salt cleanup, shampooing, and fabric work.</p>
+        </div>
+      </div>
 
-</div>
+      <div class="card">
+        <div class="photo">Pet Hair Removal<br>Upload: pethair1.jpg</div>
+        <div class="card-copy">
+          <h3>Pet Hair & Deep Cleaning</h3>
+          <p>Show difficult jobs that prove the value of professional detailing.</p>
+        </div>
+      </div>
 
-</div>
+      <div class="card">
+        <div class="photo">Customer Vehicle<br>Upload: customer1.jpg</div>
+        <div class="card-copy">
+          <h3>Completed Vehicle</h3>
+          <p>Use customer-approved photos of finished vehicles and pickup moments.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <footer>
-<div class="container">
-© 2026 Kailer's High End Detailing<br>
-Edmonton Interior Detailing • Exterior Detailing • Full Vehicle Detailing
-</div>
+  <div class="container">
+    © 2026 Kailer's High End Detailing<br>
+    Edmonton Interior Detailing • Exterior Detailing • Full Vehicle Detailing
+  </div>
 </footer>
 
 </body>
