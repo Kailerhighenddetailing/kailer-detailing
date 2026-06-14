@@ -61,6 +61,7 @@ html {
 body {
   font-family: 'Manrope', sans-serif;
   color: var(--text);
+  background-color: #020617;
   background:
     radial-gradient(circle at top right, rgba(56,189,248,.14), transparent 34%),
     radial-gradient(circle at top left, rgba(231,199,104,.12), transparent 32%),
@@ -73,6 +74,9 @@ body {
       #000000 100%
     );
 }
+   html {
+  background: #020617;
+}  
 img {
   max-width: 100%;
   display: block;
@@ -844,7 +848,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 }
 
 .luxury-bg::before {
@@ -916,7 +920,7 @@ body::before {
   height: 250px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 
   background: radial-gradient(
     circle,
@@ -929,7 +933,15 @@ body::before {
     left .12s linear,
     top .12s linear;
 }
- .topbar::after {
+
+main,
+.topbar,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.topbar::after {
   content: "";
   position: absolute;
   left: 0;
