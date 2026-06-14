@@ -93,7 +93,6 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  position: relative;
   background: rgba(2, 6, 23, 0.72);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
@@ -668,17 +667,19 @@ h2::before {
 }
 
 @media (max-width: 920px) {
+
   .hero-grid,
   .grid-3,
   .grid-2 {
-    grid-template-columns: 1fr 
-    .gallery-grid{
-  grid-template-columns:1fr;
-}
+    grid-template-columns: 1fr;
+  }
 
-.trust-grid{
-  grid-template-columns:1fr;
-}
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr;
   }
 
   .links {
@@ -977,34 +978,19 @@ body::before {
 <section class="section">
   <div class="container">
 
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(231,199,104,.12),
-      transparent 35%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(15,23,42,.82),
-      rgba(7,24,38,.92)
-    );
+    <div class="card">
+      <div class="card-copy">
 
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.35);
-}
-    <div class="note-panel">
-      .trust-item{
-  padding:1rem;
-  border-radius:18px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.12);
-}
-      <span class="eyebrow">Portfolio Notice</span>
-      <h2>Real results will continue to be added.</h2>
-      <p class="lead">
-        This gallery is designed to grow over time. As more customer vehicles are completed,
-        real before-and-after photos, shop updates, and transformation shots can be added here.
-      </p>
+        <span class="eyebrow">Portfolio Notice</span>
+
+        <h2>Real results will continue to be added.</h2>
+
+        <p class="lead">
+          This gallery is designed to grow over time. As more customer vehicles are completed,
+          real before-and-after photos, shop updates, and transformation shots can be added here.
+        </p>
+
+      </div>
     </div>
 
   </div>
