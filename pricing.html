@@ -97,7 +97,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
         <div class="card-copy">
           <span class="eyebrow">Executive</span>
           <h2>Maintenance Detail</h2>
-          <div class="price">$150+</div>
+          <div class="price">$149</div>
           <p class="lead" style="margin:0;">Approx. 3–4 hours</p>
           <ul>
             <li>Interior vacuum</li>
@@ -113,7 +113,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
         <div class="card-copy">
           <span class="eyebrow">Signature</span>
           <h2>Deep Clean Detail</h2>
-          <div class="price">$200+</div>
+          <div class="price">$199</div>
           <p class="lead" style="margin:0;">Approx. 5–6 hours</p>
           <ul>
             <li>More detailed interior cleaning</li>
@@ -129,7 +129,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
         <div class="card-copy">
           <span class="eyebrow">Ultimate</span>
           <h2>Complete Restoration</h2>
-          <div class="price">$250+</div>
+          <div class="price">$249</div>
           <p class="lead" style="margin:0;">Approx. 6–8+ hours</p>
           <ul>
             <li>Most complete option</li>
@@ -162,21 +162,21 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
           </tr>
           <tr>
             <td>Car</td>
-            <td>$150</td>
-            <td>$200</td>
-            <td>$250</td>
+            <td>$149</td>
+            <td>$199</td>
+            <td>$249</td>
           </tr>
           <tr>
             <td>SUV / Truck</td>
-            <td>$175</td>
-            <td>$225</td>
-            <td>$275</td>
+            <td>$174</td>
+            <td>$224</td>
+            <td>$274</td>
           </tr>
           <tr>
             <td>Large SUV / Van</td>
-            <td>$200</td>
-            <td>$250</td>
-            <td>$300</td>
+            <td>$199</td>
+            <td>$249</td>
+            <td>$299</td>
           </tr>
         </table>
       </div>
@@ -194,7 +194,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
         <table>
           <tr><th>Vehicle Type</th><th>Price</th></tr>
           <tr><td>Car</td><td>$125</td></tr>
-          <tr><td>SUV / Truck</td><td>$150</td></tr>
+          <tr><td>SUV / Truck</td><td>$149</td></tr>
           <tr><td>Large SUV / Van</td><td>$175</td></tr>
         </table>
         <ul>
@@ -259,7 +259,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
           </div>
 
           <div class="estimate-result">
-            Estimated Quote: <span id="estimateTotal">$150</span>
+            Estimated Quote: <span id="estimateTotal">$149</span>
           </div>
 
           <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">
@@ -283,7 +283,35 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 
   </div>
 </section>
+<section class="section">
+  <div class="container">
+    <div class="notice">
+      <span class="eyebrow">Understanding Detailing Value</span>
+      <h2>Why Professional Detailing Takes Time</h2>
 
+      <p class="lead">
+        A professional detail is far more than a quick wash and vacuum.
+        Depending on vehicle size and condition, a proper detail can take anywhere from 3 to 8+ hours.
+      </p>
+
+      <p class="lead" style="margin-top:1rem;">
+        Time is spent vacuuming, cleaning interior panels, treating carpets and seats,
+        cleaning cracks and crevices, washing exterior surfaces, cleaning wheels,
+        cleaning glass, and completing a final inspection.
+      </p>
+
+      <p class="lead" style="margin-top:1rem;">
+        Pet hair, stains, salt buildup, spills, odours, and heavily used family vehicles
+        often require additional time and attention to restore properly.
+      </p>
+
+      <p class="lead" style="margin-top:1rem;">
+        Our pricing reflects the time, care, products, equipment, training, and attention
+        required to deliver professional results — not a rushed surface clean.
+      </p>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="container">
     © 2026 Kailer's High End Detailing<br>
@@ -292,16 +320,12 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 </footer>
 
 <script>
-const vehicleSize = document.getElementById("vehicleSize");
-const detailPackage = document.getElementById("detailPackage");
-const estimateTotal = document.getElementById("estimateTotal");
-const addons = document.querySelectorAll(".addon");
-
 const prices = {
-  car: { executive:150, signature:200, ultimate:250 },
-  suv: { executive:175, signature:225, ultimate:275 },
-  large: { executive:200, signature:250, ultimate:300 }
+  car: { executive:149, signature:199, ultimate:249 },
+  suv: { executive:174, signature:224, ultimate:274 },
+  large: { executive:199, signature:249, ultimate:299 }
 };
+
 
 function updateEstimate(){
   let total = prices[vehicleSize.value][detailPackage.value];
@@ -317,5 +341,6 @@ addons.forEach(addon => addon.addEventListener("change", updateEstimate));
 updateEstimate();
 </script>
 
+  
 </body>
 </html>
