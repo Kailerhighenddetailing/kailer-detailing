@@ -38,8 +38,26 @@ li{margin:.35rem 0}
 .btn{display:inline-block;padding:1rem 1.3rem;border-radius:999px;font-weight:900;margin:.4rem}
 .btn-primary{background:linear-gradient(135deg,var(--gold),#fff1a8);color:#08111f}
 .btn-secondary{border:1px solid rgba(56,189,248,.35);background:rgba(255,255,255,.04);color:white}
-table{width:100%;border-collapse:collapse;color:white;margin-top:1rem}
-th,td{padding:14px;border:1px solid rgba(255,255,255,.12);text-align:center}
+table{
+  width:100%;
+  min-width:500px;
+  border-collapse:collapse;
+  color:white;
+  margin-top:1rem;
+}
+  .card-copy{
+  overflow-x:auto;
+}
+  .card-copy{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+th,td{
+  padding:10px;
+  border:1px solid rgba(255,255,255,.12);
+  text-align:center;
+  font-size:.9rem;
+}
 th{background:rgba(231,199,104,.14)}
 .calculator-box select{width:100%;padding:.9rem 1rem;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:#020617;color:white;font-weight:800;margin:.5rem 0 1rem}
 .calculator-box label{display:block;color:var(--gold);font-weight:900;margin-top:1rem}
@@ -47,7 +65,25 @@ th{background:rgba(231,199,104,.14)}
 .estimate-result{margin-top:1.5rem;font-size:1.5rem;font-weight:900;color:#fff1a8}
 .notice{padding:2rem;border-radius:30px;border:1px solid rgba(231,199,104,.25);background:radial-gradient(circle at top left,rgba(231,199,104,.14),transparent 35%),rgba(255,255,255,.04);text-align:center}
 footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
-@media(max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}.nav{flex-direction:column;text-align:center}.links{justify-content:center}}
+@media(max-width:900px){
+  .grid-3,.grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .nav{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .links{
+    justify-content:center;
+  }
+
+  th,td{
+    font-size:.75rem;
+    padding:6px;
+  }
+}
 </style>
 </head>
 
@@ -176,7 +212,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
             <td>Large SUV / Van</td>
             <td>$199</td>
             <td>$249</td>
-            <td>$299</td>
+            <td>$289</td>
           </tr>
         </table>
       </div>
@@ -190,7 +226,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
     <div class="card">
       <div class="card-copy">
         <span class="eyebrow">Interior Only</span>
-        <h2>Inside Cleaning</h2>
+        <h2>Maintenance Interior Cleaning</h2>
         <table>
           <tr><th>Vehicle Type</th><th>Price</th></tr>
           <tr><td>Car</td><td>$125</td></tr>
@@ -203,6 +239,9 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
           <li>Windows cleaned</li>
           <li>Floor mats cleaned</li>
           <li>Light dust and debris removal</li>
+          <p class="lead" style="margin-top:1rem;font-size:.95rem;">
+Interior Only is intended for maintenance cleaning. Deep stains, heavy pet hair, odours, salt buildup, and restoration cleaning may require Signature or Ultimate pricing.
+</p>
         </ul>
       </div>
     </div>
@@ -210,7 +249,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
     <div class="card">
       <div class="card-copy">
         <span class="eyebrow">Exterior Only</span>
-        <h2>Outside Cleaning</h2>
+        <h2>Maintenance Exterior Wash</h2>
         <table>
           <tr><th>Vehicle Type</th><th>Price</th></tr>
           <tr><td>Car</td><td>$60</td></tr>
@@ -222,6 +261,9 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
           <li>Wheels cleaned</li>
           <li>Tire dressing</li>
           <li>Exterior wipe down</li>
+          <p class="lead" style="margin-top:1rem;font-size:.95rem;">
+Exterior Only is intended for maintenance washing. It does not include paint correction, polishing, decontamination, or restoration work.
+</p>
         </ul>
       </div>
     </div>
@@ -294,7 +336,9 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
       <td>Tahoe • Suburban • Yukon XL • Expedition • Odyssey • Sienna • Carnival</td>
     </tr>
   </table>
-
+<p class="lead" style="margin-top:1rem;">
+Packages include more time, deeper cleaning, and a more complete service than Interior Only or Exterior Only maintenance options.
+</p>
   <p class="lead" style="margin-top:1.25rem;">
     Pricing is based on vehicle size and the time required to achieve professional results.
     Larger vehicles require additional labour, materials, and attention to detail.
@@ -361,7 +405,7 @@ const addons = document.querySelectorAll(".addon");
 const prices = {
   car: { executive:149, signature:199, ultimate:249 },
   suv: { executive:174, signature:224, ultimate:274 },
-  large: { executive:199, signature:249, ultimate:299 }
+  large: { executive:199, signature:249, ultimate:289 }
 };
 
 function updateEstimate(){
