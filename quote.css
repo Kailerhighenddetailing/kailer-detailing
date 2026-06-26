@@ -104,3 +104,30 @@ padding:30px;
 }
 
 }
+.option{
+
+padding:28px;
+
+margin:18px 0;
+
+border-radius:20px;
+
+background:#111827;
+
+cursor:pointer;
+
+font-size:22px;
+
+transition:.25s;
+
+border:2px solid transparent;
+
+}
+
+.option:hover{
+
+border-color:#e7c768;
+
+transform:translateY(-3px);
+
+}
