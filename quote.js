@@ -1,34 +1,51 @@
-const startBtn=document.getElementById("startBtn");
+const screen=document.getElementById("screen");
+const progress=document.querySelector(".progress-fill");
 
-const welcomeScreen=document.getElementById("welcomeScreen");
+let answers={};
+let step=0;
 
-const wizard=document.getElementById("wizard");
+document.getElementById("startBtn").onclick=()=>{
 
-startBtn.addEventListener("click",(e)=>{
+step=1;
 
-e.preventDefault();
+showVehicle();
 
-welcomeScreen.style.display="none";
+};
 
-wizard.style.display="block";
+function updateProgress(){
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+progress.style.width=(step/8*100)+"%";
 
-});
+}
 
-const vehicleCards=document.querySelectorAll(".vehicle-option");
+function showVehicle(){
 
-vehicleCards.forEach(card=>{
+updateProgress();
 
-card.addEventListener("click",()=>{
+screen.innerHTML=`
 
-vehicleCards.forEach(c=>c.classList.remove("selected"));
+<h1>What type of vehicle?</h1>
 
-card.classList.add("selected");
+<div class="option" onclick="selectVehicle('Car')">
+🚗 Car
+</div>
 
-});
+<div class="option" onclick="selectVehicle('SUV / Truck')">
+🚙 SUV / Truck
+</div>
 
-});
+<div class="option" onclick="selectVehicle('Large SUV / Van')">
+🚐 Large SUV / Van
+</div>
+
+`;
+
+}
+
+function selectVehicle(type){
+
+answers.vehicle=type;
+
+alert("Vehicle Selected: "+type);
+
+}
