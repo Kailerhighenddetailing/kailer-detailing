@@ -12,9 +12,12 @@ box-sizing:border-box;
 }
 
 body{
-background:linear-gradient(#020617,#07111f,#020617);
 font-family:Manrope,sans-serif;
-color:white;
+color:#ffffff;
+background:
+radial-gradient(circle at top right, rgba(56,189,248,.14), transparent 32%),
+radial-gradient(circle at top left, rgba(231,199,104,.10), transparent 30%),
+linear-gradient(180deg,#010409,#020617,#07111f,#020617,#010409);
 }
 
 #app{
