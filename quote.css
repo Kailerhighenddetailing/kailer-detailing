@@ -75,3 +75,18 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
   }
 }
 </style>
+.vehicle-option{
+cursor:pointer;
+transition:.3s;
+}
+
+.vehicle-option:hover{
+transform:translateY(-8px);
+border-color:#e7c768;
+box-shadow:0 0 30px rgba(231,199,104,.35);
+}
+
+.vehicle-option.selected{
+border:2px solid #e7c768;
+background:rgba(231,199,104,.12);
+}
