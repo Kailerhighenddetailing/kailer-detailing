@@ -129,57 +129,85 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 
     <div class="grid-3">
 
-      <div class="card">
-        <div class="card-copy">
-          <span class="eyebrow">Executive</span>
-          <h2>Maintenance Detail</h2>
-          <div class="price">$149</div>
-          <p class="lead" style="margin:0;">Approx. 3–4 hours</p>
-          <ul>
-            <li>Interior vacuum</li>
-            <li>Interior wipe down</li>
-            <li>Windows cleaned</li>
-            <li>Exterior wash</li>
-            <li>Wheels cleaned</li>
-          </ul>
-        </div>
-      </div>
+  
+         <div class="card">
+  <div class="card-copy">
+
+    <span class="eyebrow">Regularly Maintained Vehicles</span>
+
+    <h2>Maintenance Detail</h2>
+
+    <div class="price">$149</div>
+
+    <p class="lead" style="margin:0;">
+      Best for regularly cleaned vehicles with light everyday use.<br>
+      Approx. 3–4 hours
+    </p>
+
+    <ul>
+      <li>Interior vacuum</li>
+      <li>Interior wipe down</li>
+      <li>Windows cleaned</li>
+      <li>Exterior hand wash</li>
+      <li>Wheels cleaned</li>
+    </ul>
+
+  </div>
+</div>
 
       <div class="card">
         <div class="card-copy">
-          <span class="eyebrow">Signature</span>
-          <h2>Deep Clean Detail</h2>
-          <div class="price">$199</div>
-          <p class="lead" style="margin:0;">Approx. 5–6 hours</p>
-          <ul>
-            <li>More detailed interior cleaning</li>
-            <li>Seats, carpets, mats, panels</li>
-            <li>Exterior wash and finish</li>
-            <li>Better for family vehicles</li>
-            <li>Great seasonal reset</li>
-          </ul>
-        </div>
-      </div>
+          <span class="eyebrow">Less Frequently Cleaned</span>
 
-      <div class="card">
-        <div class="card-copy">
-          <span class="eyebrow">Ultimate</span>
-          <h2>Complete Restoration</h2>
-          <div class="price">$249</div>
-          <p class="lead" style="margin:0;">Approx. 6–8+ hours</p>
-          <ul>
-            <li>Most complete option</li>
-            <li>Interior and exterior focus</li>
-            <li>Best for neglected vehicles</li>
-            <li>Extra time and attention</li>
-            <li>Full vehicle reset</li>
-          </ul>
-        </div>
-      </div>
+<h2>Deep Clean Detail</h2>
 
+<div class="price">$199</div>
+
+<p class="lead" style="margin:0;">
+  Ideal for vehicles that haven't been cleaned recently or receive heavy daily use.<br>
+  Approx. 5–6 hours
+</p>
+
+<ul>
+  <li>Everything included in the Maintenance Detail</li>
+  <li>Deep cleaning of seats, carpets & floor mats</li>
+  <li>Detailed cleaning of door panels, dashboard & console</li>
+  <li>Interior plastics and trim thoroughly cleaned</li>
+  <li>Recommended for family, work & pet vehicles</li>
+</ul>
+        
+    
+          </div>
+    </div>
+
+    <div class="card">
+      <div class="card-copy">
+
+        <span class="eyebrow">Maximum Interior Restoration</span>
+
+        <h2>Ultimate Deep Clean</h2>
+
+        <div class="price">$249</div>
+
+        <p class="lead" style="margin:0;">
+          Our most meticulous detail. Every accessible crack, crevice, vent, seam, and surface is cleaned to restore your vehicle as close to new as possible.<br>
+          Approx. 6–8+ hours
+        </p>
+
+        <ul>
+          <li>Everything included in the Deep Clean Detail</li>
+          <li>Detailed cleaning of every accessible crack &amp; crevice</li>
+          <li>Air vents, cup holders &amp; seat tracks</li>
+          <li>Door pockets, trim &amp; hard-to-reach areas</li>
+          <li>Closest your vehicle can get to new</li>
+        </ul>
+
+      </div>
     </div>
 
   </div>
+
+</div>
 </section>
 
 <section class="section">
@@ -192,9 +220,9 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
         <table>
           <tr>
             <th>Vehicle Type</th>
-            <th>Executive</th>
-            <th>Signature</th>
-            <th>Ultimate</th>
+       <th>Maintenance</th>
+<th>Deep Clean</th>
+<th>Ultimate Deep Clean</th>
           </tr>
           <tr>
   <td>Car</td>
@@ -203,7 +231,6 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
   <td>$239</td>
 </tr>
 
-That's the
          <tr>
   <td>SUV / Truck</td>
   <td>$169</td>
@@ -291,9 +318,9 @@ Exterior Only is intended for maintenance washing. It does not include paint cor
 
           <label>Service Package</label>
           <select id="detailPackage">
-            <option value="executive">Executive Detail</option>
-            <option value="signature">Signature Detail</option>
-            <option value="ultimate">Ultimate Detail</option>
+         <option value="executive">Maintenance Detail</option>
+<option value="signature">Deep Clean Detail</option>
+<option value="ultimate">Ultimate Deep Clean</option>
           </select>
 
           <label>Add-ons</label>
@@ -411,15 +438,35 @@ const prices = {
 };
 
 function updateEstimate(){
+
   let total = prices[vehicleSize.value][detailPackage.value];
 
   addons.forEach(addon => {
-    if(addon.checked) {
+    if(addon.checked){
       total += Number(addon.value);
     }
   });
 
-  estimateTotal.textContent = "$" + total;
+  const discount = total * 0.10;
+  const discountedTotal = total - discount;
+
+  estimateTotal.innerHTML = `
+  <div style="font-size:1rem;color:#aebccd;">
+    Regular Price: <s>$${total.toFixed(2)}</s>
+  </div>
+
+  <div style="margin:6px 0;color:#4ade80;font-weight:bold;">
+    You Save: $${discount.toFixed(2)}
+  </div>
+
+  <div style="font-size:.95rem;color:#fff;">
+    Today's Online Price
+  </div>
+
+  <div style="font-size:2rem;font-weight:bold;color:#fff1a8;">
+    $${discountedTotal.toFixed(2)}
+  </div>
+`;
 }
 
 vehicleSize.addEventListener("change", updateEstimate);
