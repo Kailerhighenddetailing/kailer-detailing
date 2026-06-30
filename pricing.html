@@ -125,6 +125,62 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 </section>
 
 <section class="section">
+  <div class="container" style="max-width:700px;">
+
+   <div class="card">
+      <div class="card-copy">
+     <span class="eyebrow">Instant Online Pricing</span>
+      <h2>Get Your Instant Estimate</h2>
+<p class="lead" style="margin-bottom:1.75rem;">
+Choose your vehicle, package, and any add-ons to instantly see your estimated online price.
+</p>
+        <div class="calculator-box">
+<label>Service Type</label>
+<select id="serviceType">
+  <option value="full">Full Detail</option>
+  <option value="interior">Interior Only</option>
+  <option value="exterior">Exterior Only</option>
+</select>
+
+<label>Vehicle Type</label>
+<select id="vehicleSize">
+            <option value="car">Car</option>
+            <option value="suv">SUV / Truck</option>
+            <option value="large">7/8 Passenger Full-Size SUV / Van</option>
+          </select>
+
+ <div id="packageSection">
+
+<label>Service Package</label>
+
+<select id="detailPackage">
+  ...
+</select>
+
+</div>
+          <label>Add-ons</label>
+          <div class="addon-list">
+            <label><input type="checkbox" class="addon" value="50"> Pet Hair Removal (+$50)</label>
+            <label><input type="checkbox" class="addon" value="50"> Excessive Stains / Heavy Soil (+$50)</label>
+          </div>
+
+            <div class="estimate-result">
+  Your Estimated Investment
+  <div id="estimateTotal"></div>
+
+          </div>
+
+          <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">
+            📋 Request This Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
   <div class="container">
 
     <div class="grid-3">
@@ -140,10 +196,9 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
     <div class="price">$149</div>
 
     <p class="lead" style="margin:0;">
-      Best for regularly cleaned vehicles with light everyday use.<br>
-      Approx. 3–4 hours
-    </p>
-
+  Perfect for regularly maintained vehicles that need a professional refresh.
+</p>
+  
     <ul>
       <li>Interior vacuum</li>
       <li>Interior wipe down</li>
@@ -157,15 +212,20 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 
       <div class="card">
         <div class="card-copy">
-          <span class="eyebrow">Less Frequently Cleaned</span>
+         <span class="eyebrow" style="background:linear-gradient(135deg,#e7c768,#fff1a8);color:#08111f;border:none;">
+⭐ MOST POPULAR
+</span>
+
+<span class="eyebrow">
+Less Frequently Cleaned
+</span>
 
 <h2>Deep Clean Detail</h2>
 
 <div class="price">$199</div>
 
 <p class="lead" style="margin:0;">
-  Ideal for vehicles that haven't been cleaned recently or receive heavy daily use.<br>
-  Approx. 5–6 hours
+  Designed for vehicles with built-up dirt, family use, pets, or months between cleanings.
 </p>
 
 <ul>
@@ -183,16 +243,21 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
     <div class="card">
       <div class="card-copy">
 
-        <span class="eyebrow">Maximum Interior Restoration</span>
+    <span class="eyebrow" style="background:linear-gradient(135deg,#38bdf8,#7dd3fc);color:#08111f;border:none;">
+👑 BEST POSSIBLE RESULT
+</span>
+
+<span class="eyebrow">
+Maximum Interior Restoration
+</span>
 
         <h2>Ultimate Deep Clean</h2>
 
         <div class="price">$249</div>
 
-        <p class="lead" style="margin:0;">
-          Our most meticulous detail. Every accessible crack, crevice, vent, seam, and surface is cleaned to restore your vehicle as close to new as possible.<br>
-          Approx. 6–8+ hours
-        </p>
+   <p class="lead" style="margin:0;">
+  Our most comprehensive service, restoring every accessible surface as close to new as possible.
+</p>
 
         <ul>
           <li>Everything included in the Deep Clean Detail</li>
@@ -228,7 +293,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
   <td>Car</td>
   <td>$149</td>
   <td>$199</td>
-  <td>$239</td>
+  <td>$249</td>
 </tr>
 
          <tr>
@@ -269,7 +334,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
           <li>Floor mats cleaned</li>
           <li>Light dust and debris removal</li>
           <p class="lead" style="margin-top:1rem;font-size:.95rem;">
-Interior Only is intended for maintenance cleaning. Deep stains, heavy pet hair, odours, salt buildup, and restoration cleaning may require Signature or Ultimate pricing.
+Interior Only is intended for maintenance cleaning. Deep stains, heavy pet hair, odours, salt buildup, and restoration cleaning may require a Deep Clean or Ultimate Deep Clean service.
 </p>
         </ul>
       </div>
@@ -303,42 +368,7 @@ Exterior Only is intended for maintenance washing. It does not include paint cor
 <section class="section">
   <div class="container grid-2">
 
-    <div class="card">
-      <div class="card-copy">
-        <span class="eyebrow">Estimate Calculator</span>
-        <h2>Quick Estimate</h2>
-
-        <div class="calculator-box">
-          <label>Vehicle Type</label>
-          <select id="vehicleSize">
-            <option value="car">Car</option>
-            <option value="suv">SUV / Truck</option>
-            <option value="large">7/8 Passenger Full-Size SUV / Van</option>
-          </select>
-
-          <label>Service Package</label>
-          <select id="detailPackage">
-         <option value="executive">Maintenance Detail</option>
-<option value="signature">Deep Clean Detail</option>
-<option value="ultimate">Ultimate Deep Clean</option>
-          </select>
-
-          <label>Add-ons</label>
-          <div class="addon-list">
-            <label><input type="checkbox" class="addon" value="50"> Pet Hair Removal (+$50)</label>
-            <label><input type="checkbox" class="addon" value="50"> Excessive Stains / Heavy Soil (+$50)</label>
-          </div>
-
-          <div class="estimate-result">
-            Estimated Quote: <span id="estimateTotal">$149</span>
-          </div>
-
-          <a class="btn btn-primary" href="https://forms.gle/m55AUGRyMztN163B9" target="_blank" rel="noopener noreferrer">
-            📋 Request This Estimate
-          </a>
-        </div>
-      </div>
-    </div>
+   
 <div class="notice" style="margin-bottom:20px;">
   <span class="eyebrow">Quick Vehicle Guide</span>
 
@@ -426,20 +456,46 @@ Packages include more time, deeper cleaning, and a more complete service than In
 </footer>
 
 <script>
+const serviceType = document.getElementById("serviceType");
 const vehicleSize = document.getElementById("vehicleSize");
 const detailPackage = document.getElementById("detailPackage");
 const estimateTotal = document.getElementById("estimateTotal");
 const addons = document.querySelectorAll(".addon");
+const packageSection = document.getElementById("packageSection");
 
 const prices = {
-  car: { executive:149, signature:199, ultimate:239 },
-  suv: { executive:169, signature:209, ultimate:250 },
-  large: { executive:199, signature:249, ultimate:299 }
+  full: {
+    car: { maintenance:149, deepclean:199, ultimate:249 },
+    suv: { maintenance:169, deepclean:209, ultimate:250 },
+    large: { maintenance:199, deepclean:249, ultimate:299 }
+  },
+
+  interior: {
+    car:139,
+    suv:154,
+    large:179
+  },
+
+  exterior: {
+    car:60,
+    suv:75,
+    large:90
+  }
 };
 
 function updateEstimate(){
+if (serviceType.value === "full") {
+  packageSection.style.display = "block";
+} else {
+  packageSection.style.display = "none";
+}
+let total;
 
-  let total = prices[vehicleSize.value][detailPackage.value];
+if (serviceType.value === "full") {
+  total = prices.full[vehicleSize.value][detailPackage.value];
+} else {
+  total = prices[serviceType.value][vehicleSize.value];
+}
 
   addons.forEach(addon => {
     if(addon.checked){
@@ -469,6 +525,8 @@ function updateEstimate(){
 `;
 }
 
+
+serviceType.addEventListener("change", updateEstimate);
 vehicleSize.addEventListener("change", updateEstimate);
 detailPackage.addEventListener("change", updateEstimate);
 addons.forEach(addon => addon.addEventListener("change", updateEstimate));
