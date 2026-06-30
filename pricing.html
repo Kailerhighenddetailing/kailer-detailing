@@ -158,12 +158,15 @@ Choose your vehicle, package, and any add-ons to instantly see your estimated on
 </select>
 
 </div>
-          <label>Add-ons</label>
-          <div class="addon-list">
+     <div id="addonSection">
+
+<label>Add-ons</label>
+
+<div class="addon-list">
             <label><input type="checkbox" class="addon" value="50"> Pet Hair Removal (+$50)</label>
             <label><input type="checkbox" class="addon" value="50"> Excessive Stains / Heavy Soil (+$50)</label>
           </div>
-
+</div>
             <div class="estimate-result">
   Your Estimated Investment
   <div id="estimateTotal"></div>
@@ -462,7 +465,7 @@ const detailPackage = document.getElementById("detailPackage");
 const estimateTotal = document.getElementById("estimateTotal");
 const addons = document.querySelectorAll(".addon");
 const packageSection = document.getElementById("packageSection");
-
+const addonSection = document.getElementById("addonSection");
 const prices = {
   full: {
     car: { maintenance:149, deepclean:199, ultimate:249 },
@@ -486,8 +489,19 @@ const prices = {
 function updateEstimate(){
 if (serviceType.value === "full") {
   packageSection.style.display = "block";
+  addonSection.style.display = "block";
+
+} else if (serviceType.value === "interior") {
+  packageSection.style.display = "none";
+  addonSection.style.display = "block";
+
 } else {
   packageSection.style.display = "none";
+  addonSection.style.display = "none";
+
+  addons.forEach(addon => {
+    addon.checked = false;
+  });
 }
 let total;
 
