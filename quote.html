@@ -92,47 +92,7 @@ font-weight:900;
 color:#e7c768;
 margin:20px 0 10px;
 }
-  .service-cards{
-display:grid;
-gap:18px;
-margin-bottom:30px;
-}
 
-.service-card{
-padding:24px;
-border-radius:22px;
-background:linear-gradient(180deg,#101827,#0b1220);
-border:2px solid rgba(255,255,255,.08);
-cursor:pointer;
-transition:.25s;
-}
-
-.service-card:hover{
-transform:translateY(-4px);
-border-color:#e7c768;
-box-shadow:0 18px 45px rgba(231,199,104,.20);
-}
-
-.service-card.active{
-border-color:#38bdf8;
-box-shadow:0 0 30px rgba(56,189,248,.25);
-}
-
-.service-card h3{
-margin-bottom:8px;
-font-size:1.4rem;
-}
-
-.service-card p{
-color:#cbd5e1;
-margin-bottom:12px;
-}
-
-.service-card span{
-font-size:1.2rem;
-font-weight:900;
-color:#fff1a8;
-}
 .addon-list label{display:flex;gap:.6rem;align-items:center;padding:.75rem;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);margin:.5rem 0;color:#d9e6f3}
 .estimate-result{margin-top:1.5rem;font-size:1.5rem;font-weight:900;color:#fff1a8}
 .notice{padding:2rem;border-radius:30px;border:1px solid rgba(231,199,104,.25);background:radial-gradient(circle at top left,rgba(231,199,104,.14),transparent 35%),rgba(255,255,255,.04);text-align:center}
@@ -206,32 +166,27 @@ Get your instant estimate in under 30 seconds. Choose your service, vehicle size
 Choose your vehicle, package, and any add-ons to instantly see your estimated online price.
 </p>
         <div class="calculator-box">
-<label>Choose Your Service</label>
+<label>Service Type</label>
 
-<div class="service-cards">
+<select id="serviceType">
 
-<div class="service-card" data-service="full">
-<h3>🚗 Full Detail</h3>
-<p>Complete Interior & Exterior</p>
-<span>From $149</span>
-</div>
+<option value="" selected disabled>
+👇 Select Your Service
+</option>
 
-<div class="service-card" data-service="interior">
-<h3>🧼 Interior Only</h3>
-<p>Deep Interior Cleaning</p>
-<span>From $139</span>
-</div>
+<option value="full">
+🚗 Full Detail
+</option>
 
-<div class="service-card" data-service="exterior">
-<h3>✨ Exterior Only</h3>
-<p>Premium Hand Wash</p>
-<span>From $60</span>
-</div>
+<option value="interior">
+🧼 Interior Only
+</option>
 
-</div>
+<option value="exterior">
+✨ Exterior Only
+</option>
 
-<input type="hidden" id="serviceType">
-
+</select>
 <label>Vehicle Type</label>
 <select id="vehicleSize">
     <option value="" selected disabled>👇 Select Your Vehicle</option>
@@ -420,23 +375,6 @@ if (serviceType.value === "full") {
   </div>
 `;
 }
-const serviceCards = document.querySelectorAll(".service-card");
-
-serviceCards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        serviceCards.forEach(c => c.classList.remove("active"));
-
-        card.classList.add("active");
-
-        serviceType.value = card.dataset.service;
-
-        updateEstimate();
-
-    });
-
-});
 
 
 
