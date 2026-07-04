@@ -115,6 +115,7 @@ h3{font-size:clamp(1.65rem,3vw,2.45rem);line-height:1.05;margin-bottom:.75rem}
   object-fit:contain;
 }
 
+.section-head{text-align:center;margin-bottom:2rem}
 .case-block{margin-bottom:3rem}
 .case-head{text-align:center;margin-bottom:1.25rem}
 .case-head p{color:var(--soft);line-height:1.7;max-width:760px;margin:auto}
@@ -122,6 +123,11 @@ h3{font-size:clamp(1.65rem,3vw,2.45rem);line-height:1.05;margin-bottom:.75rem}
 .compare{
   display:grid;
   grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.results-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   gap:1rem;
 }
 .photo-card{
@@ -150,6 +156,7 @@ h3{font-size:clamp(1.65rem,3vw,2.45rem);line-height:1.05;margin-bottom:.75rem}
   height:auto;
   object-fit:contain;
 }
+.card-copy{padding:1rem;color:var(--soft);line-height:1.65}
 
 .cta{
   text-align:center;
@@ -160,7 +167,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 @media(max-width:900px){
   .nav{flex-direction:column;text-align:center}
   .links{justify-content:center}
-  .compare{grid-template-columns:1fr}
+  .compare,.results-grid{grid-template-columns:1fr}
   .hero{padding:5rem 0 3rem}
   .section{padding:3.25rem 0}
 }
@@ -195,7 +202,8 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
     <h1>Honda Odyssey <span class="gold">Interior Reset</span></h1>
     <p class="lead">
       A real customer vehicle detailed by Kailer's High End Detailing.
-      This page shows the work in a clean case-study layout instead of a crowded collage.
+      This case study highlights true before-and-after comparisons where the angles match,
+      followed by finished results from the completed interior detail.
     </p>
 
     <div class="hero-photo">
@@ -214,7 +222,7 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
       <span class="eyebrow">Services Performed</span>
       <h2>Complete Interior Detail</h2>
       <p class="lead">
-        This Honda Odyssey received an interior refresh focused on the family-vehicle areas that collect the most dirt:
+        This Honda Odyssey received an interior refresh focused on high-use family vehicle areas:
         seats, mats, door panels, dashboard, rear rows, and cargo spaces.
       </p>
       <div class="tags">
@@ -232,6 +240,14 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 <section class="section">
   <div class="container">
 
+    <div class="section-head">
+      <span class="eyebrow">Matched Before & After</span>
+      <h2>True Transformation Angles</h2>
+      <p class="lead">
+        These comparisons use the closest matching before-and-after angles so the transformation is clear and honest.
+      </p>
+    </div>
+
     <div class="case-block">
       <div class="case-head">
         <span class="eyebrow">1. Driver Area</span>
@@ -241,11 +257,15 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
       <div class="compare">
         <div class="photo-card before">
           <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before2.jpg" alt="Honda Odyssey driver area before detail"></div>
+          <div class="photo-frame">
+            <img src="gallery/honda-odyssey/before2.jpg" alt="Honda Odyssey driver area before detail">
+          </div>
         </div>
         <div class="photo-card after">
           <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after2.jpg" alt="Honda Odyssey driver area after detail"></div>
+          <div class="photo-frame">
+            <img src="gallery/honda-odyssey/after2.jpg" alt="Honda Odyssey driver area after detail">
+          </div>
         </div>
       </div>
     </div>
@@ -259,103 +279,97 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
       <div class="compare">
         <div class="photo-card before">
           <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before3.jpg" alt="Honda Odyssey dashboard before detail"></div>
+          <div class="photo-frame">
+            <img src="gallery/honda-odyssey/before3.jpg" alt="Honda Odyssey dashboard before detail">
+          </div>
         </div>
         <div class="photo-card after">
           <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after3.jpg" alt="Honda Odyssey dashboard after detail"></div>
+          <div class="photo-frame">
+            <img src="gallery/honda-odyssey/after3.jpg" alt="Honda Odyssey dashboard after detail">
+          </div>
         </div>
       </div>
     </div>
 
     <div class="case-block">
       <div class="case-head">
-        <span class="eyebrow">3. Front Seats</span>
-        <h2>Front Seating Area</h2>
-        <p>Leather seating and surrounding trim cleaned for a more polished interior finish.</p>
-      </div>
-      <div class="compare">
-        <div class="photo-card before">
-          <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before4.jpg" alt="Honda Odyssey front seats before detail"></div>
-        </div>
-        <div class="photo-card after">
-          <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after4.jpg" alt="Honda Odyssey front seats after detail"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="case-block">
-      <div class="case-head">
-        <span class="eyebrow">4. Second Row</span>
-        <h2>Second Row Side View</h2>
-        <p>Second-row seating, floor area, and mats cleaned to improve the family-use areas.</p>
-      </div>
-      <div class="compare">
-        <div class="photo-card before">
-          <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before5.jpg" alt="Honda Odyssey second row before detail"></div>
-        </div>
-        <div class="photo-card after">
-          <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after5.jpg" alt="Honda Odyssey second row after detail"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="case-block">
-      <div class="case-head">
-        <span class="eyebrow">5. Rear Seating</span>
-        <h2>Second Row Rear View</h2>
+        <span class="eyebrow">3. Rear Seating</span>
+        <h2>Rear Seating Area</h2>
         <p>Rear seating and floor areas cleaned to remove visible debris and improve overall presentation.</p>
       </div>
       <div class="compare">
         <div class="photo-card before">
           <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before6.jpg" alt="Honda Odyssey rear seats before detail"></div>
+          <div class="photo-frame">
+            <img src="gallery/honda-odyssey/before6.jpg" alt="Honda Odyssey rear seating before detail">
+          </div>
         </div>
         <div class="photo-card after">
           <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after6.jpg" alt="Honda Odyssey rear seats after detail"></div>
+          <div class="photo-frame">
+            <img src="gallery/honda-odyssey/after6.jpg" alt="Honda Odyssey rear seating after detail">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="case-block">
-      <div class="case-head">
-        <span class="eyebrow">6. Cargo Area</span>
-        <h2>Rear Cargo Area</h2>
-        <p>Cargo-area plastic, rear panels, and trunk space cleaned for a sharper finished look.</p>
-      </div>
-      <div class="compare">
-        <div class="photo-card before">
-          <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before7.jpg" alt="Honda Odyssey cargo area before detail"></div>
-        </div>
-        <div class="photo-card after">
-          <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after7.jpg" alt="Honda Odyssey cargo area after detail"></div>
-        </div>
-      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Finished Results</span>
+      <h2>Completed Interior Details</h2>
+      <p class="lead">
+        These photos show finished results from areas that did not have a perfectly matched before angle.
+      </p>
     </div>
 
-    <div class="case-block">
-      <div class="case-head">
-        <span class="eyebrow">7. Final Interior</span>
-        <h2>Wide Interior Result</h2>
-        <p>A wider finished view showing the cleaned interior presentation after the detail.</p>
-      </div>
-      <div class="compare">
-        <div class="photo-card before">
-          <div class="label">Before</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/before8.jpg" alt="Honda Odyssey wide interior before detail"></div>
+    <div class="results-grid">
+
+      <div class="photo-card after">
+        <div class="label">Front Seating Area</div>
+        <div class="photo-frame">
+          <img src="gallery/honda-odyssey/after4.jpg" alt="Honda Odyssey front seating area after detail">
         </div>
-        <div class="photo-card after">
-          <div class="label">After</div>
-          <div class="photo-frame"><img src="gallery/honda-odyssey/after8.jpg" alt="Honda Odyssey wide interior after detail"></div>
+        <div class="card-copy">
+          Finished interior result after cleaning and resetting the front seating area.
         </div>
       </div>
+
+      <div class="photo-card after">
+        <div class="label">Second Row</div>
+        <div class="photo-frame">
+          <img src="gallery/honda-odyssey/after5.jpg" alt="Honda Odyssey second row after detail">
+        </div>
+        <div class="card-copy">
+          Finished second-row result with seating, trim, and family-use areas cleaned.
+        </div>
+      </div>
+
+      <div class="photo-card after">
+        <div class="label">Cargo Area</div>
+        <div class="photo-frame">
+          <img src="gallery/honda-odyssey/after7.jpg" alt="Honda Odyssey cargo area after detail">
+        </div>
+        <div class="card-copy">
+          Cargo-area plastics, rear panels, and trunk space cleaned for a sharper finished look.
+        </div>
+      </div>
+
+      <div class="photo-card after">
+        <div class="label">Wide Interior Result</div>
+        <div class="photo-frame">
+          <img src="gallery/honda-odyssey/after8.jpg" alt="Honda Odyssey wide interior after detail">
+        </div>
+        <div class="card-copy">
+          Wider finished view showing the cleaned interior presentation after the detail.
+        </div>
+      </div>
+
     </div>
 
   </div>
