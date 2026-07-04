@@ -5,40 +5,325 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery | Kailer's High End Detailing</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="K LOGO.png">
 
 <style>
-:root{--bg:#020617;--gold:#e7c768;--blue:#38bdf8;--text:#fff;--muted:#aebccd;--line:rgba(255,255,255,.12)}
+:root{
+  --bg:#020617;
+  --gold:#e7c768;
+  --gold2:#fff1a8;
+  --blue:#38bdf8;
+  --text:#fff;
+  --muted:#aebccd;
+  --soft:#d9e6f3;
+  --line:rgba(255,255,255,.12);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Manrope,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(56,189,248,.14),transparent 32%),radial-gradient(circle at top left,rgba(231,199,104,.10),transparent 30%),linear-gradient(180deg,#010409,#020617,#07111f,#020617,#010409)}
+html{scroll-behavior:smooth}
+body{
+  font-family:Manrope,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 85% 5%,rgba(56,189,248,.16),transparent 28%),
+    radial-gradient(circle at 10% 0%,rgba(231,199,104,.12),transparent 30%),
+    linear-gradient(180deg,#010409,#020617,#07111f,#020617,#010409);
+  overflow-x:hidden;
+}
 a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 .container{width:min(1180px,calc(100% - 2rem));margin:auto}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(2,6,23,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(231,199,104,.16)}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(2,6,23,.84);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(231,199,104,.16);
+}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0}
 .brand{display:flex;align-items:center;gap:.75rem;font-weight:900;text-transform:uppercase}
 .brand img{width:52px;height:52px;object-fit:contain;border-radius:14px}
 .links{display:flex;gap:.8rem;flex-wrap:wrap;color:var(--muted);font-weight:800}
 .links a:hover{color:var(--blue)}
-.hero{padding:6rem 0 4rem;text-align:center}
-.eyebrow{display:inline-block;padding:.45rem .8rem;border-radius:999px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);color:#bae6fd;font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
-h1,h2{font-family:'Cormorant Garamond',serif;letter-spacing:-.03em}
-h1{font-size:clamp(3rem,6vw,5.6rem);line-height:.95;margin-bottom:1rem}
-h2{font-size:clamp(2.2rem,4vw,3.5rem);margin-bottom:1rem}
+
+.hero{padding:6.5rem 0 4rem;text-align:center;position:relative}
+.hero:after{
+  content:"";
+  position:absolute;
+  left:50%;bottom:0;
+  transform:translateX(-50%);
+  width:min(900px,90%);
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(231,199,104,.55),transparent);
+}
+.eyebrow{
+  display:inline-block;
+  padding:.45rem .8rem;
+  border-radius:999px;
+  border:1px solid rgba(56,189,248,.28);
+  background:rgba(56,189,248,.08);
+  color:#bae6fd;
+  font-size:.78rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  margin-bottom:1rem;
+}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;letter-spacing:-.03em}
+h1{font-size:clamp(3rem,6vw,5.8rem);line-height:.94;margin-bottom:1rem}
+h2{font-size:clamp(2.2rem,4vw,3.7rem);line-height:1;margin-bottom:.8rem}
+h3{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1;margin-bottom:.55rem}
 .gold{color:var(--gold)}
-.lead{max-width:800px;margin:auto;line-height:1.8;color:#d9e6f3;font-size:1.08rem}
+.lead{max-width:850px;margin:auto;line-height:1.85;color:var(--soft);font-size:1.08rem}
+.btn{
+  display:inline-block;
+  padding:1rem 1.35rem;
+  border-radius:999px;
+  font-weight:900;
+  margin-top:1.5rem;
+}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#08111f}
+.btn-secondary{border:1px solid rgba(56,189,248,.35);background:rgba(56,189,248,.08);color:#bae6fd}
+
 .section{padding:5rem 0}
-.section-head{text-align:center;margin-bottom:2rem}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.13);border-top:1px solid rgba(231,199,104,.22);border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
-.photo{aspect-ratio:4/3;background:#0f172a center/cover no-repeat;display:grid;place-items:center;color:var(--muted);font-weight:900;text-align:center;padding:1rem}
-.card-copy{padding:1.25rem}
-.card-copy p{color:#d9e6f3;line-height:1.6}
-.btn{display:inline-block;padding:1rem 1.3rem;border-radius:999px;font-weight:900;margin-top:1.5rem}
-.btn-primary{background:linear-gradient(135deg,var(--gold),#fff1a8);color:#08111f}
-.notice{padding:2rem;border-radius:30px;border:1px solid rgba(231,199,104,.25);background:radial-gradient(circle at top left,rgba(231,199,104,.14),transparent 35%),rgba(255,255,255,.04);text-align:center}
+.intro-card{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:1.2rem;
+  align-items:stretch;
+  margin-bottom:2rem;
+}
+.project-card,.stats-card{
+  border:1px solid rgba(255,255,255,.13);
+  border-top:1px solid rgba(231,199,104,.28);
+  background:
+    radial-gradient(circle at top left,rgba(231,199,104,.12),transparent 38%),
+    linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border-radius:34px;
+  padding:2rem;
+  box-shadow:0 28px 80px rgba(0,0,0,.38);
+}
+.project-card p{color:var(--soft);line-height:1.8}
+.service-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.55rem;
+  margin-top:1.2rem;
+}
+.service-tags span{
+  font-size:.78rem;
+  font-weight:900;
+  color:#07111f;
+  padding:.5rem .7rem;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.8rem;
+}
+.stat{
+  padding:1rem;
+  border-radius:22px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.1);
+}
+.stat strong{font-size:1.65rem;color:var(--gold);display:block}
+.stat span{color:var(--muted);font-weight:800;font-size:.85rem}
+
+.section-head{text-align:center;margin-bottom:2.6rem}
+.gallery-stack{display:grid;gap:2.3rem}
+
+.showcase{
+  border:1px solid rgba(255,255,255,.14);
+  border-top:1px solid rgba(231,199,104,.32);
+  background:
+    radial-gradient(circle at top right,rgba(56,189,248,.10),transparent 35%),
+    linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  box-shadow:0 30px 90px rgba(0,0,0,.42);
+  border-radius:36px;
+  overflow:hidden;
+}
+.showcase-info{
+  padding:1.5rem 1.5rem 1.1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:1rem;
+}
+.showcase-info p{color:var(--soft);line-height:1.7;max-width:780px}
+.badge{
+  white-space:nowrap;
+  color:#07111f;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  padding:.65rem .9rem;
+  border-radius:999px;
+  font-weight:900;
+  font-size:.8rem;
+}
+
+.side-by-side{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(255,255,255,.12);
+}
+.frame{
+  position:relative;
+  background:#0f172a;
+  overflow:hidden;
+  aspect-ratio:4/3;
+  cursor:pointer;
+}
+.frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .55s ease, filter .55s ease;
+}
+.frame:hover img{transform:scale(1.035);filter:contrast(1.03)}
+.photo-label{
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  z-index:3;
+  padding:.52rem .78rem;
+  border-radius:999px;
+  font-weight:900;
+  letter-spacing:.09em;
+  font-size:.76rem;
+  background:rgba(2,6,23,.78);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.16);
+}
+.photo-label.after{color:var(--gold)}
+.showcase-footer{
+  padding:1rem 1.5rem 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}
+.showcase-footer p{color:var(--muted);line-height:1.7}
+.view-btn{
+  border:1px solid rgba(56,189,248,.35);
+  background:rgba(56,189,248,.09);
+  color:#bae6fd;
+  padding:.85rem 1rem;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.featured-slider{
+  margin-bottom:2.3rem;
+}
+.compare{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#0f172a;
+  cursor:ew-resize;
+  user-select:none;
+}
+.compare img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.compare .after-img{clip-path:inset(0 0 0 50%)}
+.handle{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  height:100%;
+  width:3px;
+  background:linear-gradient(180deg,#fff,var(--gold),#fff);
+  z-index:5;
+  box-shadow:0 0 24px rgba(231,199,104,.9);
+}
+.handle:before{
+  content:"↔";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:58px;height:58px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#06111f;
+  font-weight:900;
+  border:3px solid rgba(255,255,255,.88);
+  box-shadow:0 14px 42px rgba(0,0,0,.45);
+}
+.slider-note{
+  color:var(--muted);
+  text-align:center;
+  font-weight:800;
+  margin-top:1rem;
+}
+
+.cta{
+  margin-top:3rem;
+  text-align:center;
+  padding:2.5rem;
+  border-radius:34px;
+  border:1px solid rgba(231,199,104,.25);
+  background:
+    radial-gradient(circle at top left,rgba(231,199,104,.14),transparent 36%),
+    rgba(255,255,255,.045);
+}
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.93);
+  z-index:100;
+  padding:1rem;
+}
+.lightbox.active{display:flex}
+.lightbox img{
+  max-width:96vw;
+  max-height:86vh;
+  object-fit:contain;
+  border-radius:18px;
+}
+.close-lightbox{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border-radius:999px;
+  padding:.85rem 1rem;
+  font-weight:900;
+  cursor:pointer;
+}
+
 footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
-@media(max-width:900px){.grid-3{grid-template-columns:1fr}.nav{flex-direction:column;text-align:center}.links{justify-content:center}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .nav{flex-direction:column;text-align:center}
+  .links{justify-content:center}
+  .intro-card{grid-template-columns:1fr}
+  .showcase-info,.showcase-footer{flex-direction:column;align-items:flex-start}
+  .badge{white-space:normal}
+  .side-by-side{grid-template-columns:1fr}
+  .compare{aspect-ratio:4/3}
+  .hero{padding:5rem 0 3rem}
+}
 </style>
 </head>
 
@@ -51,14 +336,14 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
       <span>Kailer's High End Detailing</span>
     </a>
 
-  <div class="links">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="contact.html">Contact</a>
-</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 </div>
 
@@ -66,92 +351,185 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
   <div class="container">
     <span class="eyebrow">Gallery</span>
     <h1>Real Detailing <span class="gold">Transformations</span></h1>
-
     <p class="lead">
-      A dedicated space for before-and-after photos, completed vehicle details,
-      interior resets, exterior finishes, and customer-approved transformation shots.
+      Real before-and-after results from Kailer's High End Detailing.
+      See the difference a careful interior reset can make.
     </p>
-
-    <a class="btn btn-primary" href="https://www.instagram.com/kailerhighenddetailing" target="_blank" rel="noopener noreferrer">
-      📸 View Instagram
-    </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="notice">
-      <span class="eyebrow">Portfolio Notice</span>
-      <h2>Real customer photos will be added here.</h2>
-      <p class="lead">
-        Replace these placeholder cards with real detailing photos as the portfolio grows.
-        Best results: same vehicle, same angle, good lighting.
-      </p>
-    </div>
+    <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+    <a class="btn btn-secondary" href="https://www.instagram.com/kailerhighenddetailing" target="_blank" rel="noopener noreferrer">📸 View Instagram</a>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
 
-    <div class="section-head">
-      <span class="eyebrow">Before & After</span>
-      <h2>Transformation Gallery</h2>
+    <div class="intro-card reveal">
+      <div class="project-card">
+        <span class="eyebrow">Featured Detail</span>
+        <h2>Honda Odyssey Interior Reset</h2>
+        <p>
+          A full family-vehicle interior clean focused on leather seating, mats,
+          plastics, entry areas, rear rows, and cargo spaces.
+        </p>
+        <div class="service-tags">
+          <span>Interior Detail</span>
+          <span>Leather Clean</span>
+          <span>Floor Mats</span>
+          <span>Door Panels</span>
+          <span>Cargo Area</span>
+        </div>
+      </div>
+
+      <div class="stats-card">
+        <div class="stats-grid">
+          <div class="stat"><strong>8</strong><span>Before / After Sets</span></div>
+          <div class="stat"><strong>3</strong><span>Rows Cleaned</span></div>
+          <div class="stat"><strong>Full</strong><span>Interior Reset</span></div>
+          <div class="stat"><strong>Real</strong><span>Customer Photos</span></div>
+        </div>
+      </div>
     </div>
 
-    <div class="grid-3">
-
-      <div class="card">
-        <div class="photo">Before Photo<br>Upload: before1.jpg</div>
-        <div class="card-copy">
-          <h3>Interior Before</h3>
-          <p>Use this space for the original condition before detailing.</p>
+    <div class="showcase featured-slider reveal">
+      <div class="showcase-info">
+        <div>
+          <h3>Interactive Before / After</h3>
+          <p>Drag the gold handle to reveal the transformation.</p>
         </div>
+        <span class="badge">Move the Slider</span>
       </div>
 
-      <div class="card">
-        <div class="photo">After Photo<br>Upload: after1.jpg</div>
-        <div class="card-copy">
-          <h3>Interior After</h3>
-          <p>Show the cleaned result from the same angle when possible.</p>
-        </div>
+      <div class="compare">
+        <img src="before-and-after/before1.jpg" alt="Before Honda Odyssey interior detail">
+        <img class="after-img" src="before-and-after/after1.jpg" alt="After Honda Odyssey interior detail">
+        <span class="photo-label">BEFORE</span>
+        <span class="photo-label after" style="left:auto;right:1rem;">AFTER</span>
+        <span class="handle"></span>
       </div>
 
-      <div class="card">
-        <div class="photo">Exterior Finish<br>Upload: exterior1.jpg</div>
-        <div class="card-copy">
-          <h3>Exterior Results</h3>
-          <p>Show clean paint, wheels, tires, trim, and final presentation.</p>
+      <p class="slider-note">Tip: on mobile, drag with your finger.</p>
+    </div>
+
+    <div class="section-head reveal">
+      <span class="eyebrow">Transformation Gallery</span>
+      <h2>Before & After Results</h2>
+      <p class="lead">Large side-by-side comparisons designed to show the clean clearly.</p>
+    </div>
+
+    <div class="gallery-stack">
+
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Front Cabin Reset</h3><p>Dashboard, console, front seats, and high-touch surfaces cleaned and refreshed.</p></div>
+          <span class="badge">Front Interior</span>
         </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before1.jpg" alt="Before front cabin"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after1.jpg" alt="After front cabin"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>One of the strongest first impressions in any interior detail.</p><button class="view-btn" data-img="before-and-after/after1.jpg">View After</button></div>
       </div>
 
-      <div class="card">
-        <div class="photo">Seat Cleaning<br>Upload: seats1.jpg</div>
-        <div class="card-copy">
-          <h3>Seats & Carpets</h3>
-          <p>Great for stain removal, salt cleanup, shampooing, and fabric work.</p>
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Driver Area Detail</h3><p>Driver seat, entry area, controls, door sill, and surrounding trim cleaned for a sharper look.</p></div>
+          <span class="badge">Driver Area</span>
         </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before2.jpg" alt="Before driver area"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after2.jpg" alt="After driver area"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>High-touch areas cleaned for a fresher daily-drive feel.</p><button class="view-btn" data-img="before-and-after/after2.jpg">View After</button></div>
       </div>
 
-      <div class="card">
-        <div class="photo">Pet Hair Removal<br>Upload: pethair1.jpg</div>
-        <div class="card-copy">
-          <h3>Pet Hair & Deep Cleaning</h3>
-          <p>Show difficult jobs that prove the value of professional detailing.</p>
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Second Row Seats</h3><p>Captain's chairs, seat tracks, mats, and surrounding panels cleaned and reset.</p></div>
+          <span class="badge">Second Row</span>
         </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before3.jpg" alt="Before second row"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after3.jpg" alt="After second row"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>Ideal for family vehicles that need a deeper interior reset.</p><button class="view-btn" data-img="before-and-after/after3.jpg">View After</button></div>
       </div>
 
-      <div class="card">
-        <div class="photo">Customer Vehicle<br>Upload: customer1.jpg</div>
-        <div class="card-copy">
-          <h3>Completed Vehicle</h3>
-          <p>Use customer-approved photos of finished vehicles and pickup moments.</p>
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Rear Seating Area</h3><p>Rear interior surfaces cleaned with attention to trim, seats, and floor areas.</p></div>
+          <span class="badge">Rear Interior</span>
         </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before4.jpg" alt="Before rear seating"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after4.jpg" alt="After rear seating"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>Clean rear rows help the entire vehicle feel refreshed.</p><button class="view-btn" data-img="before-and-after/after4.jpg">View After</button></div>
+      </div>
+
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Third Row Detail</h3><p>Third-row seating and rear cabin surfaces cleaned for a well-kept finish.</p></div>
+          <span class="badge">Third Row</span>
+        </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before5.jpg" alt="Before third row"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after5.jpg" alt="After third row"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>Great for vans, SUVs, and family haulers.</p><button class="view-btn" data-img="before-and-after/after5.jpg">View After</button></div>
+      </div>
+
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Cargo Area Reset</h3><p>Rear cargo well, hatch plastics, and storage spaces cleaned for a finished result.</p></div>
+          <span class="badge">Cargo Area</span>
+        </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before6.jpg" alt="Before cargo area"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after6.jpg" alt="After cargo area"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>Clean cargo spaces help the whole vehicle feel better cared for.</p><button class="view-btn" data-img="before-and-after/after6.jpg">View After</button></div>
+      </div>
+
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Door Panel & Trim</h3><p>Door panels, switches, pockets, and entry surfaces cleaned for a professional finish.</p></div>
+          <span class="badge">Trim Detail</span>
+        </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before7.jpg" alt="Before door panel"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after7.jpg" alt="After door panel"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>Small details make the biggest difference in a full interior detail.</p><button class="view-btn" data-img="before-and-after/after7.jpg">View After</button></div>
+      </div>
+
+      <div class="showcase reveal">
+        <div class="showcase-info">
+          <div><h3>Complete Interior Finish</h3><p>A final transformation view showing the cleaned, refreshed interior presentation.</p></div>
+          <span class="badge">Finished Result</span>
+        </div>
+        <div class="side-by-side">
+          <div class="frame"><img src="before-and-after/before8.jpg" alt="Before complete interior"><span class="photo-label">BEFORE</span></div>
+          <div class="frame"><img src="before-and-after/after8.jpg" alt="After complete interior"><span class="photo-label after">AFTER</span></div>
+        </div>
+        <div class="showcase-footer"><p>Ready for customer pickup, listing photos, or a fresh daily drive.</p><button class="view-btn" data-img="before-and-after/after8.jpg">View After</button></div>
       </div>
 
     </div>
+
+    <div class="cta reveal">
+      <span class="eyebrow">Book Your Detail</span>
+      <h2>Want your vehicle to look this clean?</h2>
+      <p class="lead">Interior detailing, exterior detailing, and full vehicle reset packages available in Edmonton.</p>
+      <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+    </div>
+
   </div>
 </section>
+
+<div class="lightbox" id="lightbox">
+  <button class="close-lightbox" id="closeLightbox">Close ✕</button>
+  <img id="lightboxImg" src="" alt="Expanded gallery image">
+</div>
 
 <footer>
   <div class="container">
@@ -159,6 +537,61 @@ footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid 
     Edmonton Interior Detailing • Exterior Detailing • Full Vehicle Detailing
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.compare').forEach(compare => {
+  const after = compare.querySelector('.after-img');
+  const handle = compare.querySelector('.handle');
+
+  function move(e){
+    const rect = compare.getBoundingClientRect();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    let x = clientX - rect.left;
+    x = Math.max(0, Math.min(x, rect.width));
+    const pct = (x / rect.width) * 100;
+    after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    handle.style.left = `${pct}%`;
+  }
+
+  compare.addEventListener('mousemove', move);
+  compare.addEventListener('touchmove', move, {passive:true});
+  compare.addEventListener('click', move);
+});
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const closeLightbox = document.getElementById('closeLightbox');
+
+document.querySelectorAll('.frame img, .view-btn').forEach(item => {
+  item.addEventListener('click', () => {
+    const src = item.dataset.img || item.getAttribute('src');
+    lightboxImg.src = src;
+    lightbox.classList.add('active');
+  });
+});
+
+closeLightbox.addEventListener('click', () => {
+  lightbox.classList.remove('active');
+  lightboxImg.src = "";
+});
+
+lightbox.addEventListener('click', e => {
+  if(e.target === lightbox){
+    lightbox.classList.remove('active');
+    lightboxImg.src = "";
+  }
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
