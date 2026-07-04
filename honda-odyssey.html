@@ -1,1 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honda Odyssey Interior Detail | Kailer's High End Detailing</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="K LOGO.png">
+
+<style>
+:root{
+  --gold:#e7c768;
+  --blue:#38bdf8;
+  --text:#fff;
+  --muted:#aebccd;
+  --soft:#d9e6f3;
+  --line:rgba(255,255,255,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Manrope,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top right,rgba(56,189,248,.14),transparent 32%),
+    radial-gradient(circle at top left,rgba(231,199,104,.12),transparent 30%),
+    linear-gradient(180deg,#010409,#020617,#07111f,#020617,#010409);
+}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+.container{width:min(1180px,calc(100% - 2rem));margin:auto}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(2,6,23,.84);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(231,199,104,.16);
+}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0}
+.brand{display:flex;align-items:center;gap:.75rem;font-weight:900;text-transform:uppercase}
+.brand img{width:52px;height:52px;object-fit:contain;border-radius:14px}
+.links{display:flex;gap:.8rem;flex-wrap:wrap;color:var(--muted);font-weight:800}
+.links a:hover{color:var(--blue)}
+
+.hero{padding:6rem 0 4rem;text-align:center}
+.eyebrow{
+  display:inline-block;
+  padding:.45rem .8rem;
+  border-radius:999px;
+  border:1px solid rgba(56,189,248,.28);
+  background:rgba(56,189,248,.08);
+  color:#bae6fd;
+  font-size:.78rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  margin-bottom:1rem;
+}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;letter-spacing:-.03em}
+h1{font-size:clamp(3rem,6vw,5.8rem);line-height:.94;margin-bottom:1rem}
+h2{font-size:clamp(2.2rem,4vw,3.7rem);line-height:1;margin-bottom:.9rem}
+h3{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1;margin-bottom:.5rem}
+.gold{color:var(--gold)}
+.lead{max-width:850px;margin:auto;line-height:1.85;color:var(--soft);font-size:1.08rem}
+.btn{
+  display:inline-block;
+  padding:1rem 1.35rem;
+  border-radius:999px;
+  font-weight:900;
+  margin-top:1.4rem;
+}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#fff1a8);color:#08111f}
+.btn-secondary{border:1px solid rgba(56,189,248,.35);background:rgba(56,189,248,.08);color:#bae6fd}
+
+.section{padding:4.5rem 0}
+.story{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:1rem;
+  margin-bottom:2.5rem;
+}
+.panel{
+  border:1px solid rgba(255,255,255,.13);
+  border-top:1px solid rgba(231,199,104,.28);
+  background:
+    radial-gradient(circle at top left,rgba(231,199,104,.12),transparent 38%),
+    linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border-radius:34px;
+  padding:2rem;
+  box-shadow:0 28px 80px rgba(0,0,0,.38);
+}
+.panel p{color:var(--soft);line-height:1.85}
+.tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.2rem}
+.tags span{
+  font-size:.78rem;
+  font-weight:900;
+  color:#07111f;
+  padding:.5rem .7rem;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--gold),#fff1a8);
+}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.stat{
+  padding:1rem;
+  border-radius:22px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.1);
+}
+.stat strong{font-size:1.55rem;color:var(--gold);display:block}
+.stat span{color:var(--muted);font-weight:800;font-size:.85rem}
+
+.section-head{text-align:center;margin-bottom:2rem}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
+.card{
+  overflow:hidden;
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border:1px solid rgba(255,255,255,.13);
+  border-top:1px solid rgba(231,199,104,.22);
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+}
+.photo{
+  position:relative;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#0f172a;
+  cursor:pointer;
+}
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+.photo:hover img{transform:scale(1.04)}
+.label{
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  padding:.5rem .75rem;
+  border-radius:999px;
+  background:rgba(2,6,23,.78);
+  border:1px solid rgba(255,255,255,.16);
+  font-weight:900;
+  font-size:.75rem;
+  letter-spacing:.08em;
+}
+.after{color:var(--gold)}
+.copy{padding:1rem}
+.copy p{color:var(--soft);line-height:1.6}
+
+.cta{
+  margin-top:3rem;
+  text-align:center;
+  padding:2.5rem;
+  border-radius:34px;
+  border:1px solid rgba(231,199,104,.25);
+  background:
+    radial-gradient(circle at top left,rgba(231,199,104,.14),transparent 36%),
+    rgba(255,255,255,.045);
+}
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.93);
+  z-index:100;
+  padding:1rem;
+}
+.lightbox.active{display:flex}
+.lightbox img{
+  max-width:96vw;
+  max-height:86vh;
+  object-fit:contain;
+  border-radius:18px;
+}
+.close-lightbox{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border-radius:999px;
+  padding:.85rem 1rem;
+  font-weight:900;
+  cursor:pointer;
+}
+
+footer{padding:3rem 0;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+
+@media(max-width:900px){
+  .nav{flex-direction:column;text-align:center}
+  .links{justify-content:center}
+  .story{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .hero{padding:5rem 0 3rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="K LOGO.png" alt="Kailer's High End Detailing Logo">
+      <span>Kailer's High End Detailing</span>
+    </a>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Portfolio Detail</span>
+    <h1>Honda Odyssey <span class="gold">Interior Reset</span></h1>
+    <p class="lead">
+      A real family-vehicle interior detail by Kailer's High End Detailing.
+      This page shows the vehicle condition before cleaning and the finished results after the interior reset.
+    </p>
+    <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+    <a class="btn btn-secondary" href="gallery.html">Back to Gallery</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="story">
+      <div class="panel">
+        <span class="eyebrow">The Job</span>
+        <h2>Complete Interior Refresh</h2>
+        <p>
+          This Honda Odyssey received an interior reset focused on the areas families use most:
+          front seats, second-row captain's chairs, rear seating, mats, entry areas, interior plastics,
+          and cargo spaces.
+        </p>
+        <div class="tags">
+          <span>Interior Detail</span>
+          <span>Leather Cleaning</span>
+          <span>Floor Mats</span>
+          <span>Door Panels</span>
+          <span>Cargo Area</span>
+          <span>Family Vehicle</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="stats">
+          <div class="stat"><strong>Honda</strong><span>Odyssey</span></div>
+          <div class="stat"><strong>Interior</strong><span>Detail Type</span></div>
+          <div class="stat"><strong>3 Rows</strong><span>Cabin Areas</span></div>
+          <div class="stat"><strong>Real</strong><span>Customer Photos</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <span class="eyebrow">Before</span>
+      <h2>Before Detailing</h2>
+      <p class="lead">These photos show the interior condition before the cleaning work began.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before2.jpg" alt="Honda Odyssey before interior detail photo 1"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 1</h3><p>Interior condition before detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before3.jpg" alt="Honda Odyssey before interior detail photo 2"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 2</h3><p>Interior condition before detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before4.jpg" alt="Honda Odyssey before interior detail photo 3"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 3</h3><p>Interior condition before detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before5.jpg" alt="Honda Odyssey before interior detail photo 4"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 4</h3><p>Interior condition before detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before6.jpg" alt="Honda Odyssey before interior detail photo 5"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 5</h3><p>Interior condition before detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before7.jpg" alt="Honda Odyssey before interior detail photo 6"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 6</h3><p>Interior condition before detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/before8.jpg" alt="Honda Odyssey before interior detail photo 7"><span class="label">BEFORE</span></div><div class="copy"><h3>Before Photo 7</h3><p>Interior condition before detailing.</p></div></div>
+    </div>
+
+    <div class="section-head" style="margin-top:4rem;">
+      <span class="eyebrow">After</span>
+      <h2>Finished Results</h2>
+      <p class="lead">These photos show the cleaned and refreshed interior after detailing.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after1.jpg" alt="Honda Odyssey after interior detail photo 1"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 1</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after2.jpg" alt="Honda Odyssey after interior detail photo 2"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 2</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after3.jpg" alt="Honda Odyssey after interior detail photo 3"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 3</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after4.jpg" alt="Honda Odyssey after interior detail photo 4"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 4</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after5.jpg" alt="Honda Odyssey after interior detail photo 5"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 5</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after6.jpg" alt="Honda Odyssey after interior detail photo 6"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 6</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after7.jpg" alt="Honda Odyssey after interior detail photo 7"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 7</h3><p>Finished interior result after detailing.</p></div></div>
+      <div class="card"><div class="photo"><img src="gallery/honda-odyssey/after8.jpg" alt="Honda Odyssey after interior detail photo 8"><span class="label after">AFTER</span></div><div class="copy"><h3>After Photo 8</h3><p>Finished interior result after detailing.</p></div></div>
+    </div>
+
+    <div class="cta">
+      <span class="eyebrow">Book Your Detail</span>
+      <h2>Want your vehicle to look this clean?</h2>
+      <p class="lead">Interior detailing, exterior detailing, and full vehicle reset packages available in Edmonton.</p>
+      <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="close-lightbox" id="closeLightbox">Close ✕</button>
+  <img id="lightboxImg" src="" alt="Expanded gallery image">
+</div>
+
+<footer>
+  <div class="container">
+    © 2026 Kailer's High End Detailing<br>
+    Edmonton Interior Detailing • Exterior Detailing • Full Vehicle Detailing
+  </div>
+</footer>
+
+<script>
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightboxImg');
+const closeLightbox=document.getElementById('closeLightbox');
+
+document.querySelectorAll('.photo img').forEach(img=>{
+  img.addEventListener('click',()=>{
+    lightboxImg.src=img.src;
+    lightbox.classList.add('active');
+  });
+});
+
+closeLightbox.addEventListener('click',()=>{
+  lightbox.classList.remove('active');
+  lightboxImg.src='';
+});
+
+lightbox.addEventListener('click',e=>{
+  if(e.target===lightbox){
+    lightbox.classList.remove('active');
+    lightboxImg.src='';
+  }
+});
+</script>
+
+</body>
+</html>
