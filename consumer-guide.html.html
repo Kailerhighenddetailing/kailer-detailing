@@ -953,10 +953,41 @@ footer {
     opacity: .3;
   }
 }   
+  .lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  cursor:zoom-out;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:18px;
+  box-shadow:0 0 40px rgba(0,0,0,.65);
+}
+
+.clickable-image{
+  cursor:zoom-in;
+  transition:.25s;
+}
+
+.clickable-image:hover{
+  transform:scale(1.02);
+}   
 </style>
 </head>
-<body>
 
+
+
+<body>
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
 <div class="cursor-glow"></div>
 
 <div class="luxury-bg">
@@ -1128,9 +1159,10 @@ The following photos show real examples from a customer's Honda Odyssey before i
 <div class="card">
 
 <img
-    class="review-img"
-src="gallery/honda-odyssey/front dash and looking at floor.jpeg"
-    alt="Dashboard texture before professional detailing">
+    
+    class="review-img clickable-image"
+    src="gallery/honda-odyssey/front dash and looking at floor.jpeg"
+    alt="Dashboard overview">
 
 <div class="card-copy">
 
@@ -1152,7 +1184,8 @@ Professional detailing begins by safely removing loose contamination before care
 <div class="card">
 
 <img
-    class="review-img"
+
+   class="review-img clickable-image"
  src="gallery/honda-odyssey/close up dust on dash.jpeg"
     alt="Instrument cluster before detailing">
 
@@ -1179,7 +1212,8 @@ These delicate plastics require careful cleaning with soft brushes and microfibe
 <div class="card">
 
 <img
-    class="review-img"
+
+   class="review-img clickable-image"
 src="gallery/honda-odyssey/dust close up navigation system.jpeg"
     alt="Dashboard controls before detailing">
 
@@ -1204,7 +1238,8 @@ Professional detailing removes loose contamination before carefully cleaning eac
 <div class="card">
 
 <img
-class="review-img"
+
+   class="review-img clickable-image"
 src="gallery/honda-odyssey/texture gove box dash before.jpeg"
 alt="Textured glove box and dashboard before detailing">
 
@@ -1231,7 +1266,8 @@ Professional detailing is about treating every surface appropriately—not clean
 <div class="card">
 
 <img
-    class="review-img"
+
+      class="review-img clickable-image"
   src="gallery/honda-odyssey/carpet seat cracks.jpeg"
     alt="Honda Odyssey carpet before detailing">
 
@@ -1580,7 +1616,7 @@ A professional detailing service includes far more than labour alone. Customers 
   <a href="https://app.squareup.com/appointments/book/t10y8x6v0k9yum/L9699DHV37SKB/start" target="_blank" rel="noopener noreferrer">📅 Book</a>
   <a href="https://g.page/r/CcilDK6TDGr5EBM/review" target="_blank" rel="noopener noreferrer">⭐ Reviews</a>
 </div>
-  <script>
+<script>
 const glow = document.querySelector('.cursor-glow');
 
 document.addEventListener('mousemove', (e) => {
@@ -1588,5 +1624,31 @@ document.addEventListener('mousemove', (e) => {
   glow.style.top = e.clientY + 'px';
 });
 </script>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll(".clickable-image").forEach(img => {
+
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+    });
+
+});
+
+lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
 </body>
 </html>
